@@ -1,6 +1,6 @@
-![](assets/banner_class_85.png)
+![banner](assets/banner_class_85.png)
 
-# Practica 5 - Álgebra booleana básico
+# Practica 4 - Álgebra booleana básico
 
 ## Objetivo
 
@@ -22,17 +22,17 @@ Construir y analizar el comportamiento de circuitos digitales, creando tablas de
 
 ## Desarrollo
 
-### Paso 1: Circuito digital 
+### Paso 1: Circuito digital 1
 
-Realizar el siguiente circuito, generar la tabla de verdad y su ecuación
+Reducir la expresión booleana, generar la tabla de verdad y su diagrama
 
-![circuito1](assets/practica5_1.png)
+$$A\bar{B} + AB\bar{C}$$
 
-### Paso 2: Circuito digital 
+### Paso 2: Circuito digital 2
 
-Realizar el siguiente circuito, generar la tabla de verdad y su ecuación
+Reducir la expresión booleana, generar la tabla de verdad y su diagrama
 
-![circuito1](assets/practica5_2.png)
+$$A\bar{B}C + ABC + AB\bar{C}$$
 
 ---
 
