@@ -1,0 +1,1131 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../01_introduccion/">
+      
+      
+        <link rel="next" href="../03_suma_binaria/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Sistemas Numéricos - Electrónica Digital</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sistemas-numericos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-header__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Electrónica Digital
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sistemas Numéricos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-nav__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Electrónica Digital
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion a la electronica digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sistemas Numéricos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sistemas Numéricos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema Decimal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-binario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema Binario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-octal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema Octal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-hexadecimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema Hexadecimal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-gray" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código Gray
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decimal-a-binario" class="md-nav__link">
+    <span class="md-ellipsis">
+      DECIMAL A BINARIO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DECIMAL A BINARIO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-de-divisiones-sucesivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método de divisiones sucesivas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#division-repetida" class="md-nav__link">
+    <span class="md-ellipsis">
+      División repetida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-de-suma-de-pesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método de suma de pesos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binario-a-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      BINARIO A DECIMAL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BINARIO A DECIMAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-de-suma-de-pesos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método de suma de pesos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binario-a-hexadecimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binario a Hexadecimal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hexadecimal-a-binario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hexadecimal a binario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_suma_binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operaciones Binarias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_dise%C3%B1o_digital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño Digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_compuertas_logicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas logicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografía
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suma%20binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Suma binaria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Practicas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Practicas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema Decimal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-binario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema Binario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-octal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema Octal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-hexadecimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistema Hexadecimal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-gray" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código Gray
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decimal-a-binario" class="md-nav__link">
+    <span class="md-ellipsis">
+      DECIMAL A BINARIO
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DECIMAL A BINARIO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-de-divisiones-sucesivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método de divisiones sucesivas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#division-repetida" class="md-nav__link">
+    <span class="md-ellipsis">
+      División repetida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-de-suma-de-pesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método de suma de pesos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binario-a-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      BINARIO A DECIMAL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BINARIO A DECIMAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metodo-de-suma-de-pesos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método de suma de pesos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binario-a-hexadecimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binario a Hexadecimal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hexadecimal-a-binario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hexadecimal a binario
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p><img alt="banner" src="../assets/banner_class_85.png" /></p>
+<h1 id="sistemas-numericos">Sistemas Numéricos</h1>
+<h2 id="sistema-decimal">Sistema Decimal</h2>
+<p>El sistema numérico decimal, es un sistema base 10 debido a que tiene  <strong>10 símbolos</strong>  los cuales son los  <em>números del 0 al 9</em> . Para este sistema a cada símbolo se le denomina  <em>dígito</em>  y es el más comúnmente usado en la vida cotidiana, ya que por medio de éste podemos representar cualquier cantidad numérica estándar. Cuando se trabaja números que se encuentran en diferentes sistemas, es aconsejable identificar la base del número colocándola como subíndice. Por ejemplo, si se desea representar el número 25 en decimal se coloca: 2510</p>
+<p><img alt="img" src="../assets/Clase1_S1_13.png" /></p>
+<p>Al tener 10 dígitos, se pueden formar números de diferentes cantidades. Un número con una sola cifra, tiene 10 posibles cantidades que van de 0 a 9. Si un número tiene dos cifras, entonces se pueden tener hasta 100 posibles cantidades.</p>
+<p><img alt="img" src="../assets/Clase1_S1_14.png" /></p>
+<p>Cada cifra dentro de un número tiene un valor que es comúnmente llamado como peso. La cifra de menor  <em>peso</em> , siempre es la cifra ubicada a la derecha del número. Los pesos de cada cifra incrementan de forma exponencial en donde la base es la cantidad de símbolos del sistema y el exponente es la posición de cada símbolo.</p>
+<p><img alt="img" src="../assets/Clase1_S1_15.png" /></p>
+<p>Entonces la cantidad de un número se obtiene de la siguiente forma:</p>
+<div class="arithmatex">\[348 = 8 * 100 + 4 * 101 + 3 * 102\]</div>
+<div class="arithmatex">\[348 = 8 * 1 + 4 * 10 + 3 * 100\]</div>
+<div class="arithmatex">\[348 = 8 + 40 + 300\]</div>
+<h2 id="sistema-binario">Sistema Binario</h2>
+<p>El sistema numérico binario es un sistema base 2 debido a que tiene  <em>2 símbolos</em>  los cuales son los números  <strong>0</strong>  y  <strong>1</strong> . En este sistema a un símbolo se le denomina  <em>bit</em> . Es aconsejable identificar la base del número colocándola como subíndice. Por ejemplo, si se desea representar el número  <em>100110</em>  en binario se coloca:  <em>100110</em>  <em>2</em> .</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img alt="img" src="../assets/Clase1_S1_16.png" /></td>
+<td style="text-align: center;"><img alt="img" src="../assets/Clase1_S1_17.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Para formar cantidades binarias es necesario tener en cuenta que solo hay 2 símbolos en el sistema. Con base en esto, un número con una sola cifra solo puede tener 2 posibles combinaciones. Un número con 2 cifras puede tener 4 posibles combinaciones. Esto es debido a que los pesos para los números binarios se calculan con potencias positivas de base 2 que aumentan de derecha a izquierda comenzando por 20.</p>
+<p><img alt="img" src="../assets/Clase1_S1_18.png" /></p>
+<p>Entonces, se puede observar que la cantidad de combinaciones que se pueden obtener en binario corresponde a 2n donde  <em>n</em>  es el número de bits. Con base en lo anterior, con 4 bits se pueden obtener 16 combinaciones, con 5 bits 32 combinaciones y así sucesivamente.</p>
+<p><img alt="img" src="../assets/Clase1_S1_20.png" /></p>
+<h2 id="sistema-octal">Sistema Octal</h2>
+<p>El sistema numérico octal es un sistema base 8 debido a que tiene  <em>8 símbolos</em>  los cuales son los números del  <em>0</em>  al  <em>7</em> . Es necesario identificar la base del número colocándola como subíndice. Por ejemplo, si se desea representar el número 256 en  <em>octal</em>  se coloca: 2568. La cantidad de combinaciones que se pueden obtener en octal corresponde a 8n donde  <em>n</em>  es el número de símbolos.</p>
+<p><img alt="img" src="../assets/Clase1_S1_21.png" /></p>
+<p>Igual que el sistema decimal, cada símbolo tiene un peso. Los pesos para los números octales son potencias positivas base ocho que aumentan de derecha a izquierda comenzando por 80.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="img" src="../assets/Clase1_S1_22.png" /></td>
+<td><img alt="img" src="../assets/Clase1_S1_23.png" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sistema-hexadecimal">Sistema Hexadecimal</h2>
+<p>El sistema numérico hexadecimal es un sistema base 16 debido a que tiene  <em>16 símbolos</em>  los cuales son los números del  <strong>0</strong>  al  <strong>9</strong>  y de la letra  <strong>A</strong>  a la  <strong>F</strong> . Es necesario identificar la base del número colocándola como subíndice. Por ejemplo, si se desea representar el número 95B en  <strong>hexadecimal</strong>  se coloca: 95B16. La cantidad 16 de combinaciones que se pueden obtener en hexadecimal corresponde a 16n donde n es el número de símbolos.</p>
+<p><img alt="img" src="../assets/Clase1_S1_24.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_25.png" /></p>
+<p>Los pesos para los números hexadecimales son potencias positivas base dieciséis que aumentan de derecha a izquierda comenzando por 160.</p>
+<p><img alt="img" src="../assets/Clase1_S1_26.png" /></p>
+<h2 id="codigo-gray">Código Gray</h2>
+<p>Es  <strong>un código</strong>  con una característica fundamental.  <em>La variación entre una combinación y otra es de solo un bit</em> . Esta característica es bastante importante en muchas aplicaciones como detección y corrección de errores en sistemas de comunicaciones digitales, de allí la importancia del mismo.</p>
+<p><img alt="img" src="../assets/Clase1_S1_27.png" /></p>
+<p>Para construir el código se debe iniciar con los símbolos del código binario en el bit de menor peso, es decir con el 0 y 1. Después se refleja el código resultante, es decir, que se continúa el código colocando el 1 y 0, luego se coloca el bit de siguiente peso con la mitad de posiciones en 0 y la otra mitad en 1.</p>
+<p><img alt="img" src="../assets/Clase1_S1_28.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_29.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_30.png" /></p>
+<h2 id="decimal-a-binario">DECIMAL A BINARIO</h2>
+<h3 id="metodo-de-divisiones-sucesivas">Método de divisiones sucesivas</h3>
+<p>Este método consiste en tomar el número decimal y dividirlo en 2 <span class="arithmatex">\(debido a que la base del sistema binario es 2\)</span>. La división se repite hasta que el cociente sea menor que el divisor. Para este caso en particular, debido a que el divisor es 2 entonces se hace divisiones hasta que el cociente sea 1. Al finalizar el número binario se construye tomando el último cociente y se toma los residuos de las divisiones desde el último hasta el primer residuo.</p>
+<p><img alt="img" src="../assets/Clase1_S1_31.png" /></p>
+<p>Por ejemplo, si tomamos el número decimal 2410 le aplicamos el método que daría de la siguiente forma:</p>
+<p><img alt="img" src="../assets/Clase1_S1_32.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_33.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_34.png" /></p>
+<h3 id="division-repetida">División repetida</h3>
+<p>Para convertir enteros decimales a binario es el que utiliza la división entre 2. Para la conversión, que se muestra a continuación para el número 2510, se requiere dividir en forma repetida el número decimal entre 2 y anotar el residuo después de cada división hasta que se obtenga un cociente de 0. El resultado binario se obtiene al escribir el primer residuo como el LSB y el último como el MSB.</p>
+<p><img alt="img" src="../assets/Clase1_S1_35.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_36.png" /></p>
+<h3 id="metodo-de-suma-de-pesos">Método de suma de pesos</h3>
+<p>Este método consiste en calcular el número binario equivalente al número decimal dado mediante la suma de los pesos binarios que dan como resultado el número decimal. Es necesario tener en cuenta que los pesos binarios van de 20 hasta 2n donde  <em>n</em>  es el número de bits. Esto es equivalente a decir que los pesos son: 1, 2, 4, 8, 16, 32, etc.</p>
+<p><img alt="img" src="../assets/Clase1_S1_37.png" /></p>
+<p>Por ejemplo, si tenemos el número 2510 entonces debemos encontrar un peso que no exceda esa cantidad. Si se escoge el peso 5, 25 = 32 y excede el 25. Entonces el peso adecuado a escoger es el 4.</p>
+<div class="arithmatex">\[24 = 16\]</div>
+<div class="arithmatex">\[25 - 16 = 9\]</div>
+<p>Aplicamos el mismo algoritmo para el valor resultante que es el 8.</p>
+<div class="arithmatex">\[23 = 8\]</div>
+<div class="arithmatex">\[9 - 8 = 1\]</div>
+<p>Aplicamos el mismo algoritmo para el valor resultante que es el 1. Nos damos cuenta que 22 = 4 excede el 1, 21 = 2 excede el 1, entonces:</p>
+<div class="arithmatex">\[20 = 1\]</div>
+<div class="arithmatex">\[1 - 1 = 0\]</div>
+<p>Finalmente, nos damos cuenta de que debe intervenir el peso 4, 3 y 0. Eso significa que para estos pesos el valor es 1. Para los pesos 2 y 1 el valor debe ser 0.</p>
+<div class="arithmatex">\[\text{24  23  22  21  20}\]</div>
+<div class="arithmatex">\[\text{1    1    1    1    1}\]</div>
+<div class="arithmatex">\[16 + 8 + 0 + 0 + 1 = 25\]</div>
+<p><img alt="img" src="../assets/Clase1_S1_38.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_39.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_40.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_41.png" /></p>
+<h2 id="binario-a-decimal">BINARIO A DECIMAL</h2>
+<h3 id="metodo-de-suma-de-pesos_1">Método de suma de pesos</h3>
+<p>Este método consiste en calcular el valor de cada peso del número binario y hacer la sumatoria de sus resultados. El resultado de la sumatoria equivaldrá al número decimal.</p>
+<p>Por ejemplo, si tenemos el número <span class="arithmatex">\(11011010_2\)</span> hacemos las siguientes operaciones:</p>
+<p><img alt="img" src="../assets/Clase1_S1_42.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_43.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_44.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_45.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_46.png" /></p>
+<h3 id="binario-a-hexadecimal">Binario a Hexadecimal</h3>
+<p>Nótese que cuatro bits binarios corresponden a un dígito hexadecimal. Esto es, se requieren exactamente cuatro bits para contar desde 0 hasta F. Para representar números binarios como números hexadecimales, se forman grupos de cuatro, comenzando en el punto binario y en dirección a la izquierda.</p>
+<p><em>Un número binario de ocho bits puede representarse adecuadamente con dos dígitos hexadecimales.</em></p>
+<p><img alt="img" src="../assets/Clase1_S1_47.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_48.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_49.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_50.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_51.png" /></p>
+<h3 id="hexadecimal-a-binario">Hexadecimal a binario</h3>
+<p>La conversión de hexadecimal a binario es igual de sencilla. Por cada dígito hexadecimal, se escriben los dígitos binarios correspondientes.</p>
+<p><img alt="img" src="../assets/Clase1_S1_52.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_53.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_54.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_55.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_56.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_57.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_58.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S1_59.png" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../01_introduccion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introduccion a la electronica digital">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Introduccion a la electronica digital
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03_suma_binaria/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Operaciones Binarias">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Operaciones Binarias
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": 1.0}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-lib@0.11.6/dist/browser/index.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-view@0.2.6/dist/index.min.js"></script>
+      
+    
+  </body>
+</html>
