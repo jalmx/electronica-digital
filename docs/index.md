@@ -1,8 +1,10 @@
+![banner](./assets/banner_class_85.png)
+
 # Electronica Digital
 
 ## Secuencia
 
-1. 9.  Bases numéricas, conversiones
+1. Bases numéricas, conversiones
    1.  Decimal
    2.  Binario
    3.  Hexadecimal
@@ -76,12 +78,6 @@
 |Video explicativo|20%|
 |Practicas|30%|
 |Carrito seguidor de linea|30%|
-
-
-## Plan de evaluación P3
-
-|Actividad|Porcentaje|
-|---|---|
 |Infografia, FPGA, GAL y VHDL|10%|
 |Practicas (sensores)|10%|
 |Proyecto|10%|
