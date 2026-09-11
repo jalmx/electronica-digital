@@ -48,7 +48,7 @@ Esto convierte al número en negativo.
 
 ### Números negativo
 
-Una de las maneras de realizar la resta binaria es usando complemento a 2 \(no es la única manera\).
+Una de las maneras de realizar la resta binaria es usando complemento a 2 (no es la única manera).
 
 Una vez obtenido el complemento a 2, se agrega un 1 como  MSB, y con eso indicamos que el número es negativo.
 

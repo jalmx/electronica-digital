@@ -87,7 +87,7 @@ Para construir el código se debe iniciar con los símbolos del código binario 
 
 ### Método de divisiones sucesivas
 
-Este método consiste en tomar el número decimal y dividirlo en 2 \(debido a que la base del sistema binario es 2\). La división se repite hasta que el cociente sea menor que el divisor. Para este caso en particular, debido a que el divisor es 2 entonces se hace divisiones hasta que el cociente sea 1. Al finalizar el número binario se construye tomando el último cociente y se toma los residuos de las divisiones desde el último hasta el primer residuo.
+Este método consiste en tomar el número decimal y dividirlo en 2 (debido a que la base del sistema binario es 2). La división se repite hasta que el cociente sea menor que el divisor. Para este caso en particular, debido a que el divisor es 2 entonces se hace divisiones hasta que el cociente sea 1. Al finalizar el número binario se construye tomando el último cociente y se toma los residuos de las divisiones desde el último hasta el primer residuo.
 
 ![img](./assets/Clase1_S1_31.png)
 
