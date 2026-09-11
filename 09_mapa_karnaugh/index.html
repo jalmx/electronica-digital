@@ -1,0 +1,891 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../08_aplicacion_algebra_booleana/">
+      
+      
+        <link rel="next" href="../10_aplicacion_mapa_karnaugh/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Mapa de Karnaugh - Electrónica Digital</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mapa-de-karnaugh" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-header__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Electrónica Digital
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mapa de Karnaugh
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-nav__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Electrónica Digital
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion a la electronica digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_bases%20numericas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistemas Numéricos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_suma_binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operaciones Binarias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_dise%C3%B1o_digital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño Digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_compuertas_logicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas logicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_compuertas_combinadas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas Combinadas NOR Y NAND
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_logica_combinacional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lógica combinacional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_aplicacion_algebra_booleana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicando Álgebra Booleana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_aplicacion_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicación: Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografía
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suma%20binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Suma binaria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Practicas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Practicas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="mapa-de-karnaugh">Mapa de Karnaugh</h1>
+<p>Un  <em>mapa de Karnaugh</em> es similar a una tabla de verdad, ya que muestra todos valores posibles de las variables de entrada y la salida resultante para cada valor. En lugar de organizar en filas y columnas como una tabla de verdad,  <em>el mapa de Karnaugh es una matriz de celdas</em>  en la que cada celda representa un valor binario de las variables de entrada.</p>
+<p><img alt="img" src="../assets/Clase1_S7_1.png" /></p>
+<p>Las celdas se organizan de manera que la simplificación de una determinada expresión consiste en agrupar adecuadamente las celdas. Los mapas de Karnaugh se pueden utilizar para expresiones de dos, tres, cuatro y cinco variables.</p>
+<p><img alt="img" src="../assets/Clase1_S7_2.png" /></p>
+<p>Existe otro método, denominado método de Quine-McClusky, que puede emplearse para un número mayor de variables. El número de celdas de un mapa de Karnaugh es igual al número total de posibles combinaciones de las variables de entrada, al igual que el número de filas de una tabla de verdad. Para tres variables, el número de celdas necesarias es de 23 = 8. Para cuatro variables, el número de celdas es de 24 = 16.</p>
+<p><img alt="img" src="../assets/Clase1_S7_3.png" /></p>
+<p>El  <em>mapa de Karnaugh (mapa K) es una herramienta gráfica</em>  que se utiliza para simplificar una ecuación lógica o convertir una tabla de verdad en su correspondiente circuito lógico mediante un proceso simple y ordenado. Aunque un mapa K puede usarse para problemas en los que se involucre cualquier número de variables de entrada,  <em>su utilidad práctica está limitada a cinco o seis variables</em> .</p>
+<p><img alt="img" src="../assets/Clase1_S7_4.png" /></p>
+<p>Al igual que una tabla de verdad, el  _mapa K _ es un medio para mostrar la relación entre las entradas lógicas y la salida deseada.</p>
+<p><img alt="img" src="../assets/Clase1_S7_5.png" /></p>
+<h1 id="mapa-de-karnaugh-de-tres-variables">Mapa de Karnaugh de tres variables</h1>
+<p>El mapa de Karnaugh de tres variables es una matriz de ocho celdas. En este caso, A, B y C se emplean para denominar a las variables, aunque podían haberse usado cualesquiera otras letras. Los valores binarios de A y B se encuentran en el lado izquierdo (observe la secuencia) y los valores de C se colocan en la parte superior.</p>
+<p><img alt="img" src="../assets/Clase1_S7_6.png" /></p>
+<p>El valor de una determinada celda es el valor binario de A y B, en la parte izquierda de la misma fila combinado con el valor de C en la parte superior de la misma columna. Por ejemplo, la celda de la esquina superior izquierda tiene un valor binario de 000 y la celda inferior derecha tiene un valor binario de 101.</p>
+<p><img alt="img" src="../assets/Clase1_S7_7.png" /></p>
+<p>Se muestran los términos producto estándar representados por cada celda del mapa de Karnaugh.</p>
+<p><img alt="img" src="../assets/Clase1_S7_8.png" /></p>
+<h1 id="mapa-de-karnaugh-de-cuatro-variables">Mapa de Karnaugh de cuatro variables</h1>
+<p>El mapa de Karnaugh de cuatro variables es una matriz de dieciséis celdas. Los valores binarios de A y B se encuentran en el lado izquierdo y los valores de C y D se colocan en la parte superior.</p>
+<p><img alt="img" src="../assets/Clase1_S7_9.png" /></p>
+<p>El valor de una determinada celda es el valor binario de A y B, en la parte izquierda de la misma fila, combinado con los valores binarios de C y D en la parte superior de la misma columna. Por ejemplo, la celda de la esquina superior derecha tiene un valor binario de 0010 y la celda inferior derecha tiene un valor binario de 1010.</p>
+<p><img alt="img" src="../assets/Clase1_S7_10.png" /></p>
+<p>Se indican los términos producto estándar representados por cada celda del mapa de Karnaugh de cuatro variables.</p>
+<p><img alt="img" src="../assets/Clase1_S7_11.png" /></p>
+<h1 id="adyacencia-de-celdas">Adyacencia de celdas</h1>
+<p>Las celdas de un mapa de Karnaugh se disponen de manera que solo cambia una única variable entre celdas adyacentes. La adyacencia se define por un cambio de una única variable. Las celdas que difieren en una única variable son adyacentes. Por ejemplo, en el mapa de tres variables, la celda 010 es adyacente a las celdas 000, 011 y 110. La celda 010 no es adyacente a la celda 001, ni a la celda 111, ni a la celda 100 ni a la celda 101.</p>
+<p><img alt="img" src="../assets/Clase1_S7_12.png" /></p>
+<p>Físicamente, cada celda es adyacente a las celdas que están situadas inmediatas a ella por cualquiera de sus cuatro lados. Un celda no es adyacente a aquellas celdas que tocan diagonalmente alguna de sus esquinas. Además, las celdas de la fila superior son adyacentes a las de la fila inferior y las celdas de la columna izquierda son adyacentes a las situadas en la columna de la derecha.</p>
+<p><img alt="img" src="../assets/Clase1_S7_13.png" /></p>
+<p>Esto se denomina adyacencia cíclica, ya que podemos pensar que el mapa de Karnaugh se dobla de forma que se toquen los extremos superior e inferior como si fuera un cilindro o los extremos de la derecha e izquierda para formar la misma figura. Se ilustra la adyacencia de celdas en un mapa de cuatro variables, aunque se aplican las mismas reglas de adyacencia a los mapas de Karnaugh con cualquier número de celdas.</p>
+<p><img alt="img" src="../assets/Clase1_S7_14.png" /></p>
+<h1 id="mapa-de-karnaugh_1">Mapa de Karnaugh</h1>
+<p>La tabla de verdad proporciona el valor de la salida  <em>X</em>  para cada combinación de valores de entrada. El mapa K proporciona la misma información en un formato distinto. Cada caso en la tabla de verdad corresponde a una casilla en el mapa K. Por ejemplo, en la figura la condición A = 0, B = 0 corresponde la casilla A’ B’ en el mapa K.</p>
+<p><img alt="img" src="../assets/Clase1_S7_15.png" /></p>
+<p>Como la tabla de verdad muestra X = 1 para este caso, se coloca un 1 en la casilla A’ B’ del mapa K. De manera similar, la condición A = 1, B = 1 en la tabla de verdad corresponde a la casilla AB del mapa K. Como X = 1 para este caso, se coloca un 1 en la casilla AB. Todas las demás casillas se llenan con 0s. Esta misma idea se utiliza en los mapas con tres y cuatro variables.</p>
+<p><img alt="img" src="../assets/Clase1_S7_16.png" /></p>
+<p>Las casillas del mapa K se etiquetan de manera que las casillas adyacentes en forma horizontal difieran solo por una variable. Por ejemplo, la casilla de la esquina superior izquierda en el mapa de cuatro variables es  <em>A’ B’ C’ D’</em> , mientras que la casilla que se encuentra justo a su derecha es  <em>A’ B’ C’ D’</em>  (solo la variable D es distinta).</p>
+<p><img alt="img" src="../assets/Clase1_S7_17.png" /></p>
+<p>De manera similar, las casillas adyacentes verticales solo difieren por una variable. Por ejemplo, la casilla de la esquina superior izquierda es  <em>A’ B’ C’ D’</em> , mientras que la casilla que está justo debajo es  <em>A’ B’ C’ D’</em>  (solo la variable B es distinta).</p>
+<p><img alt="img" src="../assets/Clase1_S7_18.png" /></p>
+<p>Observe que cada casilla en la fila superior se considera como adyacente a una casilla correspondiente en la fila inferior. Por ejemplo, la casilla  <em>A’ B’CD</em>  en la fila superior es adyacente a la casilla  <em>AB’CD</em>  en la fila inferior, ya que solo difieren por la variable  <em>A</em> . Podemos considerar que la parte superior del mapa se dobla para tocar su parte inferior.</p>
+<p><img alt="img" src="../assets/Clase1_S7_19.png" /></p>
+<p>De manera similar, las casillas de la columna más a la izquierda son adyacentes a las correspondientes en la columna más a la derecha.</p>
+<p><img alt="img" src="../assets/Clase1_S7_20.png" /></p>
+<p>Para que las casillas adyacentes en forma vertical y horizontal difieran sólo por una variable, el etiquetado de arriba hacia abajo debe realizarse en el orden mostrado: A’ B’, A’B, AB, AB’. Lo mismo aplica para el etiquetado de izquierda a derecha: C’D’, C’D, CD, CD’.</p>
+<p><img alt="img" src="../assets/Clase1_S7_21.png" /></p>
+<p>Una vez que se ha llenado un  <em>mapa K</em>  con 0s y 1s, puede obtenerse la expresión de suma de productos para la salida  <em>X</em>  mediante la aplicación de la operación OR a todas las casillas que contengan un 1.</p>
+<p><img alt="img" src="../assets/Clase1_S7_22.png" /></p>
+<p>En el mapa de tres variables, las casillas A’B’C, A’B’C, ABC y ABC’ contienen un 1, de manera que X = A’B’C’+  A’B’C + A’BC’  ABC.</p>
+<p><img alt="img" src="../assets/Clase1_S7_23.png" /></p>
+<h1 id="agrupamiento">Agrupamiento</h1>
+<p>La expresión para la salida X puede simplificarse mediante la combinación apropiada de las casillas en el mapa K que contengan 1s. Al proceso para combinar estos 1s se le conoce como  <em>agrupamiento</em> .</p>
+<p><em>Los grupos solo pueden ser en base 2, es decir, solo pueden ser 1, 2, 4, 8, 16, 32 …</em></p>
+<p>No se pueden agregar en otra cantidad.</p>
+<p><img alt="img" src="../assets/Clase1_S7_24.png" /></p>
+<h1 id="agrupamiento-de-pares-grupos-de-dos">Agrupamiento de pares (grupos de dos)</h1>
+<p>El mapa K para cierta tabla de verdad de tres variables. Este mapa contiene un par de 1s que son adyacentes en forma vertical; el primero representa a A’BC’ y el segundo a ABC’.</p>
+<p><img alt="img" src="../assets/Clase1_S7_25.png" /></p>
+<p>Observe que en estos dos términos, sólo la variable A aparece tanto en forma normal como complementada (invertida), mientras que B y C permanecen sin cambios. Estos dos términos pueden agruparse (combinarse) para obtener un resultante que elimine la variable A, ya que aparece tanto en forma complementada como no complementada.</p>
+<p><img alt="img" src="../assets/Clase1_S7_26.png" /></p>
+<p><em>Al agrupar un par de 1s adyacentes en un mapa K se elimina la variable que aparece tanto en forma no complementada como en forma complementada.</em></p>
+<p><img alt="img" src="../assets/Clase1_S7_27.png" /></p>
+<h1 id="agrupamiento-de-cuadruples-grupos-de-cuatro">Agrupamiento de cuádruples (grupos de cuatro)</h1>
+<p>Un mapa K puede contener un grupo de cuatro 1s que sean adyacentes. A este grupo se le conoce como  <em>cuádruple</em> . Se muestra varios ejemplos de este tipo.</p>
+<p><img alt="img" src="../assets/Clase1_S7_28.png" /></p>
+<p>En la figura, los cuatro 1s son adyacentes en forma vertical y en la otra son adyacentes en forma horizontal.</p>
+<p><img alt="img" src="../assets/Clase1_S7_29.png" /></p>
+<p>La figura c contiene cuatro 1s en una casilla y se consideran adyacentes entre sí. Los cuatro 1s de la figura d también son adyacentes, al igual que los de la figura e, ya que, como dijimos antes, las filas superior e inferior se consideran como adyacentes entre sí, al igual que las columnas más a la izquierda y más a la derecha.</p>
+<p><img alt="img" src="../assets/Clase1_S7_30.png" /></p>
+<p><em>Al agrupar un cuádruple de 1s adyacentes se eliminan las dos variables que aparecen tanto en forma complementada como en forma no complementada.</em></p>
+<p><img alt="img" src="../assets/Clase1_S7_31.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S7_32.png" /></p>
+<h1 id="agrupamiento-de-octetos-grupos-de-ocho">Agrupamiento de octetos (grupos de ocho)</h1>
+<p>A un grupo de ocho 1s adyacentes entre sí se le conoce como  <em>octeto</em> . Se muestra varios ejemplos de octetos. Cuando se agrupa un octeto en un mapa de cuatro variables, se eliminan tres de ellas, ya que solo una permanece sin cambios.</p>
+<p>Por ejemplo, si examinamos las ocho casillas agrupadas en la figura, podremos ver que solo la variable B se encuentra en la misma forma para las ocho casillas: las demás variables aparecen en su forma complementada y no complementada. En consecuencia, para este mapa X = B.</p>
+<p><img alt="img" src="../assets/Clase1_S7_33.png" /></p>
+<p><em>Al agrupar un octeto de 1s adyacentes se eliminan las tres variables que aparecen tanto en su forma complementada como en su forma no complementada.</em></p>
+<p><img alt="img" src="../assets/Clase1_S7_34.png" /></p>
+<h1 id="proceso-completo-de-simplificacion">Proceso completo de simplificación</h1>
+<p><em>Cuando una variable aparece tanto en su forma complementada como no complementada dentro de un grupo, esa variable se elimina de la expresión. Las variables que son iguales para todas las casillas del grupo deben aparecer en la expresión final.</em></p>
+<p><img alt="img" src="../assets/Clase1_S7_35.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../08_aplicacion_algebra_booleana/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Aplicando Álgebra Booleana">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Aplicando Álgebra Booleana
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../10_aplicacion_mapa_karnaugh/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Aplicación: Mapa de Karnaugh">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Aplicación: Mapa de Karnaugh
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": 1.0}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-lib@0.11.6/dist/browser/index.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-view@0.2.6/dist/index.min.js"></script>
+      
+    
+  </body>
+</html>

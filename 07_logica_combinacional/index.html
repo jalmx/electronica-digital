@@ -1,0 +1,1016 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../06_compuertas_combinadas/">
+      
+      
+        <link rel="next" href="../08_aplicacion_algebra_booleana/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Lógica combinacional - Electrónica Digital</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#logica-combinacional" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-header__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Electrónica Digital
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lógica combinacional
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-nav__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Electrónica Digital
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion a la electronica digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_bases%20numericas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistemas Numéricos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_suma_binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operaciones Binarias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_dise%C3%B1o_digital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño Digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_compuertas_logicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas logicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_compuertas_combinadas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas Combinadas NOR Y NAND
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lógica combinacional
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lógica combinacional
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#construccion-de-circuitos-a-partir-de-su-expresion-booleana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construcción de circuitos a partir de su expresión booleana
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diseno-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diseño digital
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_aplicacion_algebra_booleana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicando Álgebra Booleana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_aplicacion_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicación: Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografía
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suma%20binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Suma binaria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Practicas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Practicas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#construccion-de-circuitos-a-partir-de-su-expresion-booleana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construcción de circuitos a partir de su expresión booleana
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diseno-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diseño digital
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="logica-combinacional">Lógica combinacional</h1>
+<p>Para producir una forma de onda de salida deseada, a menudo es necesario utilizar una combinación de compuertas. Por ejemplo, supóngase que se necesita generar una señal de control formada por los pulsos 2' y 5' a partir de las formas de onda del reloj con retardo y del contador de corrimiento.</p>
+<p><img alt="img" src="../assets/Clase1_S5_1.png" /></p>
+<p>Se requiere una compuerta AND de tres entradas para aislar el pulso 2' y otra AND con el mismo número de entradas para aislar el pulso 5'. Para producir la señal deseada, debe hacerse el OR de la salida de ambas compuertas. La salida estará en el nivel ALTO ya sea durante el pulso 2' O (OR) el 5'. La combinación de compuertas para producir la salida requerida recibe el nombre de  <em>lógica combinacional o combinatoria</em> .</p>
+<p><img alt="img" src="../assets/Clase1_S5_2.png" /></p>
+<p>La operación de todas las compuertas lógicas básicas, y el álgebra booleana para describir y analizar circuitos formados de combinaciones de compuertas lógicas.  <em>Estos circuitos pueden clasificarse como circuitos lógicos combinacionales</em> , ya que, en cualquier momento, el nivel lógico de la salida depende de la combinación de los niveles lógicos presentes en las entradas. Un circuito combinacional no tiene característica de memoria, por lo que su salida depende solo del valor actual de sus entradas.</p>
+<p><img alt="img" src="../assets/Clase1_S5_3.png" /></p>
+<h2 id="construccion-de-circuitos-a-partir-de-su-expresion-booleana">Construcción de circuitos a partir de su expresión booleana</h2>
+<p>Construir el diagrama de la siguiente expresión:</p>
+<div class="arithmatex">\[A + B + C = Y\]</div>
+<p><img alt="img" src="../assets/Clase1_S5_4.png" /></p>
+<p>Construir el diagrama de la siguiente expresión:</p>
+<div class="arithmatex">\[(A + B + C) (A’ + B’)= Y\]</div>
+<p><img alt="img" src="../assets/Clase1_S5_5.png" /></p>
+<p>Construir el diagrama de la siguiente expresión:</p>
+<div class="arithmatex">\[A B C + A’ B’ C = Y\]</div>
+<p><img alt="img" src="../assets/Clase1_S5_6.png" /></p>
+<p>Construir el diagrama de la siguiente expresión:</p>
+<div class="arithmatex">\[x = BC + AC + AB\]</div>
+<p><img alt="img" src="../assets/Clase1_S5_7.png" /></p>
+<p>Construir el diagrama de la siguiente expresión:</p>
+<div class="arithmatex">\[A’ B = Y\]</div>
+<p><img alt="img" src="../assets/Clase1_S5_8.png" /></p>
+<p>Construir el diagrama de la siguiente expresión:</p>
+<div class="arithmatex">\[A B’ + A’ B = Y\]</div>
+<p><img alt="img" src="../assets/Clase1_S5_9.png" /></p>
+<h2 id="diseno-digital">Diseño digital</h2>
+<p><img alt="img" src="../assets/Clase1_S5_10.png" /></p>
+<h1 id="algebra-booleana">Álgebra booleana</h1>
+<p>El álgebra de Boole es un sistema matemático que nos permite manejar ecuaciones, las cuales pueden ser simplificadas y convertidas en o desde un sistema físico de puertas lógicas, las cuales realizan esa misma función. Es decir, podemos, mediante matemáticas, hacer que un sistema de control muy complejo se pueda simplificar.</p>
+<p><img alt="img" src="../assets/Clase1_S5_11.png" /></p>
+<p>Las operaciones fundamentales son:</p>
+<p><strong>Suma</strong> . Es la operación que realiza la compuerta OR, esta se expresa como:  <em>f = a + b</em></p>
+<p><strong>Producto</strong> . Es la operación de la compuerta AND, la cual se expresa como:  <em>f = ab</em></p>
+<p><strong>Inversión</strong> . Es la operación que realiza la compuerta NOT. Se expresa como: _ f = a’_</p>
+<p><img alt="img" src="../assets/Clase1_S5_12.png" /></p>
+<p>El álgebra de Boole son las matemáticas de los sistemas digitales. Es indispensable tener unos conocimientos básicos del álgebra booleana para estudiar y analizar los circuitos lógicos. Se han presentado las operaciones y expresiones booleanas para las puertas NOT, AND, OR, NAND y NOR.</p>
+<p><img alt="img" src="../assets/Clase1_S5_13.png" /></p>
+<p>Los términos  <em>variable</em> ,  <em>complemento</em>  y  <em>literal</em>  son términos utilizados en el álgebra booleana. Una  <em>variable</em>  es un símbolo que se utiliza para representar magnitudes lógicas. Cualquier variable puede tener un valor de 0 o de 1. El  <em>complemento</em>  es el inverso de la variable y se indica mediante una barra encima de la misma. Por ejemplo, el complemento de la variable  <em>A es A’</em> . Si A = 1, entonces A = 0. Si A = 0, entonces A = 1.</p>
+<p><img alt="img" src="../assets/Clase1_S5_14.png" /></p>
+<p>El  <em>complemento</em>  de la variable A se lee “no A” o “A barra”. En ocasiones, se emplea un apóstrofe en lugar de la barra para indicar el complemento de una variable; por ejemplo B’ indica el complemento de B. Un  <em>literal</em>  es una variable o el complemento de una variable.</p>
+<p><img alt="img" src="../assets/Clase1_S5_15.png" /></p>
+<h2 id="suma-booleana">Suma booleana</h2>
+<p>La suma booleana es equivalente a la operación OR y a continuación se muestran sus reglas básicas junto con su relación con la puerta OR:</p>
+<p><img alt="img" src="../assets/Clase1_S5_16.png" /></p>
+<p>En el álgebra de Boole, un  <em>término suma</em>  es una suma de literales. En los circuitos lógicos, un término suma se obtiene mediante una operación OR, sin que exista ninguna operación AND en la expresión.</p>
+<p><img alt="img" src="../assets/Clase1_S5_17.png" /></p>
+<p><em>Un término suma es igual a 1 cuando uno o más de los literales del término es 1. Un término suma es igual a 0 sólo si cada uno de los literales son iguales a 0.</em></p>
+<p><img alt="img" src="../assets/Clase1_S5_18.png" /></p>
+<h1 id="multiplicacion-booleana">Multiplicación booleana</h1>
+<p>La multiplicación booleana es equivalente a la operación AND y sus reglas básicas junto con sus relaciones con la puerta AND se ilustran a continuación:</p>
+<p><img alt="img" src="../assets/Clase1_S5_19.png" /></p>
+<p>En el álgebra de Boole, un  <em>término producto</em>  es un producto de literales. En los circuitos lógicos, un término suma se obtiene mediante una operación AND, sin que existe ninguna operación OR en la expresión.</p>
+<p><img alt="img" src="../assets/Clase1_S5_20.png" /></p>
+<p><em>Un _  _término producto</em>  _ es igual a 1 sólo si cada uno de los literales del término es 1. Un término producto es igual a 0 cuando uno o más de los literales son iguales a 0_ .</p>
+<p><img alt="img" src="../assets/Clase1_S5_21.png" /></p>
+<h1 id="precedencia-de-operadores">Precedencia de operadores</h1>
+<p>La expresión A · B + C puede interpretarse de dos maneras:</p>
+<p>(1) Se aplica un OR entre A · B y el término C; o</p>
+<p>(2) Se aplica un AND entre A y el término B + C.</p>
+<p><img alt="img" src="../assets/Clase1_S5_22.png" /></p>
+<p>Para evitar esta confusión debe quedar claro que si una expresión contiene las operaciones AND y OR,  <strong>la operación AND se realiza primero</strong> ,  <em>a menos que haya paréntesis</em>  en la expresión, en cuyo caso la operación encerrada entre paréntesis es la que se debe realizar primero. Esta regla es la misma que se utiliza en el álgebra ordinaria para determinar el orden de las operaciones.</p>
+<p><img alt="img" src="../assets/Clase1_S5_23.png" /></p>
+<p>La expresión para la salida de la compuerta OR es A + B. Esta salida sirve como entrada para la compuerta AND junto con otra entrada C. Por ende, expresamos la salida de la compuerta AND como  <em>x = (A + B) · C</em> .</p>
+<p><img alt="img" src="../assets/Clase1_S5_24.png" /></p>
+<p>El uso de los paréntesis aquí para indicar que primero se aplica la operación OR entre A y B, antes de que a su suma OR se le aplique un AND con C. Sin los paréntesis se interpretaría de manera incorrecta, ya que A + B · C significa que a la entrada A se le aplica un OR con el producto  <em>B · C</em> .</p>
+<p><img alt="img" src="../assets/Clase1_S5_25.png" /></p>
+<h1 id="circuitos-que-contienen-inversores">Circuitos que contienen INVERSORES</h1>
+<p>Siempre que haya un INVERSOR presente en el diagrama de un circuito lógico, la expresión de su salida es en sí igual a la expresión de la entrada con una barra sobre ella.</p>
+<p><img alt="img" src="../assets/Clase1_S5_26.png" /></p>
+<p>Se muestra dos ejemplos que utilizan INVERSORES. La entrada A se alimenta a través de un INVERSOR, cuya salida es, por lo tanto, A. La salida del INVERSOR se alimenta a una compuerta OR junto con B, de manera que la salida OR es igual a A + B. Observe que la barra solo está sobre A, lo cual indica que A primero se invierte y después se alimenta a la compuerta OR junto con B.</p>
+<p><img alt="img" src="../assets/Clase1_S5_27.png" /></p>
+<p>La salida de la compuerta OR es igual a A + B y se alimenta a través de un INVERSOR. Por lo tanto, la salida del INVERSOR es igual a (A + B)’, ya que invierte toda la expresión de entrada. Observe que la barra cubre toda la expresión (A + B). Esto es importante, las expresiones (A + B)’ y (A’ + B’)  <em>no son equivalentes</em> .</p>
+<p><img alt="img" src="../assets/Clase1_S5_28.png" /></p>
+<p>La expresión (A + B)’ indica que primero se aplica un OR entre A y B, y después su suma OR se invierte, mientras que la expresión (A’ + B’) indica que primero se invierten A y B, y después se aplica un OR a los resultados de las dos inversiones.</p>
+<p><img alt="img" src="../assets/Clase1_S5_29.png" /></p>
+<p>Note el uso de dos conjuntos separados de paréntesis en la figura. Observe además en la figura que la variable de entrada A está conectada como entrada para dos compuertas distintas.</p>
+<p><img alt="img" src="../assets/Clase1_S5_30.png" /></p>
+<h1 id="analisis-mediante-el-uso-de-una-tabla">Análisis mediante el uso de una tabla</h1>
+<p><img alt="img" src="../assets/Clase1_S5_31.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_32.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_33.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_34.png" /></p>
+<h1 id="teoremas-booleanos">Teoremas Booleanos</h1>
+<p><img alt="img" src="../assets/Clase1_S5_35.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_36.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_37.png" /></p>
+<p>Los teoremas (9) y (10) se conocen como  <em>leyes conmutativas</em> , ya que indican que el orden en el que se aplican las operaciones OR y AND a dos variables no importa; el resultado es el mismo.</p>
+<p><img alt="img" src="../assets/Clase1_S5_38.png" /></p>
+<p>Los teoremas (11) y (12) son las  <em>leyes asociativas</em> , las cuales establecen que podemos agrupar las variables en una expresión AND o en una expresión OR de cualquier forma que necesitemos.</p>
+<p><img alt="img" src="../assets/Clase1_S5_39.png" /></p>
+<p>El teorema (13) es la  <em>ley distributiva</em> , la cual establece que para expandir una expresión se multiplica término por término, de igual forma que en el álgebra ordinaria.</p>
+<p><img alt="img" src="../assets/Clase1_S5_40.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_41.png" /></p>
+<h1 id="identidades-del-algebra-de-boole">Identidades del álgebra de Boole</h1>
+<p><img alt="img" src="../assets/Clase1_S5_42.png" /></p>
+<h1 id="leyes-del-algebra-de-boole">Leyes del álgebra de Boole</h1>
+<p>La  <em>ley conmutativa</em>  de la  <strong>suma</strong>  para dos variables se escribe como sigue:</p>
+<p><img alt="img" src="../assets/Clase1_S5_43.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_44.png" /></p>
+<p>La  <em>ley conmutativa de la multiplicación</em>  para dos variables es</p>
+<p><img alt="img" src="../assets/Clase1_S5_45.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_46.png" /></p>
+<p>La  <em>ley asociativa de la suma</em>  para tres variables se escribe como sigue:</p>
+<p><img alt="img" src="../assets/Clase1_S5_47.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_48.png" /></p>
+<p>La  <em>ley asociativa de la multiplicación</em>  para tres variables se escribe del siguiente modo:</p>
+<p><img alt="img" src="../assets/Clase1_S5_49.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_50.png" /></p>
+<p>La  <em>ley distributiva para tres variables</em>  se escribe como sigue:</p>
+<p><img alt="img" src="../assets/Clase1_S5_51.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_52.png" /></p>
+<h1 id="teorema-de-morgan">Teorema de Morgan</h1>
+<p>Los  <strong>teoremas de DeMorgan</strong>  proporcionan una verificación matemática de la equivalencia entre las puertas  <em>NAND</em>  y  <em>negativa-OR, y las puertas NOR y negativa-AND.</em></p>
+<p><img alt="img" src="../assets/Clase1_S5_53.png" /></p>
+<p>El primer teorema de DeMorgan se enuncia de la siguiente forma:</p>
+<p><em>El complemento de un producto de variables es igual a la suma de los complementos de las variables.</em></p>
+<p><img alt="img" src="../assets/Clase1_S5_54.png" /></p>
+<p>O dicho de otra manera</p>
+<p><em>El complemento de dos o más variables a las que se aplica la operación AND es equivalente a aplicar la operación OR a los complementos de cada variable.</em></p>
+<p><img alt="img" src="../assets/Clase1_S5_55.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_56.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_57.png" /></p>
+<p>El segundo teorema de DeMorgan se enuncia como sigue:</p>
+<p><em>El complemento de una suma de variables es igual al producto de los complementos de las variables.</em></p>
+<p><img alt="img" src="../assets/Clase1_S5_58.png" /></p>
+<p>O dicho de otra manera,</p>
+<p><em>El complemento de dos o más variables a las que se aplica la operación OR es equivalente a aplicar la operación AND a los complementos de cada variable.</em></p>
+<p><img alt="img" src="../assets/Clase1_S5_59.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_60.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S5_61.png" /></p>
+<h1 id="teoremas-booleanos_1">Teoremas Booleanos</h1>
+<p><img alt="img" src="../assets/Clase1_S5_62.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../06_compuertas_combinadas/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Compuertas Combinadas NOR Y NAND">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Compuertas Combinadas NOR Y NAND
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../08_aplicacion_algebra_booleana/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Aplicando Álgebra Booleana">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Aplicando Álgebra Booleana
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": 1.0}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-lib@0.11.6/dist/browser/index.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-view@0.2.6/dist/index.min.js"></script>
+      
+    
+  </body>
+</html>

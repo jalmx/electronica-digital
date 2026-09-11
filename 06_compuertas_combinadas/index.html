@@ -1,0 +1,1195 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../05_compuertas_logicas/">
+      
+      
+        <link rel="next" href="../07_logica_combinacional/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Compuertas Combinadas NOR Y NAND - Electrónica Digital</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#compuertas-combinadas-nor-y-nand" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-header__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Electrónica Digital
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Compuertas Combinadas NOR Y NAND
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-nav__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Electrónica Digital
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion a la electronica digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_bases%20numericas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistemas Numéricos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_suma_binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operaciones Binarias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_dise%C3%B1o_digital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño Digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_compuertas_logicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas logicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Compuertas Combinadas NOR Y NAND
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas Combinadas NOR Y NAND
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compuerta-nor-no-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compuerta NOR (NO-O)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compuerta NOR (NO-O)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-compuerta-nor-no-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicación: Compuerta NOR (NO-O)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compuerta-nand-no-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compuerta NAND (NO-Y)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compuerta-or-exclusiva-xor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compuerta OR EXCLUSIVA (XOR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compuerta OR EXCLUSIVA (XOR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-compuerta-or-exclusiva-xor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicación: Compuerta OR EXCLUSIVA (XOR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compuerta-nor-exclusiva-xnor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compuerta NOR EXCLUSIVA (XNOR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compuerta NOR EXCLUSIVA (XNOR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-compuerta-nor-exclusiva-xnor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicacion: Compuerta NOR EXCLUSIVA (XNOR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compuerta-nand-como-compuerta-universal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compuerta NAND como compuerta universal
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_logica_combinacional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lógica combinacional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_aplicacion_algebra_booleana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicando Álgebra Booleana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_aplicacion_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicación: Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografía
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suma%20binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Suma binaria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Practicas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Practicas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compuerta-nor-no-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compuerta NOR (NO-O)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compuerta NOR (NO-O)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-compuerta-nor-no-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicación: Compuerta NOR (NO-O)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compuerta-nand-no-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compuerta NAND (NO-Y)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compuerta-or-exclusiva-xor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compuerta OR EXCLUSIVA (XOR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compuerta OR EXCLUSIVA (XOR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-compuerta-or-exclusiva-xor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicación: Compuerta OR EXCLUSIVA (XOR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compuerta-nor-exclusiva-xnor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compuerta NOR EXCLUSIVA (XNOR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compuerta NOR EXCLUSIVA (XNOR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-compuerta-nor-exclusiva-xnor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicacion: Compuerta NOR EXCLUSIVA (XNOR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compuerta-nand-como-compuerta-universal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compuerta NAND como compuerta universal
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="compuertas-combinadas-nor-y-nand">Compuertas Combinadas NOR Y NAND</h1>
+<p>En los circuitos digitales se utilizan mucho otros dos tipos de compuertas lógicas: <em>NOR y NAND</em> .  <em>Estas compuertas combinan las operaciones básicas AND, OR y NOT</em> , por lo que es muy sencillo escribir sus expresiones booleanas.</p>
+<p><img alt="img" src="../assets/Clase1_S3_45.png" /></p>
+<h2 id="compuerta-nor-no-o">Compuerta NOR (NO-O)</h2>
+<p>Se muestra el símbolo para una compuerta NOR de dos entradas. Es igual que el símbolo de la compuerta OR, slo que tiene un pequeño círculo en la salida. El pequeño círculo representa la operación de inversión.</p>
+<p><img alt="img" src="../assets/Clase1_S3_46.png" /></p>
+<p>Por ello, la compuerta NOR opera de manera similar a una compuerta OR seguida de un INVERSOR, de manera que los circuitos son equivalentes, y la expresión de salida para la compuerta NOR es</p>
+<p><img alt="img" src="../assets/Clase1_S3_47.png" /></p>
+<p>La tabla de verdad muestra que la salida de la compuerta NOR es el inverso exacto de la salida de la compuerta OR para todas las posibles condiciones de entrada. La salida de una compuerta OR cambia a ALTO cuando cualquiera de sus entradas se encuentra en ALTO; la salida de la compuerta NOR cambia a BAJO cuando cualquiera de sus entradas se encuentra en ALTO. Esta misma operación puede aplicarse a las compuertas NOR con más de dos entradas.</p>
+<p><img alt="img" src="../assets/Clase1_S3_48.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_49.png" /></p>
+<p>El símbolo describe la operación de la compuerta. Puesto que las entradas no tienen círculo de inversión, pero la salida si, la lectura del símbolo es " <em>entra 1 OR 1, sale 0</em> ". Lo anterior está descrito por las tres últimas líneas de la tabla de verdad</p>
+<p><em>La puerta NOR</em>  genera una salida a nivel BAJO cuando cualquiera de sus entradas está a nivel ALTO. Solo cuando todas sus entradas estén a nivel BAJO, la salida se pondrá a nivel ALTO.</p>
+<p><img alt="img" src="../assets/Clase1_S3_50.png" /></p>
+<p>Para el caso concreto de la puerta NOR de dos entradas, con la designación A y B para las entradas y X para la salida.</p>
+<p><img alt="img" src="../assets/Clase1_S3_51.png" /></p>
+<blockquote>
+<p>En una puerta NOR de dos entradas: la salida X es un nivel BAJO si cualquiera de sus entradas A o B está a nivel ALTO, o si ambas entradas A y B están a nivel ALTO; X es un nivel ALTO si A y B están a nivel BAJO.</p>
+</blockquote>
+<p><img alt="img" src="../assets/Clase1_S3_52.png" /></p>
+<p>Esta operación genera un nivel de salida opuesto al que genera la puerta OR. En una puerta NOR, el nivel BAJO es el nivel activo o verdadero de salida, como indica el círculo de la salida.</p>
+<p><img alt="img" src="../assets/Clase1_S3_53.png" /></p>
+<p>Se ilustra el funcionamiento de una puerta NOR de dos entradas, para las cuatro posibles combinaciones de entrada.</p>
+<p><img alt="img" src="../assets/Clase1_S3_54.png" /></p>
+<p>Esta operación genera un nivel de salida opuesto al que genera la puerta OR. En una puerta NOR, el nivel BAJO es el nivel activo o verdadero de salida, como indica el círculo de la salida.</p>
+<p><img alt="img" src="../assets/Clase1_S3_55.png" /></p>
+<p>La figura ilustra el funcionamiento de una puerta NOR de dos entradas, para las cuatro posibles combinaciones de entrada, y la Tabla es la tabla de verdad para la puerta NOR de dos entradas.</p>
+<p><img alt="img" src="../assets/Clase1_S3_56.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_57.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_58.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_59.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_60.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_61.png" /></p>
+<p>El funcionamiento de la compuerta se puede observar en la siguiente:</p>
+<p><img alt="img" src="../assets/Clase1_S3_62.png" /></p>
+<h3 id="aplicacion-compuerta-nor-no-o">Aplicación: Compuerta NOR (NO-O)</h3>
+<p>Si se aplican a la puerta NOR las dos señales mostradas, ¿cómo es la señal de salida que se obtiene?</p>
+<p>Cuando cualquier entrada de la puerta NOR está a nivel ALTO, la salida es un nivel BAJO, como se ve en la forma de onda de salida X del diagrama de tiempos.</p>
+<p><img alt="img" src="../assets/Clase1_S3_63.png" /></p>
+<h2 id="compuerta-nand-no-y">Compuerta NAND (NO-Y)</h2>
+<p>Se muestra el símbolo para una compuerta NAND de dos entradas. Es el mismo que el de la compuerta AND más un pequeño círculo en la salida.</p>
+<p><img alt="img" src="../assets/Clase1_S3_64.png" /></p>
+<p>Este pequeño círculo denota la operación de inversión. Así, la compuerta NAND opera igual que una compuerta AND seguida de un INVERSOR, de manera que los circuitos son equivalentes y la expresión de salida para la compuerta NAND es x = (AB)’.</p>
+<p><img alt="img" src="../assets/Clase1_S3_65.png" /></p>
+<p>La tabla de verdad se muestra que la salida de la compuerta NAND es el inverso exacto de la compuerta AND para todas las posibles condiciones de entrada.</p>
+<p><img alt="img" src="../assets/Clase1_S3_66.png" /></p>
+<p><em>La salida AND cambia a nivel ALTO sólo cuando todas las entradas se encuentran en ALTO</em> , mientras que la salida _ NAND cambia a BAJO sólo cuando todas las entradas se encuentran en ALTO_ . Esta misma característica puede aplicarse a las compuertas NAND que tienen más de dos entradas.</p>
+<p><img alt="img" src="../assets/Clase1_S3_67.png" /></p>
+<p>El término  <em>NAND</em>  es una contracción de  <em>NOT−AND</em> , e implica una función AND con la salida complementada (negada).</p>
+<p><img alt="img" src="../assets/Clase1_S3_68.png" /></p>
+<p>Se muestra el símbolo lógico estándar para la puerta NAND de 2 entradas y su equivalente empleando los símbolos de la puerta AND seguida de un inversor, donde el símbolo  <strong>≡</strong>  significa “ <em>equivalente a</em> ”.</p>
+<p><img alt="img" src="../assets/Clase1_S3_69.png" /></p>
+<p>La  <em>puerta NAND</em>  genera una salida a nivel BAJO solo cuando todas las entradas están a nivel ALTO. Cuando cualquiera de las entradas está a nivel BAJO, la salida se pondrá a nivel ALTO. Para el caso concreto de la puerta NAND de dos entradas, con la designación A y B para las entradas y X para la salida.</p>
+<p><img alt="img" src="../assets/Clase1_S3_70.png" /></p>
+<blockquote>
+<p>En una puerta NAND de dos entradas, la salida X es un nivel BAJO si las entradas A y B están a nivel ALTO; X es un nivel ALTO si A o B están a nivel BAJO o si ambas, A y B, están a nivel BAJO.</p>
+</blockquote>
+<p><img alt="img" src="../assets/Clase1_S3_71.png" /></p>
+<p>Observe que esta operación, en términos de nivel de salida, es la opuesta a la operación lógica AND. En una puerta NAND, el nivel BAJO (0) es el nivel activo o verdadero de salida, como indica el círculo de la salida. Se ilustra la operación lógica de una puerta NAND de dos entradas, para las cuatro posibles combinaciones.</p>
+<p><img alt="img" src="../assets/Clase1_S3_72.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_73.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_74.png" /></p>
+<p>Determine la forma de onda de salida de una compuerta NAND que tiene las entradas que se muestran</p>
+<p><img alt="img" src="../assets/Clase1_S3_75.png" /></p>
+<h2 id="compuerta-or-exclusiva-xor">Compuerta OR EXCLUSIVA (XOR)</h2>
+<p>Se muestran los símbolos estándar para la puerta OR−exclusiva (XOR). La puerta XOR tiene solo dos entradas. La salida de una puerta OR−exclusiva se pone a nivel ALTO solo cuando las dos entradas están a niveles lógicos opuestos. Esta operación se puede expresar, en función de dos entradas A y B y una salida X.</p>
+<p><img alt="img" src="../assets/Clase1_S3_76.png" /></p>
+<p><em>En una puerta OR−exclusiva, la salida X es un nivel ALTO si la entrada A está a nivel BAJO y la entrada B está a nivel ALTO; o si la entrada A está a nivel ALTO y la entrada B está a nivel BAJO; X es un nivel BAJO si tanto A como B están a nivel ALTO o BAJO.</em></p>
+<p><img alt="img" src="../assets/Clase1_S3_77.png" /></p>
+<p>Se ilustran las cuatro posibles combinaciones de entrada y las salidas resultantes para la puerta XOR. El nivel ALTO es el nivel activo o verdadero de salida y solo se produce cuando las entradas están a niveles opuestos.</p>
+<p><img alt="img" src="../assets/Clase1_S3_78.png" /></p>
+<p>La operación lógica de la puerta XOR se resume en la tabla de verdad mostrada en la Tabla.</p>
+<p><img alt="img" src="../assets/Clase1_S3_79.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_80.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_81.png" /></p>
+<p>Considere el circuito lógico. La expresión de salida de este circuito es:</p>
+<p><img alt="img" src="../assets/Clase1_S3_82.png" /></p>
+<p>La ecuación que representa una XOR es:</p>
+<p>mejor conocida como:</p>
+<p><img alt="img" src="../assets/Clase1_S3_83.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_84.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_85.png" /></p>
+<p>La tabla de verdad que acompaña a este circuito muestra que x = 1 para dos casos: A = 0, B = 1 (el término A’B) y A = 1, B = 0 (el término AB’). En otras palabras:</p>
+<p><em>Este circuito produce una salida en ALTO siempre que las dos entradas se encuentran en los niveles opuestos.</em></p>
+<p><img alt="img" src="../assets/Clase1_S3_86.png" /></p>
+<p>Este es el circuito  <em>OR exclusivo</em> , que de aquí en adelante se escribe como  <em>XOR.</em></p>
+<p><img alt="img" src="../assets/Clase1_S3_87.png" /></p>
+<p>Esta combinación específica de compuertas lógicas se produce con mucha frecuencia y es muy útil en ciertas aplicaciones. De hecho, al circuito XOR se le ha otorgado su propio símbolo, el cual se muestra.</p>
+<p><img alt="img" src="../assets/Clase1_S3_88.png" /></p>
+<p>Se asume que este símbolo contiene toda la lógica dentro del circuito  <em>XOR</em>  y, por lo tanto, tiene la misma expresión lógica y la misma tabla de verdad. Por lo general, al  <em>circuito XOR</em>   <em>se le conoce como _  _compuerta XOR</em> , y lo consideramos como otro tipo de compuerta lógica.</p>
+<p><img alt="img" src="../assets/Clase1_S3_89.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_90.png" /></p>
+<p>En la figura se muestra el símbolo IEEE/ANSI para una compuerta  <em>XOR</em> . El símbolo de notación de dependencia (= 1) dentro del bloque indica que la salida será activa en ALTO sólo cuando una de las entradas esté en ALTO.</p>
+<p><img alt="img" src="../assets/Clase1_S3_91.png" /></p>
+<p>Una compuerta XOR sólo tiene  <em>dos</em>  entradas;  <em>no hay compuertas XOR de tres ni de cuatro entradas</em> . Las dos entradas se combinan de manera que x = A’B + AB’.</p>
+<p>Una forma abreviada que se utiliza algunas veces para indicar la expresión de salida XOR es:</p>
+<p><img alt="img" src="../assets/Clase1_S3_92.png" /></p>
+<p>en donde el  <strong>símbolo ⊕</strong>  representa la operación de la c <em>ompuerta XOR</em></p>
+<p><img alt="img" src="../assets/Clase1_S3_93.png" /></p>
+<p>Se sintetizan las características de una  <em>compuerta XOR</em> :</p>
+<ol>
+<li>
+<p>Sólo tiene dos entradas y su salida es</p>
+</li>
+<li>
+<p>Su salida está en  <em>ALTO</em>  solo cuando las dos entradas se encuentran en niveles  <em>distintos</em> .</p>
+</li>
+</ol>
+<p><img alt="img" src="../assets/Clase1_S3_94.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_95.png" /></p>
+<p>El funcionamiento de la compuerta se puede observar en la siguiente figura:</p>
+<p><img alt="img" src="../assets/Clase1_S3_96.png" /></p>
+<p>En la gráfica se puede apreciar que en la primera y última figura hay en las entradas número par de unos lógicos, por consiguiente a la salida se apaga el LED indicando un cero lógico. En el resto de las figuras la salida es uno lógico, lo cual describe la tabla de verdad de esta operación lógica.</p>
+<p><img alt="img" src="../assets/Clase1_S3_97.png" /></p>
+<p>La referencia de la compuerta XOR de dos entradas es el número 74LS86, el cual tiene la siguiente estructura interna.</p>
+<p><img alt="img" src="../assets/Clase1_S3_98.png" /></p>
+<h3 id="aplicacion-compuerta-or-exclusiva-xor">Aplicación: Compuerta OR EXCLUSIVA (XOR)</h3>
+<p>Un cierto sistema está formado por dos circuitos idénticos que funcionan en paralelo. Mientras que ambos funcionan correctamente, las salidas de los dos circuitos son iguales. Si uno de los circuitos falla, las salidas serán niveles opuestos en ese instante. Establecer un método para detectar que se ha producido un fallo en uno de los circuitos.</p>
+<p><img alt="img" src="../assets/Clase1_S3_99.png" /></p>
+<p><strong>Solucion</strong> : Las salidas de los circuitos se conectan a las entradas de una puerta XOR, como muestra. Un fallo en cualquiera de los circuitos hace que las entradas de la puerta XOR tengan niveles opuestos. Esta condición da lugar a nivel ALTO en la salida de la puerta XOR, que indica que uno de los circuitos ha fallado.</p>
+<p><img alt="img" src="../assets/Clase1_S3_100.png" /></p>
+<h2 id="compuerta-nor-exclusiva-xnor">Compuerta NOR EXCLUSIVA (XNOR)</h2>
+<p>El  <em>NOR exclusivo</em> , también conocido en ocasiones como  <em>OR no exclusivo</em> , tiene la tabla de verdad y el símbolo que se muestran.  <em>La salida, Y, tiene el nivel ALTO cuando las entradas son iguales, y BAJO si son distintas</em> .</p>
+<p><img alt="img" src="../assets/Clase1_S3_101.png" /></p>
+<p>El circuito NOR exclusivo (que se abrevia como  <em>XNOR</em> ) opera en forma completamente opuesta al circuito XOR. Se muestra un circuito XNOR y su tabla de verdad correspondiente.</p>
+<p><img alt="img" src="../assets/Clase1_S3_102.png" /></p>
+<p>La expresión de salida es</p>
+<p>_lo cual indica junto con la tabla de verdad que x será 1 para dos casos: A = B = 1 (el término AB) y A = B = 0 (el término A’ B’). _</p>
+<p><img alt="img" src="../assets/Clase1_S3_103.png" /></p>
+<p><em>El circuito XNOR produce una salida en ALTO siempre que las dos entradas se encuentran en el mismo nivel.</em></p>
+<p><img alt="img" src="../assets/Clase1_S3_104.png" /></p>
+<p>De todo esto podemos deducir que la salida del circuito XNOR es el inverso exacto de la salida del circuito XOR. El símbolo tradicional para una compuerta XNOR se obtiene con sólo agregar un pequeño círculo en la salida del símbolo XOR.</p>
+<p><img alt="img" src="../assets/Clase1_S3_105.png" /></p>
+<p>El símbolo IEEE/ANSI agrega el pequeño triángulo en la salida del símbolo XOR. Ambos símbolos indican una salida que cambia a su estado de activo en BAJO cuando sólo una de las entradas está en ALTO.</p>
+<p><img alt="img" src="../assets/Clase1_S3_106.png" /></p>
+<p>La compuerta XNOR también tiene sólo dos entradas, y las combina de manera que su salida sea</p>
+<p>Una forma abreviada de indicar la expresión de salida de la compuerta XNOR es</p>
+<p><img alt="img" src="../assets/Clase1_S3_107.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_108.png" /></p>
+<p>la cual es el inverso de la operación XOR. La compuerta XNOR se puede sintetizar de la siguiente manera:</p>
+<ol>
+<li>
+<p>Sólo tiene dos entradas y su salida es:</p>
+</li>
+<li>
+<p>Su salida está en ALTO sólo cando las dos entradas se encuentran en el mismo nivel.</p>
+</li>
+</ol>
+<p><img alt="img" src="../assets/Clase1_S3_109.png" /></p>
+<p>Se presentan los símbolos estándar de la puerta NOR−exclusiva (XNOR). Al igual que la puerta XOR, la puerta XNOR solo tiene dos entradas. El círculo en la salida del símbolo de la puerta XNOR indica que su salida es la opuesta a la de la puerta XOR.</p>
+<p><img alt="img" src="../assets/Clase1_S3_110.png" /></p>
+<p>Cuando dos niveles lógicos de entrada son opuestos, la salida de la puerta NOR−exclusiva es un nivel BAJO. La operación se puede expresar del siguiente modo (A y B son las entradas, y X es la salida).</p>
+<p><img alt="img" src="../assets/Clase1_S3_111.png" /></p>
+<p>Se muestran las cuatro posibles combinaciones de entrada y las salidas resultantes para la puerta XNOR.</p>
+<p><img alt="img" src="../assets/Clase1_S3_112.png" /></p>
+<p>La operación lógica se resume en la Tabla de verdad. Observe que la salida es un nivel ALTO cuando las dos entradas están al mismo nivel.</p>
+<p><img alt="img" src="../assets/Clase1_S3_113.png" /></p>
+<h3 id="aplicacion-compuerta-nor-exclusiva-xnor">Aplicacion: Compuerta NOR EXCLUSIVA (XNOR)</h3>
+<p><img alt="img" src="../assets/Clase1_S3_114.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_115.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_116.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_117.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_118.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_119.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_120.png" /></p>
+<h2 id="compuerta-nand-como-compuerta-universal">Compuerta NAND como compuerta universal</h2>
+<p><img alt="img" src="../assets/Clase1_S3_121.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S3_122.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../05_compuertas_logicas/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Compuertas logicas">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Compuertas logicas
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../07_logica_combinacional/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Lógica combinacional">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Lógica combinacional
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": 1.0}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-lib@0.11.6/dist/browser/index.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-view@0.2.6/dist/index.min.js"></script>
+      
+    
+  </body>
+</html>

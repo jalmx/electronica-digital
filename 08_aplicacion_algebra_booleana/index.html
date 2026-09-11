@@ -1,0 +1,1011 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../07_logica_combinacional/">
+      
+      
+        <link rel="next" href="../09_mapa_karnaugh/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Aplicando Álgebra Booleana - Electrónica Digital</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aplicando-algebra-booleana" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-header__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Electrónica Digital
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aplicando Álgebra Booleana
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-nav__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Electrónica Digital
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion a la electronica digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_bases%20numericas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistemas Numéricos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_suma_binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operaciones Binarias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_dise%C3%B1o_digital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño Digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_compuertas_logicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas logicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_compuertas_combinadas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas Combinadas NOR Y NAND
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_logica_combinacional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lógica combinacional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Aplicando Álgebra Booleana
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_aplicacion_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicación: Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografía
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suma%20binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Suma binaria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Practicas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Practicas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practicas/Practica%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="aplicando-algebra-booleana">Aplicando Álgebra Booleana</h1>
+<p>Simplifique la expresión, comprobar tabla de verdad y crear su circuito digital</p>
+<p><img alt="img" src="../assets/Clase1_S6_1.png" /></p>
+<p>Simplificando la expresión, la ecuación es:</p>
+<p>Factorizamos las variables comunes  <em>AB</em> ’</p>
+<p>Nos queda para reducir la D con su complemento D’, y aplicamos la fórmula:</p>
+<p>Nos da como resultado:</p>
+<p><img alt="img" src="../assets/Clase1_S6_2.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_3.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_4.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_5.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_6.png" /></p>
+<p>Crear el circuito de la ecuación reducida:</p>
+<p><img alt="img" src="../assets/Clase1_S6_7.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_8.png" /></p>
+<p>Simplifique la expresión, comprobar tabla de verdad y crear su circuito digital</p>
+<p><img alt="img" src="../assets/Clase1_S6_9.png" /></p>
+<p>Simplificando la expresión, la ecuación es:</p>
+<p>Realizamos la multiplicación:</p>
+<p>Ahora podemos aplicar los teoremas siguientes:</p>
+<p>Sustituimos en la ecuación:</p>
+<p><img alt="img" src="../assets/Clase1_S6_10.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_11.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_12.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_13.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_14.png" /></p>
+<p>Reducimos y nos queda:</p>
+<p>Factorizamos a B</p>
+<p>Nos da como resultado:</p>
+<p><img alt="img" src="../assets/Clase1_S6_15.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_16.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_17.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_18.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_19.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_20.png" /></p>
+<p>Simplifique la expresión, comprobar tabla de verdad y crear su circuito digital:</p>
+<p><img alt="img" src="../assets/Clase1_S6_21.png" /></p>
+<p>Simplificando la expresión, la ecuación es:</p>
+<p>Si factorizamos las variables comunes CD, tenemos que</p>
+<p>Utilizando el  <em>teorema</em>  podemos sustituir</p>
+<p><img alt="img" src="../assets/Clase1_S6_22.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_23.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_24.png" /></p>
+<p>Quedándonos:</p>
+<p>Volvemos a multiplicar todo, para el resultado final</p>
+<p><img alt="img" src="../assets/Clase1_S6_25.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_26.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_27.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_28.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_29.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_30.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_31.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_32.png" /></p>
+<h1 id="aplicando-algebra-booleana_1">APLICANDO ÁLGEBRA BOOLEANA</h1>
+<h1 id="aplicando-algebra-booleana_2">Aplicando Álgebra Booleana</h1>
+<p>Con base al circuito, generar la ecuación, reducirla y obtener tabla de verdad</p>
+<p><img alt="img" src="../assets/Clase1_S6_33.png" /></p>
+<p>Vamos asignando los valores por cada compuerta y su salida</p>
+<p>Nos da como resultado:</p>
+<p><img alt="img" src="../assets/Clase1_S6_34.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_35.png" /></p>
+<p>Nos da como resultado:</p>
+<p>La tabla de verdad:</p>
+<p><img alt="img" src="../assets/Clase1_S6_36.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_37.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_38.png" /></p>
+<p>Con base al circuito, generar la ecuación, reducirla y obtener tabla de verdad</p>
+<p><img alt="img" src="../assets/Clase1_S6_39.png" /></p>
+<p>Vamos asignando los valores por cada compuerta y su salida</p>
+<p>Nos da como resultado:</p>
+<p><img alt="img" src="../assets/Clase1_S6_40.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_41.png" /></p>
+<p>La función obtenida fue:</p>
+<p>Para simplificar, aplicaremos Teorema de Morgan en las negaciones</p>
+<p>Con esto aplicamos para que la suma se convierta en multiplicación:</p>
+<p><img alt="img" src="../assets/Clase1_S6_42.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_43.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_44.png" /></p>
+<p>Ahora, aplicamos el teorema para</p>
+<p>Con esto la ecuación nos queda:</p>
+<p>Volvemos a aplicar teorema de Morgan:</p>
+<p><img alt="img" src="../assets/Clase1_S6_45.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_46.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_47.png" /></p>
+<p>Aplicamos el teorema</p>
+<p>Con esto la ecuación se reduce</p>
+<p>Multiplicamos los factores:</p>
+<p>Aplicamos el teorema</p>
+<p><img alt="img" src="../assets/Clase1_S6_48.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_49.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_50.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_51.png" /></p>
+<p>Para llegar al resultado final:</p>
+<p><img alt="img" src="../assets/Clase1_S6_52.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_53.png" /></p>
+<p>Creamos la tabla de verdad y comprobamos (sin reducción)</p>
+<p><img alt="img" src="../assets/Clase1_S6_54.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_55.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_56.png" /></p>
+<p>Creamos la tabla de verdad y comprobamos</p>
+<p><img alt="img" src="../assets/Clase1_S6_57.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_58.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_59.png" /></p>
+<p>Con base al circuito, generar la ecuación, reducirla y obtener tabla de verdad</p>
+<p><img alt="img" src="../assets/Clase1_S6_60.png" /></p>
+<p>Vamos asignando los valores por cada compuerta y su salida</p>
+<p><img alt="img" src="../assets/Clase1_S6_61.png" /></p>
+<p>Nos dá como resultado:</p>
+<p><img alt="img" src="../assets/Clase1_S6_62.png" /></p>
+<p>La función resultante fue:</p>
+<p>Aplicamos el teorema de Morgan:</p>
+<p>Cancelamos los inversos en A y C</p>
+<p>Multiplicamos los factores:</p>
+<p><img alt="img" src="../assets/Clase1_S6_63.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_64.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_65.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_66.png" /></p>
+<p>Reduzimos A.A = A</p>
+<p>Fatorizamos AC</p>
+<p>Reduzimos las B complementarias:</p>
+<p>Nos queda:</p>
+<p><img alt="img" src="../assets/Clase1_S6_67.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_68.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_69.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_70.png" /></p>
+<p>Aún podemos factorizar para que nos quede:</p>
+<p><img alt="img" src="../assets/Clase1_S6_71.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_72.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_73.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_74.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_75.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_76.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_77.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_78.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_79.png" /></p>
+<p>Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital</p>
+<p><img alt="img" src="../assets/Clase1_S6_80.png" /></p>
+<p>Primero se debe obtener los valores de las salidas que sean 1:</p>
+<p>Una vez tenemos las salidas en 1, se genera la ecuación sumando cada producto:</p>
+<p><img alt="img" src="../assets/Clase1_S6_81.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_82.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_83.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_84.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_85.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_86.png" /></p>
+<p>Ahora debemos reducir la ecuación, para esto vamos a aplicar el teorema  <em>x + x = x</em> , con  <em>ABC</em> ; duplicamos para reducir más fácil la ecuación:</p>
+<p>Factorizamos los términos:</p>
+<p>Hacemos las reducciones necesarias y llegamos a la resultante</p>
+<p><img alt="img" src="../assets/Clase1_S6_87.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_88.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_89.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_90.png" /></p>
+<p>Armamos el circuito resultante</p>
+<p><img alt="img" src="../assets/Clase1_S6_91.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_92.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_93.png" /></p>
+<p>La tabla de verdad resultante:</p>
+<p><img alt="img" src="../assets/Clase1_S6_94.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_95.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_96.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_97.png" /></p>
+<p>Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital</p>
+<p><img alt="img" src="../assets/Clase1_S6_98.png" /></p>
+<p>Primero se debe obtener los valores de las salidas que sean 1:</p>
+<p>La ecuación generada es:</p>
+<p>( ~A B C D) + (A ~B ~C ~D ) + (A ~B ~C D ) +</p>
+<p>(A ~B C ~ D) + (A ~B C D) + (A B ~C ~D) + (A B ~C D )</p>
+<p>( A B C ~D) + (A B C D)</p>
+<p><img alt="img" src="../assets/Clase1_S6_99.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_100.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_101.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_102.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_103.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_104.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_105.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_106.png" /></p>
+<p>La función obtenida es:</p>
+<p>Vamos a factorizar los complementos en D:</p>
+<p>La ecuación reducida nos queda:</p>
+<p><img alt="img" src="../assets/Clase1_S6_107.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_108.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_109.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_110.png" /></p>
+<p>Volvemos factorizar los complementos de C:</p>
+<p>La ecuación reducida nos queda:</p>
+<p>Factorizamos A:</p>
+<p><img alt="img" src="../assets/Clase1_S6_111.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_112.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_113.png" /></p>
+<p>Aplicamos el complemento en B:</p>
+<p>Aún podemos reducir más, aplicando el Teorama  <em>x + xy = x + y</em> . En este caso  <em>x = A</em>  y  <em>y = BCD,</em>  nos queda:</p>
+<p><img alt="img" src="../assets/Clase1_S6_114.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_115.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_116.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_117.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_118.png" /></p>
+<p>La tabla de verdad resultante:</p>
+<p><img alt="img" src="../assets/Clase1_S6_119.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_120.png" /></p>
+<p>La tabla de verdad resultante:</p>
+<p><img alt="img" src="../assets/Clase1_S6_121.png" /></p>
+<p><img alt="img" src="../assets/Clase1_S6_122.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../07_logica_combinacional/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Lógica combinacional">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Lógica combinacional
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../09_mapa_karnaugh/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Mapa de Karnaugh">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Mapa de Karnaugh
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": 1.0}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-lib@0.11.6/dist/browser/index.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-view@0.2.6/dist/index.min.js"></script>
+      
+    
+  </body>
+</html>

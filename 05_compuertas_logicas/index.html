@@ -12,7 +12,7 @@
         <link rel="prev" href="../04_dise%C3%B1o_digital/">
       
       
-        <link rel="next" href="../bibliografia/">
+        <link rel="next" href="../06_compuertas_combinadas/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -438,6 +438,106 @@
   
   
     <li class="md-nav__item">
+      <a href="../06_compuertas_combinadas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas Combinadas NOR Y NAND
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_logica_combinacional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lógica combinacional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_aplicacion_algebra_booleana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicando Álgebra Booleana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_aplicacion_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicación: Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../bibliografia/" class="md-nav__link">
         
   
@@ -505,10 +605,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -519,8 +619,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
             <span class="md-nav__icon md-icon"></span>
             Practicas
           </label>
@@ -766,148 +866,148 @@
 <p><img alt="banner" src="../assets/banner_class_85.png" /></p>
 <h1 id="compuertas-logicas">Compuertas logicas</h1>
 <h2 id="constantes-y-variables-booleanas">Constantes y Variables Booleanas</h2>
-<p>El álgebra booleana difiere en gran medida del álgebra ordinaria\, ya que a las constantes y variables booleanas solo se les permite tener dos valores posibles: 0 y 1. Una variable booleana es una cantidad que puede ser <span class="arithmatex">\(en distintas ocasiones\)</span> igual a 0 o a 1.</p>
+<p>El álgebra booleana difiere en gran medida del álgebra ordinaria, ya que a las constantes y variables booleanas solo se les permite tener dos valores posibles: 0 y 1. Una variable booleana es una cantidad que puede ser (en distintas ocasiones) igual a 0 o a 1.</p>
 <p><img alt="img" src="../assets/Clase1_S2_55.png" /></p>
 <p>Las variables booleanas se utilizan a menudo para representar el nivel de voltaje presente en un alambre o en las terminales de entrada/salida de un circuito.</p>
 <p><img alt="img" src="../assets/Clase1_S2_56.png" /></p>
-<p>Por ejemplo\, en cierto sistema digital\, el valor booleano 0 podría asignarse a cualquier voltaje en el intervalo de 0 a 0.8 V\, mientras que el valor booleano 1 podría asignarse a cualquier voltaje entre 2 y 5 V*</p>
+<p>Por ejemplo, en cierto sistema digital, el valor booleano 0 podría asignarse a cualquier voltaje en el intervalo de 0 a 0.8 V, mientras que el valor booleano 1 podría asignarse a cualquier voltaje entre 2 y 5 V*</p>
 <p><img alt="img" src="../assets/Clase1_S2_57.png" /></p>
-<p>Por lo tanto\, el 0 y el 1 booleanos no representan números reales\, sino el estado de una variable de voltaje\, o lo que se conoce como su  <em>nivel lógico</em> . Se dice que un voltaje en un circuito digital está en el nivel 0 lógico o en el nivel 1 lógico\, dependiendo de su valor numérico actual.</p>
+<p>Por lo tanto, el 0 y el 1 booleanos no representan números reales, sino el estado de una variable de voltaje, o lo que se conoce como su  <em>nivel lógico</em> . Se dice que un voltaje en un circuito digital está en el nivel 0 lógico o en el nivel 1 lógico, dependiendo de su valor numérico actual.</p>
 <p><img alt="img" src="../assets/Clase1_S2_58.png" /></p>
 <p>En la lógica digital se utilizan otros términos más como sinónimos de 0 y 1. La tabla muestra algunos de los más comunes. La mayor parte del tiempo utilizaremos las designaciones 0/1 y BAJO/ALTO.</p>
 <p><img alt="img" src="../assets/Clase1_S2_59.png" /></p>
-<p>El álgebra booleana es el medio para expresar la relación entre las entradas y las salidas de un circuito lógico. Las entradas se consideran variables lógicas cuyos niveles lógicos en cualquier momento determinan los niveles de salida. En todo el trabajo que veremos utilizaremos símbolos de letras para representar variables lógicas. Por ejemplo\, la letra A podría representar una cierta entrada o salida de un circuito digital\, y en un determinado momento debemos tener  <em>A = 0</em>  o  <em>A = 1</em> ; alguno de los dos estados.</p>
+<p>El álgebra booleana es el medio para expresar la relación entre las entradas y las salidas de un circuito lógico. Las entradas se consideran variables lógicas cuyos niveles lógicos en cualquier momento determinan los niveles de salida. En todo el trabajo que veremos utilizaremos símbolos de letras para representar variables lógicas. Por ejemplo, la letra A podría representar una cierta entrada o salida de un circuito digital, y en un determinado momento debemos tener  <em>A = 0</em>  o  <em>A = 1</em> ; alguno de los dos estados.</p>
 <p><img alt="img" src="../assets/Clase1_S2_60.png" /></p>
-<p>Como solo dos valores son posibles\, en realidad es muy sencillo trabajar con el álgebra booleana en comparación con el álgebra ordinaria. En el álgebra booleana no hay fracciones\, decimales\, números negativos\, raíces cuadradas\, raíces cúbicas\, logaritmos\, números imaginarios\, etc. De hecho\, en el álgebra booleana solo hay tres operaciones básicas: _ _  <em>OR\, AND y NOT</em>  <em>.</em></p>
+<p>Como solo dos valores son posibles, en realidad es muy sencillo trabajar con el álgebra booleana en comparación con el álgebra ordinaria. En el álgebra booleana no hay fracciones, decimales, números negativos, raíces cuadradas, raíces cúbicas, logaritmos, números imaginarios, etc. De hecho, en el álgebra booleana solo hay tres operaciones básicas: _ _  <em>OR, AND y NOT</em>  <em>.</em></p>
 <p><img alt="img" src="../assets/Clase1_S2_61.png" /></p>
-<p>A estas operaciones básicas se les conoce como  <em>operaciones lógicas</em> . Los circuitos digitales\, llamados compuertas lógicas\, pueden construirse a partir de diodos\, transistores y resistencias conectados de manera que la salida del circuito sea el resultado de una operación lógica básica  _<span class="arithmatex">\(OR\, AND\, NOT_ \)</span> que se lleva a cabo con las entradas. Utilizaremos primero el álgebra booleana para describir y analizar las compuertas lógicas básicas\, y después para analizar y diseñar combinaciones de compuertas lógicas conectadas para formar circuitos lógicos.</p>
+<p>A estas operaciones básicas se les conoce como  <em>operaciones lógicas</em> . Los circuitos digitales, llamados compuertas lógicas, pueden construirse a partir de diodos, transistores y resistencias conectados de manera que la salida del circuito sea el resultado de una operación lógica básica  <em>(OR, AND, NOT</em> ) que se lleva a cabo con las entradas. Utilizaremos primero el álgebra booleana para describir y analizar las compuertas lógicas básicas, y después para analizar y diseñar combinaciones de compuertas lógicas conectadas para formar circuitos lógicos.</p>
 <p><img alt="img" src="../assets/Clase1_S2_62.png" /></p>
 <h2 id="tablas-de-verdad">Tablas de Verdad</h2>
-<p>Una  <em>tabla de verdad</em>  es una herramienta para describir la forma en que la salida de un circuito lógico depende de los niveles lógicos presentes en las entradas del circuito. Se muestra una tabla de verdad para un tipo de circuito lógico de dos entradas. La tabla lista todas las posibles combinaciones de niveles lógicos presentes en las entradas A y B\, junto con el correspondiente nivel en la salida  <em>x</em> .</p>
+<p>Una  <em>tabla de verdad</em>  es una herramienta para describir la forma en que la salida de un circuito lógico depende de los niveles lógicos presentes en las entradas del circuito. Se muestra una tabla de verdad para un tipo de circuito lógico de dos entradas. La tabla lista todas las posibles combinaciones de niveles lógicos presentes en las entradas A y B, junto con el correspondiente nivel en la salida  <em>x</em> .</p>
 <p><img alt="img" src="../assets/Clase1_S2_63.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S2_64.png" /></p>
-<p>La primera entrada en la tabla muestra que cuando  <em>A y B</em>  se encuentran en el nivel 0\, la salida  <em>x</em>  se encuentra en el nivel 1 o\, de manera equivalente\, en el estado 1. La segunda entrada muestra que cuando la entrada B se cambia al estado 1\, de manera que A = 0 y B = 1\, la salida x se vuelve un 0. De manera similar\, la tabla muestra qué ocurre con el estado de salida para cualquier conjunto de condiciones de entrada.</p>
+<p>La primera entrada en la tabla muestra que cuando  <em>A y B</em>  se encuentran en el nivel 0, la salida  <em>x</em>  se encuentra en el nivel 1 o, de manera equivalente, en el estado 1. La segunda entrada muestra que cuando la entrada B se cambia al estado 1, de manera que A = 0 y B = 1, la salida x se vuelve un 0. De manera similar, la tabla muestra qué ocurre con el estado de salida para cualquier conjunto de condiciones de entrada.</p>
 <p><img alt="img" src="../assets/Clase1_S2_65.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S2_66.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S2_67.png" /></p>
-<p>Se muestran ejemplos de tablas de verdad para circuitos lógicos de tres y cuatro entradas. De nuevo\, cada tabla enlista todas las posibles combinaciones de niveles lógicos de las entradas a la izquierda\, con el nivel lógico resultante para la salida  <em>x</em>  a la derecha. Desde luego que los valores reales para  <em>x</em>  dependerán del tipo de circuito lógico.</p>
+<p>Se muestran ejemplos de tablas de verdad para circuitos lógicos de tres y cuatro entradas. De nuevo, cada tabla enlista todas las posibles combinaciones de niveles lógicos de las entradas a la izquierda, con el nivel lógico resultante para la salida  <em>x</em>  a la derecha. Desde luego que los valores reales para  <em>x</em>  dependerán del tipo de circuito lógico.</p>
 <p><img alt="img" src="../assets/Clase1_S2_68.png" /></p>
-<p>Hay 4 combinaciones para la tabla de verdad de dos entradas\, 8 combinaciones para una tabla de verdad de tres entradas y 16 combinaciones para la tabla de verdad de cuatro entradas. El número de combinaciones de entrada será igual a 2N para una tabla de verdad con  <em>N</em>  entradas. También la lista de todas las posibles combinaciones de entrada va de acuerdo con la secuencia de conteo binario\, por lo que es fácil anotar todas las combinaciones sin que falte una.</p>
+<p>Hay 4 combinaciones para la tabla de verdad de dos entradas, 8 combinaciones para una tabla de verdad de tres entradas y 16 combinaciones para la tabla de verdad de cuatro entradas. El número de combinaciones de entrada será igual a 2N para una tabla de verdad con  <em>N</em>  entradas. También la lista de todas las posibles combinaciones de entrada va de acuerdo con la secuencia de conteo binario, por lo que es fácil anotar todas las combinaciones sin que falte una.</p>
 <h2 id="compuerta-or">COMPUERTA OR</h2>
 <h3 id="operacion-or-con-compuertas-or">Operación OR con Compuertas OR</h3>
-<p>La operación OR <span class="arithmatex">\(O\)</span> es la primera de las tres operaciones booleanas básicas. El horno de cocina es un buen ejemplo. La luz dentro del horno debe encenderse si el interruptor de la luz del horno está encendido  <em>“O”</em>  si la puerta está abierta.</p>
+<p>La operación OR (O) es la primera de las tres operaciones booleanas básicas. El horno de cocina es un buen ejemplo. La luz dentro del horno debe encenderse si el interruptor de la luz del horno está encendido  <em>“O”</em>  si la puerta está abierta.</p>
 <p><img alt="img" src="../assets/Clase1_S2_69.png" /></p>
 <p>La letra  <em>A</em>  podría usarse para representar la condición interruptor de la luz del horno encendido y  <em>B</em>  podría representar la condición puerta abierta. La letra  <em>x</em>  podría representar la condición luz encendida.</p>
 <p><img alt="img" src="../assets/Clase1_S2_70.png" /></p>
-<p>Se muestra lo que ocurre cuando se combinan dos entradas lógicas <span class="arithmatex">\(A y B\)</span> mediante el uso de la operación OR para producir la salida x. La tabla muestras que x es un 1 lógico para cada una de las combinaciones de niveles de entrada en donde una o más entradas sea 1. El único caso en el que x es un 0 es cuando ambas entradas son 0.</p>
+<p>Se muestra lo que ocurre cuando se combinan dos entradas lógicas (A y B) mediante el uso de la operación OR para producir la salida x. La tabla muestras que x es un 1 lógico para cada una de las combinaciones de niveles de entrada en donde una o más entradas sea 1. El único caso en el que x es un 0 es cuando ambas entradas son 0.</p>
 <p><img alt="img" src="../assets/Clase1_S2_71.png" /></p>
 <p>La expresión booleana para la operación OR es</p>
 <p><img alt="img" src="../assets/Clase1_S2_72.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S2_73.png" /></p>
-<p>En esta expresión\,  <em>el signo _  </em>+<em>  _ no indica la suma ordinaria</em> ;  <strong>indica la operación OR</strong> . Esta operación es similar a la suma ordinaria\, excepto para el caso en el que tanto A como B son 1; la operación OR produce  <em>1 + 1 = 1\, _  __no__  _ 1 + 1  = 2</em> .</p>
+<p>En esta expresión,  <em>el signo _  </em>+<em>  _ no indica la suma ordinaria</em> ;  <strong>indica la operación OR</strong> . Esta operación es similar a la suma ordinaria, excepto para el caso en el que tanto A como B son 1; la operación OR produce  <em>1 + 1 = 1, _  __no__  _ 1 + 1  = 2</em> .</p>
 <p><img alt="img" src="../assets/Clase1_S2_74.png" /></p>
-<p>En el álgebra booleana 1 es el valor más alto\, por lo que nunca tendremos un resultado mayor que 1. Lo mismo aplica cuando se combinan tres entradas mediante el uso de la operación OR. Aquí tenemos que  <em>x = A + B + C</em> . Si consideramos el caso en el que las tres entradas son 1\, tenemos</p>
+<p>En el álgebra booleana 1 es el valor más alto, por lo que nunca tendremos un resultado mayor que 1. Lo mismo aplica cuando se combinan tres entradas mediante el uso de la operación OR. Aquí tenemos que  <em>x = A + B + C</em> . Si consideramos el caso en el que las tres entradas son 1, tenemos</p>
 <p><img alt="img" src="../assets/Clase1_S2_75.png" /></p>
-<p>La expresión  <em>x = A + B</em>  se lee como “ <em>x es igual a A OR B</em> ”\, lo cual significa que  <em>x</em>  será  <em>1</em>  cuando  <em>A o B o ambas sean 1</em> . De igual forma\, la expresión x = A + B + C se lee como “ <em>x es igual a A OR B OR C</em> ”\, lo cual significa que  <em>x</em>  será  <em>1</em>  cuando  <em>A o B o C o cualquier combinación de ellas sean 1</em> . Para describir este circuito en el idioma español podríamos decir que  <em>x es verdadera <span class="arithmatex">\(1\)</span> _  _CUANDO</em>  _ A es verdadera <span class="arithmatex">\(1\)</span> _  <em>OR</em>  _ B es verdadera <span class="arithmatex">\(1\)</span> _  <em>OR</em>  _ C es verdadera <span class="arithmatex">\(1\)</span>_</p>
+<p>La expresión  <em>x = A + B</em>  se lee como “ <em>x es igual a A OR B</em> ”, lo cual significa que  <em>x</em>  será  <em>1</em>  cuando  <em>A o B o ambas sean 1</em> . De igual forma, la expresión x = A + B + C se lee como “ <em>x es igual a A OR B OR C</em> ”, lo cual significa que  <em>x</em>  será  <em>1</em>  cuando  <em>A o B o C o cualquier combinación de ellas sean 1</em> . Para describir este circuito en el idioma español podríamos decir que  <em>x es verdadera (1) _  _CUANDO</em>  _ A es verdadera (1) _  <em>OR</em>  _ B es verdadera (1) _  <em>OR</em>  _ C es verdadera (1)_</p>
 <p><img alt="img" src="../assets/Clase1_S2_76.png" /></p>
 <h3 id="compuerta-or_1">Compuerta OR</h3>
-<p>En los circuitos digitales\, una  <strong>compuerta OR</strong>  es un circuito que tiene dos o más entradas y cuya salida es igual a la combinación  <strong>OR</strong>  de las entradas. Se muestra el símbolo lógico para una compuerta  <strong>OR</strong>  de dos entradas.</p>
+<p>En los circuitos digitales, una  <strong>compuerta OR</strong>  es un circuito que tiene dos o más entradas y cuya salida es igual a la combinación  <strong>OR</strong>  de las entradas. Se muestra el símbolo lógico para una compuerta  <strong>OR</strong>  de dos entradas.</p>
 <p><img alt="img" src="../assets/Clase1_S2_77.png" /></p>
-<p>Las entradas A y B son niveles lógicos de voltaje y la salida x es un nivel lógico de voltaje cuyo valor es el resultado de la operación  <strong>OR</strong>  sobre _ A y B_ ; es decir\, x = A + B. En otras palabras\, la compuerta OR opera de manera que su salida esté en ALTO\, 1 lógico\, si cualquiera de las entradas A o B o ambas se encuentran en el nivel 1 lógico. La salida de la  <em>compuerta OR</em>  estará en BAJO\, 0 lógico\, solo si todas sus entradas están en 0 lógico.</p>
+<p>Las entradas A y B son niveles lógicos de voltaje y la salida x es un nivel lógico de voltaje cuyo valor es el resultado de la operación  <strong>OR</strong>  sobre _ A y B_ ; es decir, x = A + B. En otras palabras, la compuerta OR opera de manera que su salida esté en ALTO, 1 lógico, si cualquiera de las entradas A o B o ambas se encuentran en el nivel 1 lógico. La salida de la  <em>compuerta OR</em>  estará en BAJO, 0 lógico, solo si todas sus entradas están en 0 lógico.</p>
 <p><img alt="img" src="../assets/Clase1_S2_78.png" /></p>
 <p>Esta misma idea puede extenderse a más de dos entradas.  Se muestra una compuerta  <strong>OR</strong>  de tres entradas y su tabla de verdad. Si examinamos esta tabla de verdad podremos ver de nuevo que la salida será 1 para cada caso en el que una o más entradas sean 1. Este principio general es el mismo para las compuertas OR con cualquier número de entradas.</p>
 <p><img alt="img" src="../assets/Clase1_S2_79.png" /></p>
-<p>Si utilizamos el lenguaje del álgebra booleana\, la salida  <em>x</em>  podemos expresarla como x = A + B + C\, en donde hay que enfatizar otra vez que el símbolo  representa la operación OR. Así\, la salida de cualquier compuerta OR puede expresarse como la combinación OR de sus diversas entradas.</p>
+<p>Si utilizamos el lenguaje del álgebra booleana, la salida  <em>x</em>  podemos expresarla como x = A + B + C, en donde hay que enfatizar otra vez que el símbolo  representa la operación OR. Así, la salida de cualquier compuerta OR puede expresarse como la combinación OR de sus diversas entradas.</p>
 <p><img alt="img" src="../assets/Clase1_S2_80.png" /></p>
 <p>El funcionamiento de la compuerta se puede observar:</p>
 <p><img alt="img" src="../assets/Clase1_S2_81.png" /></p>
-<p>Se puede apreciar que en la parte superior izquierda hay en las entradas ceros lógicos\, por consiguiente a la salida se apaga el LED indicando un cero lógico. En el resto de las figuras la salida es uno lógico\, lo cual describe la tabla de verdad de esta operación lógica.</p>
+<p>Se puede apreciar que en la parte superior izquierda hay en las entradas ceros lógicos, por consiguiente a la salida se apaga el LED indicando un cero lógico. En el resto de las figuras la salida es uno lógico, lo cual describe la tabla de verdad de esta operación lógica.</p>
 <p><img alt="img" src="../assets/Clase1_S2_82.png" /></p>
-<p>La referencia de la compuerta OR de dos entradas es el número 74LS32\, el cual tiene la siguiente estructura interna.</p>
+<p>La referencia de la compuerta OR de dos entradas es el número 74LS32, el cual tiene la siguiente estructura interna.</p>
 <p><img alt="img" src="../assets/Clase1_S2_83.png" /></p>
-<p>El circuito  <strong>74LS32</strong> \, tiene internamente 4 compuertas OR de dos entradas\, además de un pin que se debe conectar a tierra denominado GND y un pin que se debe conectar a 5 volts denominado Vcc.</p>
+<p>El circuito  <strong>74LS32</strong> , tiene internamente 4 compuertas OR de dos entradas, además de un pin que se debe conectar a tierra denominado GND y un pin que se debe conectar a 5 volts denominado Vcc.</p>
 <p><img alt="img" src="../assets/Clase1_S2_84.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S2_85.png" /></p>
-<p>Además del símbolo lógico convencional\, la IEC <span class="arithmatex">\(International Electrotechnical Commission\)</span> y el IEEE <span class="arithmatex">\(Institute of Electrical and Electronics Engineers\)</span> han desarrollado un sistema de símbolos lógicos que muestran la relación entre cada entrada y salida\, sin presentar la circuitería interna.</p>
+<p>Además del símbolo lógico convencional, la IEC (International Electrotechnical Commission) y el IEEE (Institute of Electrical and Electronics Engineers) han desarrollado un sistema de símbolos lógicos que muestran la relación entre cada entrada y salida, sin presentar la circuitería interna.</p>
 <p><img alt="img" src="../assets/Clase1_S2_86.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S2_87.png" /></p>
 <h3 id="ejemplo-compuerta-or">Ejemplo: Compuerta OR</h3>
 <p><img alt="img" src="../assets/Clase1_S2_88.png" /></p>
 <h1 id="compuerta-and">COMPUERTA AND</h1>
-<h1 id="operacion-and-con-compuertas-and">Operación AND Con Compuertas AND</h1>
-<p>La  <strong>operación AND</strong>  es la segunda operación booleana básica. Como ejemplo del uso de la lógica AND\, considere una secadora de ropa ordinaria: seca ropa <span class="arithmatex">\( _calienta y gira_ \)</span> solo si el temporizador está por encima de cero  <em>“Y”</em>  la puerta está cerrada. Vamos a asignar A para representar cuando el temporizador está activado\,  <em>B</em>  para representar cuando la puerta está cerrada y  <em>x</em>  puede representar cuando el calentador y el motor están encendidos.</p>
+<h2 id="operacion-and-con-compuertas-and">Operación AND Con Compuertas AND</h2>
+<p>La  <strong>operación AND</strong>  es la segunda operación booleana básica. Como ejemplo del uso de la lógica AND, considere una secadora de ropa ordinaria: seca ropa ( <em>calienta y gira</em> ) solo si el temporizador está por encima de cero  <em>“Y”</em>  la puerta está cerrada. Vamos a asignar A para representar cuando el temporizador está activado,  <em>B</em>  para representar cuando la puerta está cerrada y  <em>x</em>  puede representar cuando el calentador y el motor están encendidos.</p>
 <p><img alt="img" src="../assets/Clase1_S3_1.png" /></p>
-<p>La tabla de verdad se muestra lo que ocurre cuando dos entradas lógicas  <em>A y B</em>  se combinan mediante el uso de la operación AND para producir la salida  <em>x</em> . La tabla muestra que x es un 1 lógico sólo cuando A y B están en el nivel 1 lógico. Para cualquier caso en el que una de las entradas sea 0\, la salida será 0.</p>
+<p>La tabla de verdad se muestra lo que ocurre cuando dos entradas lógicas  <em>A y B</em>  se combinan mediante el uso de la operación AND para producir la salida  <em>x</em> . La tabla muestra que x es un 1 lógico sólo cuando A y B están en el nivel 1 lógico. Para cualquier caso en el que una de las entradas sea 0, la salida será 0.</p>
 <p><img alt="img" src="../assets/Clase1_S3_2.png" /></p>
 <p>La expresión booleana para la operación AND es</p>
 <p><img alt="img" src="../assets/Clase1_S3_3.png" /></p>
-<p>En esta expresión\,  <em>el signo _  __࢈__  indica la operación AND booleana y  _no la operación de multiplicación</em> . No obstante\, la operación AND sobre variables booleanas opera de la misma forma que la multiplicación ordinaria\, según nos muestra el análisis de la tabla de verdad\, por lo que podemos considerarlas como iguales. Esta característica puede ser útil al evaluar expresiones lógicas que contengan operaciones AND.</p>
+<p>En esta expresión,  <em>el signo _  __࢈__  indica la operación AND booleana y  _no la operación de multiplicación</em> . No obstante, la operación AND sobre variables booleanas opera de la misma forma que la multiplicación ordinaria, según nos muestra el análisis de la tabla de verdad, por lo que podemos considerarlas como iguales. Esta característica puede ser útil al evaluar expresiones lógicas que contengan operaciones AND.</p>
 <p><img alt="img" src="../assets/Clase1_S3_4.png" /></p>
-<p>La expresión x = A · B se lee como “ <em>x es igual a A AND B</em> ”\, lo cual significa que  <em>x</em>   <em>será 1 sólo cuando A y B sean 1</em> . Por lo general\, se omite el signo  de manera que la expresión se vuelve x = AB. Para el caso en el que se aplica la operación AND con tres entradas\, tenemos que x = A · B · C = ABC. Esto se lee como “ <em>x es igual a A AND B AND C”</em> \, lo cual significa que x será 1 solo cuando  <em>A y B y C</em>  sean todas 1.</p>
+<p>La expresión x = A · B se lee como “ <em>x es igual a A AND B</em> ”, lo cual significa que  <em>x</em>   <em>será 1 sólo cuando A y B sean 1</em> . Por lo general, se omite el signo  de manera que la expresión se vuelve x = AB. Para el caso en el que se aplica la operación AND con tres entradas, tenemos que x = A · B · C = ABC. Esto se lee como “ <em>x es igual a A AND B AND C”</em> , lo cual significa que x será 1 solo cuando  <em>A y B y C</em>  sean todas 1.</p>
 <p><img alt="img" src="../assets/Clase1_S3_5.png" /></p>
-<h1 id="compuerta-and_1">Compuerta AND</h1>
-<p>Se muestra el símbolo lógico para una compuerta  <em>AND</em>  de dos entradas. La salida de la compuerta AND es igual al producto AND de las entradas lógicas; es decir\, _ x  = AB_ . En otras palabras\, la compuerta AND es un circuito que opera de manera que su salida esté en ALTO solo cuando todas sus entradas se encuentren en ALTO. Para todos los demás casos\, la salida de la compuerta AND estará en BAJO.</p>
+<h2 id="compuerta-and_1">Compuerta AND</h2>
+<p>Se muestra el símbolo lógico para una compuerta  <em>AND</em>  de dos entradas. La salida de la compuerta AND es igual al producto AND de las entradas lógicas; es decir, _ x  = AB_ . En otras palabras, la compuerta AND es un circuito que opera de manera que su salida esté en ALTO solo cuando todas sus entradas se encuentren en ALTO. Para todos los demás casos, la salida de la compuerta AND estará en BAJO.</p>
 <p><img alt="img" src="../assets/Clase1_S3_6.png" /></p>
-<p>Esta misma operación es característica de compuertas AND con más de dos entradas. Por ejemplo\, la figura muestra una compuerta AND de tres entradas y su tabla de verdad correspondiente. Una vez más\, observe que la salida de la compuerta es 1 sólo para el caso en el que  <em>A = B = C = 1</em> . La expresión para la salida es  <em>x = ABC</em> . Para una compuerta AND de cuatro entradas\, la salida es  <em>x = ABCD</em> .</p>
+<p>Esta misma operación es característica de compuertas AND con más de dos entradas. Por ejemplo, la figura muestra una compuerta AND de tres entradas y su tabla de verdad correspondiente. Una vez más, observe que la salida de la compuerta es 1 sólo para el caso en el que  <em>A = B = C = 1</em> . La expresión para la salida es  <em>x = ABC</em> . Para una compuerta AND de cuatro entradas, la salida es  <em>x = ABCD</em> .</p>
 <p><img alt="img" src="../assets/Clase1_S3_7.png" /></p>
 <p>El funcionamiento de la compuerta se puede observar:</p>
 <p><img alt="img" src="../assets/Clase1_S3_8.png" /></p>
-<p>Se puede apreciar que en la parte inferior derecha hay en las entradas un uno lógico\, por consiguiente a la salida se enciende el LED indicando un uno lógico. En el resto de las imágenes la salida es cero lógico\, lo cual describe la tabla de verdad de esta operación lógica.</p>
+<p>Se puede apreciar que en la parte inferior derecha hay en las entradas un uno lógico, por consiguiente a la salida se enciende el LED indicando un uno lógico. En el resto de las imágenes la salida es cero lógico, lo cual describe la tabla de verdad de esta operación lógica.</p>
 <p><img alt="img" src="../assets/Clase1_S3_9.png" /></p>
-<p>La referencia de la compuerta AND de dos entradas es el número 74LS08\, el cual tiene la siguiente estructura interna.</p>
+<p>La referencia de la compuerta AND de dos entradas es el número 74LS08, el cual tiene la siguiente estructura interna.</p>
 <p><img alt="img" src="../assets/Clase1_S3_10.png" /></p>
-<p>El circuito 74LS08\, tiene internamente 4 compuertas AND de dos entradas\, además de un pin que se debe conectar a tierra denominado GND y un pin que se debe conectar a 5 voltios denominado Vcc.</p>
+<p>El circuito 74LS08, tiene internamente 4 compuertas AND de dos entradas, además de un pin que se debe conectar a tierra denominado GND y un pin que se debe conectar a 5 voltios denominado Vcc.</p>
 <p><img alt="img" src="../assets/Clase1_S3_11.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S3_12.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S3_13.png" /></p>
 <p>La IEC eligió el símbolo  <strong>&amp;</strong>  para  <em>representar la función AND</em> . Se muestra el símbolo de la IEC para una compuerta AND cuádruple con dos entradas 7408.</p>
 <p><img alt="img" src="../assets/Clase1_S3_14.png" /></p>
 <p>Aparece el símbolo para el CI 4082 con compuerta AND doble de cuatro entradas.</p>
-<h1 id="aplicacion-compuerta-and">Aplicación: Compuerta AND</h1>
+<h2 id="aplicacion-compuerta-and">Aplicación: Compuerta AND</h2>
 <p>Determine la forma de onda de salida para la compuerta AND que se muestra</p>
 <p><img alt="img" src="../assets/Clase1_S3_15.png" /></p>
 <h1 id="compuerta-and-vs-or">Compuerta AND vs OR</h1>
-<p>Notemos la diferencia entre los símbolos para la compuerta AND y la compuerta OR. Cada vez que vea el símbolo AND en el diagrama de un circuito lógico\, le indicará que la salida estará en ALTO sólo cuando todas las entradas estén en ALTO. Cada vez que vea el símbolo OR\, le indicará que la salida estará en ALTO cuando cualquiera de sus entradas esté en ALTO.</p>
+<p>Notemos la diferencia entre los símbolos para la compuerta AND y la compuerta OR. Cada vez que vea el símbolo AND en el diagrama de un circuito lógico, le indicará que la salida estará en ALTO sólo cuando todas las entradas estén en ALTO. Cada vez que vea el símbolo OR, le indicará que la salida estará en ALTO cuando cualquiera de sus entradas esté en ALTO.</p>
 <p><img alt="img" src="../assets/Clase1_S3_16.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S3_17.png" /></p>
 <h1 id="compuerta-not-inversora">COMPUERTA NOT (INVERSORA)</h1>
-<h1 id="operacion-not">Operación NOT</h1>
-<p>La  <em>operación NOT</em>  es distinta de las operaciones OR y AND\, ya que puede realizarse sobre una sola variable de entrada. Por ejemplo\, si la variable A está sujeta a la operación NOT\, el resultado x puede expresarse así:</p>
+<h2 id="operacion-not">Operación NOT</h2>
+<p>La  <em>operación NOT</em>  es distinta de las operaciones OR y AND, ya que puede realizarse sobre una sola variable de entrada. Por ejemplo, si la variable A está sujeta a la operación NOT, el resultado x puede expresarse así:</p>
 <p><img alt="img" src="../assets/Clase1_S3_18.png" /></p>
 <p>En donde la barra superior representa la operación NOT. Esta expresión se lee como “ <em>x es igual a NOT A</em> ” o “ <em>x es igual al inverso de A</em> ” o “ <em>x es igual al complemento de A</em> ”.</p>
 <p><img alt="img" src="../assets/Clase1_S3_19.png" /></p>
 <p>Cada una de estas expresiones es de uso común y todas indican que el valor lógico de x = ‘A es el opuesto del valor lógico de  <em>A</em> .</p>
 <p><img alt="img" src="../assets/Clase1_S3_20.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S3_21.png" /></p>
-<p>La tabla de verdad aclara esto para los dos casos en que  <em>A = 0 y A = 1</em> . Esto es\,</p>
+<p>La tabla de verdad aclara esto para los dos casos en que  <em>A = 0 y A = 1</em> . Esto es,</p>
 <p><img alt="img" src="../assets/Clase1_S3_22.png" /></p>
-<p>La operación NOT también se conoce como  <em>inversión</em>  o  <em>complementación</em> \, términos que utilizamos de manera indistinta. Siempre utilizaremos el indicador de barra superior para representar la inversión\, es importante mencionar que el símbolo primo <span class="arithmatex">\(‘\)</span> es otro indicador para la inversión. Esto es\,</p>
+<p>La operación NOT también se conoce como  <em>inversión</em>  o  <em>complementación</em> , términos que utilizamos de manera indistinta. Siempre utilizaremos el indicador de barra superior para representar la inversión, es importante mencionar que el símbolo primo (‘) es otro indicador para la inversión. Esto es,</p>
 <p><img alt="img" src="../assets/Clase1_S3_23.png" /></p>
 <p>Ambos deben reconocerse como símbolos que indican la operación de inversión.</p>
 <p><img alt="img" src="../assets/Clase1_S3_24.png" /></p>
-<h1 id="circuito-not-inversor">Circuito NOT (INVERSOR)</h1>
-<p>Se muestra el símbolo para un  <strong>circuito NOT</strong> \, al cual se le conoce más comúnmente como  <strong>INVERSOR</strong> . Este circuito siempre tiene una sola entrada y su nivel lógico de salida siempre es opuesto al nivel lógico de esta entrada.</p>
+<h2 id="circuito-not-inversor">Circuito NOT (INVERSOR)</h2>
+<p>Se muestra el símbolo para un  <strong>circuito NOT</strong> , al cual se le conoce más comúnmente como  <strong>INVERSOR</strong> . Este circuito siempre tiene una sola entrada y su nivel lógico de salida siempre es opuesto al nivel lógico de esta entrada.</p>
 <p><img alt="img" src="../assets/Clase1_S3_25.png" /></p>
-<p>El círculo que aparece en la salida del símbolo\, se conoce como círculo de inversión.</p>
+<p>El círculo que aparece en la salida del símbolo, se conoce como círculo de inversión.</p>
 <p><img alt="img" src="../assets/Clase1_S3_26.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S3_27.png" /></p>
-<p>Se muestra la forma en que el INVERSOR afecta a una señal de entrada. Invierte <span class="arithmatex">\(complementa\)</span> la señal de entrada en todos los puntos de la forma de onda\, por lo que siempre que la entrada = 0\, la salida = 1\, y viceversa.</p>
+<p>Se muestra la forma en que el INVERSOR afecta a una señal de entrada. Invierte (complementa) la señal de entrada en todos los puntos de la forma de onda, por lo que siempre que la entrada = 0, la salida = 1, y viceversa.</p>
 <p><img alt="img" src="../assets/Clase1_S3_28.png" /></p>
 <p>El funcionamiento de la compuerta se puede observar:</p>
 <p><img alt="img" src="../assets/Clase1_S3_29.png" /></p>
-<p>Se puede apreciar que en la figura de la izquierda hay a la entrada un cero lógico\, por consiguiente a la salida se enciende el LED indicando un uno lógico. En la figura de la derecha hay a la entrada un uno lógico\, por consiguiente a la salida se apaga el LED indicando un cero lógico.</p>
+<p>Se puede apreciar que en la figura de la izquierda hay a la entrada un cero lógico, por consiguiente a la salida se enciende el LED indicando un uno lógico. En la figura de la derecha hay a la entrada un uno lógico, por consiguiente a la salida se apaga el LED indicando un cero lógico.</p>
 <p><img alt="img" src="../assets/Clase1_S3_30.png" /></p>
-<p>La referencia de esta compuerta es el número 74LS04\, el cual tiene la estructura interna</p>
+<p>La referencia de esta compuerta es el número 74LS04, el cual tiene la estructura interna</p>
 <p><img alt="img" src="../assets/Clase1_S3_31.png" /></p>
-<p>El circuito 74LS04\, tiene internamente  <em>6 compuertas NOT</em> \, además de un pin que se debe conectar a tierra denominado GND y un pin que se debe conectar a 5 Volts denominado Vcc.</p>
+<p>El circuito 74LS04, tiene internamente  <em>6 compuertas NOT</em> , además de un pin que se debe conectar a tierra denominado GND y un pin que se debe conectar a 5 Volts denominado Vcc.</p>
 <p><img alt="img" src="../assets/Clase1_S3_32.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S3_33.png" /></p>
-<p>Además del símbolo lógico convencional\, la IEC <span class="arithmatex">\(International Electrotechnical Commission\)</span> y el IEEE <span class="arithmatex">\(Institute of Electrical and Electronics Engineers\)</span> han desarrollado un sistema de símbolos lógicos que muestran la relación entre cada entrada y salida\, sin presentar la circuitería interna.</p>
+<p>Además del símbolo lógico convencional, la IEC (International Electrotechnical Commission) y el IEEE (Institute of Electrical and Electronics Engineers) han desarrollado un sistema de símbolos lógicos que muestran la relación entre cada entrada y salida, sin presentar la circuitería interna.</p>
 <p><img alt="img" src="../assets/Clase1_S3_34.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S3_35.png" /></p>
-<p>Se muestra el símbolo de la IEC para el inversor séxtuple 7406. Puesto que cada inversor funciona de manera independiente de los demás\, cada uno se dibuja con su propio rectángulo. El  <em>"1"</em>  del rectángulo de la parte superior indica que una entrada debe estar activa para producir la salida. El triángulo de la derecha es equivalente al círculo de inversión del símbolo convencional. Una entrada activa en el nivel alto\, produce una salida activa en el nivel bajo.</p>
-<h1 id="aplicacion-circuito-not-inversor">Aplicación: Circuito NOT (INVERSOR)</h1>
-<p>Se muestra una aplicación ordinaria de la compuerta NOT. El botón está cableado para producir un 1 lógico <span class="arithmatex">\(verdadero\)</span> cuando se oprime. Algunas veces es conveniente saber si el botón no está oprimido\, por lo que este circuito proporciona una expresión que es verdadera cuando el botón no está oprimido.</p>
+<p>Se muestra el símbolo de la IEC para el inversor séxtuple 7406. Puesto que cada inversor funciona de manera independiente de los demás, cada uno se dibuja con su propio rectángulo. El  <em>"1"</em>  del rectángulo de la parte superior indica que una entrada debe estar activa para producir la salida. El triángulo de la derecha es equivalente al círculo de inversión del símbolo convencional. Una entrada activa en el nivel alto, produce una salida activa en el nivel bajo.</p>
+<h2 id="aplicacion-circuito-not-inversor">Aplicación: Circuito NOT (INVERSOR)</h2>
+<p>Se muestra una aplicación ordinaria de la compuerta NOT. El botón está cableado para producir un 1 lógico (verdadero) cuando se oprime. Algunas veces es conveniente saber si el botón no está oprimido, por lo que este circuito proporciona una expresión que es verdadera cuando el botón no está oprimido.</p>
 <p><img alt="img" src="../assets/Clase1_S3_36.png" /></p>
 <h1 id="compuertas">Compuertas</h1>
 <p><img alt="img" src="../assets/Clase1_S3_37.png" /></p>
@@ -917,173 +1017,14 @@
 <p>Una notación de dependencia especial dentro del símbolo rectangular indica cómo dependen las salidas del dispositivo de sus entradas. Se muestra los símbolos IEEE/ANSI a un lado de los símbolos tradicionales para las compuertas lógicas básicas.</p>
 <p><img alt="img" src="../assets/Clase1_S3_39.png" /></p>
 <p><img alt="img" src="../assets/Clase1_S3_40.png" /></p>
-<p>Los símbolos rectangulares utilizan un pequeño triángulo rectángulo <span class="arithmatex">\( ◺ \)</span> en lugar de la pequeña burbuja de los símbolos tradicionales para indicar la inversión del nivel lógico. La presencia o ausencia del triángulo también indica si una entrada o salida es activa en nivel BAJO o ALTO.</p>
+<p>Los símbolos rectangulares utilizan un pequeño triángulo rectángulo ( ◺ ) en lugar de la pequeña burbuja de los símbolos tradicionales para indicar la inversión del nivel lógico. La presencia o ausencia del triángulo también indica si una entrada o salida es activa en nivel BAJO o ALTO.</p>
 <p><img alt="img" src="../assets/Clase1_S3_41.png" /></p>
 <p>Una notación especial dentro de cada símbolo rectangular describe la relación lógica entra las entradas y la salida. El “1” dentro del símbolo INVERSOR denota un dispositivo con solo una entrada; el triángulo en la salida indica que esta cambiará al estado activo en BAJO cuando la entrada se encuentre en su estado activo en ALTO.</p>
 <p><img alt="img" src="../assets/Clase1_S3_42.png" /></p>
-<p>El “&amp;” dentro del símbolo AND significa que la salida cambiará a su estado activo en ALTO cuando todas las entradas se encuentren en el estado activo en ALTO. El “≥” dentro de la compuerta OR indica que la salida cambiará a su estado activo <span class="arithmatex">\(ALTO\)</span> siempre que cualquiera de las entradas se encuentre en su estado activo <span class="arithmatex">\(ALTO\)</span>.</p>
+<p>El “&amp;” dentro del símbolo AND significa que la salida cambiará a su estado activo en ALTO cuando todas las entradas se encuentren en el estado activo en ALTO. El “≥” dentro de la compuerta OR indica que la salida cambiará a su estado activo (ALTO) siempre que cualquiera de las entradas se encuentre en su estado activo (ALTO).</p>
 <p><img alt="img" src="../assets/Clase1_S3_43.png" /></p>
-<p>Los símbolos rectangulares para las compuertas NAND y NOR son los mismos que para las compuertas AND y OR\, respectivamente\, con la adición del pequeño triángulo inversor en la salida.</p>
+<p>Los símbolos rectangulares para las compuertas NAND y NOR son los mismos que para las compuertas AND y OR, respectivamente, con la adición del pequeño triángulo inversor en la salida.</p>
 <p><img alt="img" src="../assets/Clase1_S3_44.png" /></p>
-<h1 id="compuertas-combinadas">COMPUERTAS COMBINADAS</h1>
-<h1 id="compuertas-nor-y-nand">Compuertas NOR Y NAND</h1>
-<p>En los circuitos digitales se utilizan mucho otros dos tipos de compuertas lógicas: _ NOR y NAND_ .  <em>Estas compuertas combinan las operaciones básicas AND\, OR y NOT</em> \, por lo que es muy sencillo escribir sus expresiones booleanas.</p>
-<p><img alt="img" src="../assets/Clase1_S3_45.png" /></p>
-<h1 id="compuerta-nor">Compuerta NOR</h1>
-<p><img alt="img" src="../assets/Clase1_S3_46.png" /></p>
-<p>Se muestra el símbolo para una compuerta NOR de dos entradas. Es igual que el símbolo de la compuerta OR\, slo que tiene un pequeño círculo en la salida. El pequeño círculo representa la operación de inversión.</p>
-<h1 id="compuerta-nor-no-o">Compuerta NOR (NO-O)</h1>
-<p>Por ello\, la compuerta NOR opera de manera similar a una compuerta OR seguida de un INVERSOR\, de manera que los circuitos son equivalentes\, y la expresión de salida para la compuerta NOR es</p>
-<p><img alt="img" src="../assets/Clase1_S3_47.png" /></p>
-<p>La tabla de verdad muestra que la salida de la compuerta NOR es el inverso exacto de la salida de la compuerta OR para todas las posibles condiciones de entrada. La salida de una compuerta OR cambia a ALTO cuando cualquiera de sus entradas se encuentra en ALTO; la salida de la compuerta NOR cambia a BAJO cuando cualquiera de sus entradas se encuentra en ALTO. Esta misma operación puede aplicarse a las compuertas NOR con más de dos entradas.</p>
-<p><img alt="img" src="../assets/Clase1_S3_48.png" /></p>
-<h1 id="compuerta-nor_1">Compuerta NOR</h1>
-<p><img alt="img" src="../assets/Clase1_S3_49.png" /></p>
-<p>El símbolo describe la operación de la compuerta. Puesto que las entradas no tienen círculo de inversión\, pero la salida si\, la lectura del símbolo es " <em>entra 1 OR 1\, sale 0</em> ". Lo anterior está descrito por las tres últimas líneas de la tabla de verdad</p>
-<h1 id="compuerta-nor-no-o_1">Compuerta NOR (NO-O)</h1>
-<p><em>La puerta NOR</em>  genera una salida a nivel BAJO cuando cualquiera de sus entradas está a nivel ALTO. Solo cuando todas sus entradas estén a nivel BAJO\, la salida se pondrá a nivel ALTO.</p>
-<p><img alt="img" src="../assets/Clase1_S3_50.png" /></p>
-<p>Para el caso concreto de la puerta NOR de dos entradas\, con la designación A y B para las entradas y X para la salida.</p>
-<p><img alt="img" src="../assets/Clase1_S3_51.png" /></p>
-<p><em>En una puerta NOR de dos entradas: la salida X es un nivel BAJO si cualquiera de sus entradas A o B está a nivel ALTO\, o si ambas entradas A y B están a nivel ALTO; X es un nivel ALTO si A y B están a nivel BAJO.</em></p>
-<p><img alt="img" src="../assets/Clase1_S3_52.png" /></p>
-<p>Esta operación genera un nivel de salida opuesto al que genera la puerta OR. En una puerta NOR\, el nivel BAJO es el nivel activo o verdadero de salida\, como indica el círculo de la salida.</p>
-<p><img alt="img" src="../assets/Clase1_S3_53.png" /></p>
-<p>Se ilustra el funcionamiento de una puerta NOR de dos entradas\, para las cuatro posibles combinaciones de entrada.</p>
-<p><img alt="img" src="../assets/Clase1_S3_54.png" /></p>
-<p>Esta operación genera un nivel de salida opuesto al que genera la puerta OR. En una puerta NOR\, el nivel BAJO es el nivel activo o verdadero de salida\, como indica el círculo de la salida.</p>
-<p><img alt="img" src="../assets/Clase1_S3_55.png" /></p>
-<p>La figura ilustra el funcionamiento de una puerta NOR de dos entradas\, para las cuatro posibles combinaciones de entrada\, y la Tabla es la tabla de verdad para la puerta NOR de dos entradas.</p>
-<p><img alt="img" src="../assets/Clase1_S3_56.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_57.png" /></p>
-<h1 id="compuerta-nor_2">Compuerta NOR</h1>
-<p><img alt="img" src="../assets/Clase1_S3_58.png" /></p>
-<h1 id="compuerta-nor-no-o_2">Compuerta NOR (NO-O)</h1>
-<p><img alt="img" src="../assets/Clase1_S3_59.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_60.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_61.png" /></p>
-<p>El funcionamiento de la compuerta se puede observar en la siguiente:</p>
-<p><img alt="img" src="../assets/Clase1_S3_62.png" /></p>
-<h1 id="aplicacion-compuerta-nor-no-o">Aplicación: Compuerta NOR (NO-O)</h1>
-<p>Si se aplican a la puerta NOR las dos señales mostradas\, ¿cómo es la señal de salida que se obtiene?</p>
-<p>Cuando cualquier entrada de la puerta NOR está a nivel ALTO\, la salida es un nivel BAJO\, como se ve en la forma de onda de salida X del diagrama de tiempos.</p>
-<p><img alt="img" src="../assets/Clase1_S3_63.png" /></p>
-<h1 id="compuerta-nand-no-y">COMPUERTA NAND (NO-Y)</h1>
-<h1 id="compuerta-nand-no-y_1">Compuerta NAND (NO-Y)</h1>
-<p>Se muestra el símbolo para una compuerta NAND de dos entradas. Es el mismo que el de la compuerta AND más un pequeño círculo en la salida.</p>
-<p><img alt="img" src="../assets/Clase1_S3_64.png" /></p>
-<p>Este pequeño círculo denota la operación de inversión. Así\, la compuerta NAND opera igual que una compuerta AND seguida de un INVERSOR\, de manera que los circuitos son equivalentes y la expresión de salida para la compuerta NAND es x = <span class="arithmatex">\(AB\)</span>’.</p>
-<p><img alt="img" src="../assets/Clase1_S3_65.png" /></p>
-<p>La tabla de verdad se muestra que la salida de la compuerta NAND es el inverso exacto de la compuerta AND para todas las posibles condiciones de entrada.</p>
-<p><img alt="img" src="../assets/Clase1_S3_66.png" /></p>
-<p><em>La salida AND cambia a nivel ALTO sólo cuando todas las entradas se encuentran en ALTO</em> \, mientras que la salida _ NAND cambia a BAJO sólo cuando todas las entradas se encuentran en ALTO_ . Esta misma característica puede aplicarse a las compuertas NAND que tienen más de dos entradas.</p>
-<p><img alt="img" src="../assets/Clase1_S3_67.png" /></p>
-<p>El término  <em>NAND</em>  es una contracción de  <em>NOT−AND</em> \, e implica una función AND con la salida complementada <span class="arithmatex">\(negada\)</span>.</p>
-<p><img alt="img" src="../assets/Clase1_S3_68.png" /></p>
-<p>Se muestra el símbolo lógico estándar para la puerta NAND de 2 entradas y su equivalente empleando los símbolos de la puerta AND seguida de un inversor\, donde el símbolo  <strong>≡</strong>  significa “ <em>equivalente a</em> ”.</p>
-<p><img alt="img" src="../assets/Clase1_S3_69.png" /></p>
-<p>La  <em>puerta NAND</em>  genera una salida a nivel BAJO solo cuando todas las entradas están a nivel ALTO. Cuando cualquiera de las entradas está a nivel BAJO\, la salida se pondrá a nivel ALTO. Para el caso concreto de la puerta NAND de dos entradas\, con la designación A y B para las entradas y X para la salida.</p>
-<p><img alt="img" src="../assets/Clase1_S3_70.png" /></p>
-<p><em>En una puerta NAND de dos entradas\, la salida X es un nivel BAJO si las entradas A y B están a nivel ALTO; X es un nivel ALTO si A o B están a nivel BAJO o si ambas\, A y B\, están a nivel BAJO.</em></p>
-<p><img alt="img" src="../assets/Clase1_S3_71.png" /></p>
-<p>Observe que esta operación\, en términos de nivel de salida\, es la opuesta a la operación lógica AND. En una puerta NAND\, el nivel BAJO <span class="arithmatex">\(0\)</span> es el nivel activo o verdadero de salida\, como indica el círculo de la salida. Se ilustra la operación lógica de una puerta NAND de dos entradas\, para las cuatro posibles combinaciones.</p>
-<p><img alt="img" src="../assets/Clase1_S3_72.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_73.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_74.png" /></p>
-<p>Determine la forma de onda de salida de una compuerta NAND que tiene las entradas que se muestran</p>
-<p><img alt="img" src="../assets/Clase1_S3_75.png" /></p>
-<h1 id="compuerta-or-exclusiva-xor">Compuerta OR EXCLUSIVA (XOR)</h1>
-<p>Se muestran los símbolos estándar para la puerta OR−exclusiva <span class="arithmatex">\(XOR\)</span>. La puerta XOR tiene solo dos entradas. La salida de una puerta OR−exclusiva se pone a nivel ALTO solo cuando las dos entradas están a niveles lógicos opuestos. Esta operación se puede expresar\, en función de dos entradas A y B y una salida X.</p>
-<p><img alt="img" src="../assets/Clase1_S3_76.png" /></p>
-<p><em>En una puerta OR−exclusiva\, la salida X es un nivel ALTO si la entrada A está a nivel BAJO y la entrada B está a nivel ALTO; o si la entrada A está a nivel ALTO y la entrada B está a nivel BAJO; X es un nivel BAJO si tanto A como B están a nivel ALTO o BAJO.</em></p>
-<p><img alt="img" src="../assets/Clase1_S3_77.png" /></p>
-<p>Se ilustran las cuatro posibles combinaciones de entrada y las salidas resultantes para la puerta XOR. El nivel ALTO es el nivel activo o verdadero de salida y solo se produce cuando las entradas están a niveles opuestos.</p>
-<p><img alt="img" src="../assets/Clase1_S3_78.png" /></p>
-<p>La operación lógica de la puerta XOR se resume en la tabla de verdad mostrada en la Tabla.</p>
-<p><img alt="img" src="../assets/Clase1_S3_79.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_80.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_81.png" /></p>
-<p>Considere el circuito lógico. La expresión de salida de este circuito es:</p>
-<p><img alt="img" src="../assets/Clase1_S3_82.png" /></p>
-<p>La ecuación que representa una XOR es:</p>
-<p>mejor conocida como:</p>
-<p><img alt="img" src="../assets/Clase1_S3_83.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_84.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_85.png" /></p>
-<p>La tabla de verdad que acompaña a este circuito muestra que x = 1 para dos casos: A = 0\, B = 1 <span class="arithmatex">\(el término A’B\)</span> y A = 1\, B = 0 <span class="arithmatex">\(el término AB’\)</span>. En otras palabras:</p>
-<p><em>Este circuito produce una salida en ALTO siempre que las dos entradas se encuentran en los niveles opuestos.</em></p>
-<p><img alt="img" src="../assets/Clase1_S3_86.png" /></p>
-<p>Este es el circuito  <em>OR exclusivo</em> \, que de aquí en adelante se escribe como  <em>XOR.</em></p>
-<p><img alt="img" src="../assets/Clase1_S3_87.png" /></p>
-<p>Esta combinación específica de compuertas lógicas se produce con mucha frecuencia y es muy útil en ciertas aplicaciones. De hecho\, al circuito XOR se le ha otorgado su propio símbolo\, el cual se muestra.</p>
-<p><img alt="img" src="../assets/Clase1_S3_88.png" /></p>
-<p>Se asume que este símbolo contiene toda la lógica dentro del circuito  <em>XOR</em>  y\, por lo tanto\, tiene la misma expresión lógica y la misma tabla de verdad. Por lo general\, al  <em>circuito XOR</em>   <em>se le conoce como _  _compuerta XOR</em> \, y lo consideramos como otro tipo de compuerta lógica.</p>
-<p><img alt="img" src="../assets/Clase1_S3_89.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_90.png" /></p>
-<p>En la figura se muestra el símbolo IEEE/ANSI para una compuerta  <em>XOR</em> . El símbolo de notación de dependencia <span class="arithmatex">\(= 1\)</span> dentro del bloque indica que la salida será activa en ALTO sólo cuando una de las entradas esté en ALTO.</p>
-<p><img alt="img" src="../assets/Clase1_S3_91.png" /></p>
-<p>Una compuerta XOR sólo tiene  <em>dos</em>  entradas;  <em>no hay compuertas XOR de tres ni de cuatro entradas</em> . Las dos entradas se combinan de manera que x = A’B + AB’.</p>
-<p>Una forma abreviada que se utiliza algunas veces para indicar la expresión de salida XOR es:</p>
-<p><img alt="img" src="../assets/Clase1_S3_92.png" /></p>
-<p>en donde el  <strong>símbolo ⊕</strong>  representa la operación de la c <em>ompuerta XOR</em></p>
-<p><img alt="img" src="../assets/Clase1_S3_93.png" /></p>
-<p>Se sintetizan las características de una  <em>compuerta XOR</em> :</p>
-<p>1. Sólo tiene dos entradas y su salida es</p>
-<p>2. Su salida está en  <em>ALTO</em>  solo cuando las dos entradas se encuentran en niveles  <em>distintos</em> .</p>
-<p><img alt="img" src="../assets/Clase1_S3_94.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_95.png" /></p>
-<p>El funcionamiento de la compuerta se puede observar en la siguiente figura:</p>
-<p><img alt="img" src="../assets/Clase1_S3_96.png" /></p>
-<p>En la gráfica se puede apreciar que en la primera y última figura hay en las entradas número par de unos lógicos\, por consiguiente a la salida se apaga el LED indicando un cero lógico. En el resto de las figuras la salida es uno lógico\, lo cual describe la tabla de verdad de esta operación lógica.</p>
-<p><img alt="img" src="../assets/Clase1_S3_97.png" /></p>
-<p>La referencia de la compuerta XOR de dos entradas es el número 74LS86\, el cual tiene la siguiente estructura interna.</p>
-<p><img alt="img" src="../assets/Clase1_S3_98.png" /></p>
-<h1 id="aplicacion-compuerta-or-exclusiva-xor">Aplicación: Compuerta OR EXCLUSIVA (XOR)</h1>
-<p>Un cierto sistema está formado por dos circuitos idénticos que funcionan en paralelo. Mientras que ambos funcionan correctamente\, las salidas de los dos circuitos son iguales. Si uno de los circuitos falla\, las salidas serán niveles opuestos en ese instante. Establecer un método para detectar que se ha producido un fallo en uno de los circuitos.</p>
-<p><img alt="img" src="../assets/Clase1_S3_99.png" /></p>
-<p><strong>Solucion</strong> : Las salidas de los circuitos se conectan a las entradas de una puerta XOR\, como muestra. Un fallo en cualquiera de los circuitos hace que las entradas de la puerta XOR tengan niveles opuestos. Esta condición da lugar a nivel ALTO en la salida de la puerta XOR\, que indica que uno de los circuitos ha fallado.</p>
-<p><img alt="img" src="../assets/Clase1_S3_100.png" /></p>
-<h1 id="compuerta-nor-exclusiva-xnor">Compuerta NOR EXCLUSIVA (XNOR)</h1>
-<p>El  <em>NOR exclusivo</em> \, también conocido en ocasiones como  <em>OR no exclusivo</em> \, tiene la tabla de verdad y el símbolo que se muestran.  <em>La salida\, Y\, tiene el nivel ALTO cuando las entradas son iguales\, y BAJO si son distintas</em> .</p>
-<p><img alt="img" src="../assets/Clase1_S3_101.png" /></p>
-<p>El circuito NOR exclusivo <span class="arithmatex">\(que se abrevia como  _XNOR_ \)</span> opera en forma completamente opuesta al circuito XOR. Se muestra un circuito XNOR y su tabla de verdad correspondiente.</p>
-<p><img alt="img" src="../assets/Clase1_S3_102.png" /></p>
-<p>La expresión de salida es</p>
-<p>_lo cual indica junto con la tabla de verdad que x será 1 para dos casos: A = B = 1 <span class="arithmatex">\(el término AB\)</span> y A = B = 0 <span class="arithmatex">\(el término A’ B’\)</span>. _</p>
-<p><img alt="img" src="../assets/Clase1_S3_103.png" /></p>
-<p><em>El circuito XNOR produce una salida en ALTO siempre que las dos entradas se encuentran en el mismo nivel.</em></p>
-<p><img alt="img" src="../assets/Clase1_S3_104.png" /></p>
-<p>De todo esto podemos deducir que la salida del circuito XNOR es el inverso exacto de la salida del circuito XOR. El símbolo tradicional para una compuerta XNOR se obtiene con sólo agregar un pequeño círculo en la salida del símbolo XOR.</p>
-<p><img alt="img" src="../assets/Clase1_S3_105.png" /></p>
-<p>El símbolo IEEE/ANSI agrega el pequeño triángulo en la salida del símbolo XOR. Ambos símbolos indican una salida que cambia a su estado de activo en BAJO cuando sólo una de las entradas está en ALTO.</p>
-<p><img alt="img" src="../assets/Clase1_S3_106.png" /></p>
-<p>La compuerta XNOR también tiene sólo dos entradas\, y las combina de manera que su salida sea</p>
-<p>Una forma abreviada de indicar la expresión de salida de la compuerta XNOR es</p>
-<p><img alt="img" src="../assets/Clase1_S3_107.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_108.png" /></p>
-<p>la cual es el inverso de la operación XOR. La compuerta XNOR se puede sintetizar de la siguiente manera:</p>
-<p>1. Sólo tiene dos entradas y su salida es:</p>
-<p>2. Su salida está en ALTO sólo cando las dos entradas se encuentran en el mismo nivel.</p>
-<p><img alt="img" src="../assets/Clase1_S3_109.png" /></p>
-<p>Se presentan los símbolos estándar de la puerta NOR−exclusiva <span class="arithmatex">\(XNOR\)</span>. Al igual que la puerta XOR\, la puerta XNOR solo tiene dos entradas. El círculo en la salida del símbolo de la puerta XNOR indica que su salida es la opuesta a la de la puerta XOR.</p>
-<p><img alt="img" src="../assets/Clase1_S3_110.png" /></p>
-<p>Cuando dos niveles lógicos de entrada son opuestos\, la salida de la puerta NOR−exclusiva es un nivel BAJO. La operación se puede expresar del siguiente modo <span class="arithmatex">\(A y B son las entradas\, y X es la salida\)</span>.</p>
-<p><img alt="img" src="../assets/Clase1_S3_111.png" /></p>
-<p>Se muestran las cuatro posibles combinaciones de entrada y las salidas resultantes para la puerta XNOR.</p>
-<p><img alt="img" src="../assets/Clase1_S3_112.png" /></p>
-<p>La operación lógica se resume en la Tabla de verdad. Observe que la salida es un nivel ALTO cuando las dos entradas están al mismo nivel.</p>
-<p><img alt="img" src="../assets/Clase1_S3_113.png" /></p>
-<h1 id="aplicacion-compuerta-nor-exclusiva-xnor">Aplicacion: Compuerta NOR EXCLUSIVA (XNOR)</h1>
-<p><img alt="img" src="../assets/Clase1_S3_114.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_115.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_116.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_117.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_118.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_119.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_120.png" /></p>
-<h1 id="compuerta-nand-como-compuerta-universal">Compuerta NAND como compuerta universal</h1>
-<p><img alt="img" src="../assets/Clase1_S3_121.png" /></p>
-<p><img alt="img" src="../assets/Clase1_S3_122.png" /></p>
 
 
 
@@ -1133,13 +1074,13 @@
         
         
           
-          <a href="../bibliografia/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Bibliografía">
+          <a href="../06_compuertas_combinadas/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Compuertas Combinadas NOR Y NAND">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                Bibliografía
+                Compuertas Combinadas NOR Y NAND
               </div>
             </div>
             <div class="md-footer__button md-icon">
