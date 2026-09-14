@@ -308,15 +308,9 @@ Una notación de dependencia especial dentro del símbolo rectangular indica có
 
 ![img](./assets/Clase1_S3_39.png)
 
-![img](./assets/Clase1_S3_40.png)
-
 Los símbolos rectangulares utilizan un pequeño triángulo rectángulo ( ◺ ) en lugar de la pequeña burbuja de los símbolos tradicionales para indicar la inversión del nivel lógico. La presencia o ausencia del triángulo también indica si una entrada o salida es activa en nivel BAJO o ALTO.
 
-![img](./assets/Clase1_S3_41.png)
-
 Una notación especial dentro de cada símbolo rectangular describe la relación lógica entra las entradas y la salida. El “1” dentro del símbolo INVERSOR denota un dispositivo con solo una entrada; el triángulo en la salida indica que esta cambiará al estado activo en BAJO cuando la entrada se encuentre en su estado activo en ALTO.
-
-![img](./assets/Clase1_S3_42.png)
 
 El “&” dentro del símbolo AND significa que la salida cambiará a su estado activo en ALTO cuando todas las entradas se encuentren en el estado activo en ALTO. El “≥” dentro de la compuerta OR indica que la salida cambiará a su estado activo (ALTO) siempre que cualquiera de las entradas se encuentre en su estado activo (ALTO).
 

@@ -6,7 +6,7 @@ title: "Operaciones Binarias"
 
 # Operaciones Binarias
 
-## SUMA BINARIA
+## Suma binaria
 
 ![img](./assets/Clase1_S1_60.png)
 
@@ -30,7 +30,7 @@ title: "Operaciones Binarias"
 
 ![img](./assets/Clase1_S1_69.png)
 
-## RESTA BINARIA
+## Resta binaria
 
 ### Complemento a 1
 
