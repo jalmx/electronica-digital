@@ -17,27 +17,26 @@ Realizar el **circuito lógico** de las siguientes ecuaciones, junto con su **ta
 
 Con base al circuito mostrado, crear la ecuacion que lo representa, con su tabla de verdad correspondiente.
 
-1. 
+1.
 ![ejercicio](./assets/circuito_ejercicio_1.png)
 
 ---
 
-2. 
+2.
 ![ejercicio](./assets/circuito_ejercicio_2.png)
 
 ---
 
-3. 
+3.
 ![ejercicio](./assets/circuito_ejercicio_3.png)
 
 ---
  
-4. 
-
+4.
 ![ejercicio](./assets/circuito_ejercicio_4.png)
 
 ---
 
-5. 
+5.
 
 ![ejercicio](./assets/circuito_ejercicio_5.png)
