@@ -55,35 +55,23 @@ $$A B’ + A’ B = Y$$
 
 ![img](./assets/Clase1_S5_10.png)
 
-# Álgebra booleana
+## Álgebra booleana
 
 El álgebra de Boole es un sistema matemático que nos permite manejar ecuaciones, las cuales pueden ser simplificadas y convertidas en o desde un sistema físico de puertas lógicas, las cuales realizan esa misma función. Es decir, podemos, mediante matemáticas, hacer que un sistema de control muy complejo se pueda simplificar.
 
-![img](./assets/Clase1_S5_11.png)
-
 Las operaciones fundamentales son:
 
-__Suma__ . Es la operación que realiza la compuerta OR, esta se expresa como:  _f = a + b_
-
-__Producto__ . Es la operación de la compuerta AND, la cual se expresa como:  _f = ab_
-
-__Inversión__ . Es la operación que realiza la compuerta NOT. Se expresa como: _ f = a’_
-
-![img](./assets/Clase1_S5_12.png)
+- __Suma__ . Es la operación que realiza la compuerta OR, esta se expresa como:  _f = a + b_
+- __Producto__ . Es la operación de la compuerta AND, la cual se expresa como:  _f = ab_
+- __Inversión__ . Es la operación que realiza la compuerta NOT. Se expresa como: _ f = a’_
 
 El álgebra de Boole son las matemáticas de los sistemas digitales. Es indispensable tener unos conocimientos básicos del álgebra booleana para estudiar y analizar los circuitos lógicos. Se han presentado las operaciones y expresiones booleanas para las puertas NOT, AND, OR, NAND y NOR.
 
-![img](./assets/Clase1_S5_13.png)
-
 Los términos  _variable_ ,  _complemento_  y  _literal_  son términos utilizados en el álgebra booleana. Una  _variable_  es un símbolo que se utiliza para representar magnitudes lógicas. Cualquier variable puede tener un valor de 0 o de 1. El  _complemento_  es el inverso de la variable y se indica mediante una barra encima de la misma. Por ejemplo, el complemento de la variable  _A es A’_ . Si A = 1, entonces A = 0. Si A = 0, entonces A = 1.
-
-![img](./assets/Clase1_S5_14.png)
 
 El  _complemento_  de la variable A se lee “no A” o “A barra”. En ocasiones, se emplea un apóstrofe en lugar de la barra para indicar el complemento de una variable; por ejemplo B’ indica el complemento de B. Un  _literal_  es una variable o el complemento de una variable.
 
-![img](./assets/Clase1_S5_15.png)
-
-## Suma booleana
+### Suma booleana
 
 La suma booleana es equivalente a la operación OR y a continuación se muestran sus reglas básicas junto con su relación con la puerta OR:
 
@@ -91,13 +79,12 @@ La suma booleana es equivalente a la operación OR y a continuación se muestran
 
 En el álgebra de Boole, un  _término suma_  es una suma de literales. En los circuitos lógicos, un término suma se obtiene mediante una operación OR, sin que exista ninguna operación AND en la expresión.
 
-![img](./assets/Clase1_S5_17.png)
-
-_Un término suma es igual a 1 cuando uno o más de los literales del término es 1. Un término suma es igual a 0 sólo si cada uno de los literales son iguales a 0._
+!!! note 
+    _Un término suma es igual a 1 cuando uno o más de los literales del término es 1. Un término suma es igual a 0 sólo si cada uno de los literales son iguales a 0._
 
 ![img](./assets/Clase1_S5_18.png)
 
-# Multiplicación booleana
+### Multiplicación booleana
 
 La multiplicación booleana es equivalente a la operación AND y sus reglas básicas junto con sus relaciones con la puerta AND se ilustran a continuación:
 
@@ -111,7 +98,7 @@ _Un _  _término producto_  _ es igual a 1 sólo si cada uno de los literales de
 
 ![img](./assets/Clase1_S5_21.png)
 
-# Precedencia de operadores
+## Precedencia de operadores
 
 La expresión A · B + C puede interpretarse de dos maneras:
 
@@ -133,7 +120,7 @@ El uso de los paréntesis aquí para indicar que primero se aplica la operación
 
 ![img](./assets/Clase1_S5_25.png)
 
-# Circuitos que contienen INVERSORES
+## Circuitos que contienen INVERSORES
 
 Siempre que haya un INVERSOR presente en el diagrama de un circuito lógico, la expresión de su salida es en sí igual a la expresión de la entrada con una barra sobre ella.
 
@@ -155,7 +142,7 @@ Note el uso de dos conjuntos separados de paréntesis en la figura. Observe adem
 
 ![img](./assets/Clase1_S5_30.png)
 
-# Análisis mediante el uso de una tabla
+## Análisis mediante el uso de una tabla
 
 ![img](./assets/Clase1_S5_31.png)
 
@@ -165,7 +152,7 @@ Note el uso de dos conjuntos separados de paréntesis en la figura. Observe adem
 
 ![img](./assets/Clase1_S5_34.png)
 
-# Teoremas Booleanos
+## Teoremas Booleanos
 
 ![img](./assets/Clase1_S5_35.png)
 
@@ -187,11 +174,11 @@ El teorema (13) es la  _ley distributiva_ , la cual establece que para expandir 
 
 ![img](./assets/Clase1_S5_41.png)
 
-# Identidades del álgebra de Boole
+### Identidades del álgebra de Boole
 
 ![img](./assets/Clase1_S5_42.png)
 
-# Leyes del álgebra de Boole
+### Leyes del álgebra de Boole
 
 La  _ley conmutativa_  de la  __suma__  para dos variables se escribe como sigue:
 
@@ -223,7 +210,7 @@ La  _ley distributiva para tres variables_  se escribe como sigue:
 
 ![img](./assets/Clase1_S5_52.png)
 
-# Teorema de Morgan
+## Teorema de Morgan
 
 Los  __teoremas de DeMorgan__  proporcionan una verificación matemática de la equivalencia entre las puertas  _NAND_  y  _negativa\-OR, y las puertas NOR y negativa\-AND._
 
@@ -261,6 +248,6 @@ _El complemento de dos o más variables a las que se aplica la operación OR es 
 
 ![img](./assets/Clase1_S5_61.png)
 
-# Teoremas Booleanos
+### Teoremas Booleanos
 
 ![img](./assets/Clase1_S5_62.png)

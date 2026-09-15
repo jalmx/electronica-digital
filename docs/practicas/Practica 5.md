@@ -26,13 +26,13 @@ Construir y analizar el comportamiento de circuitos digitales, creando tablas de
 
 Realizar el siguiente circuito, generar la tabla de verdad y su ecuación
 
-![circuito1](assets/practica5_1.png)
+![circuito1](../assets/practica5_1.png)
 
 ### Paso 2: Circuito digital 
 
 Realizar el siguiente circuito, generar la tabla de verdad y su ecuación
 
-![circuito1](assets/practica5_2.png)
+![circuito1](../assets/practica5_2.png)
 
 ---
 

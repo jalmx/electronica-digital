@@ -27,7 +27,7 @@ Construir y analizar el comportamiento de circuitos digitales, creando tablas de
 
 Construir el siguiente circuito y llenar la tabla de verdad correspondiente.
 
-![](assets/circuito_1_p4.svg)
+![](../assets/circuito_1_p4.svg)
 
 Llena la siguiente tabla:
 
@@ -46,7 +46,7 @@ Llena la siguiente tabla:
 
 Construir el siguiente circuito y llenar la tabla de verdad correspondiente.
 
-![](assets/circuito_2_p4.svg)
+![](../assets/circuito_2_p4.svg)
 
 Llena la siguiente tabla:
 
@@ -65,7 +65,7 @@ Llena la siguiente tabla:
 
 Construir el siguiente circuito y llenar la tabla de verdad correspondiente.
 
-![](assets/circuito_3_p4.svg)
+![](../assets/circuito_3_p4.svg)
 
 Llena la siguiente tabla:
 
@@ -84,7 +84,7 @@ Llena la siguiente tabla:
 
 Construir el siguiente circuito y llenar la tabla de verdad correspondiente.
 
-![](assets/circuito_4_p4.svg)
+![](../assets/circuito_4_p4.svg)
 
 Llena la siguiente tabla:
 

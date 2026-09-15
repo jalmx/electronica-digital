@@ -104,10 +104,6 @@ Volvemos a multiplicar todo, para el resultado final
 
 ![img](./assets/Clase1_S6_32.png)
 
-# APLICANDO ÁLGEBRA BOOLEANA
-
-# Aplicando Álgebra Booleana
-
 Con base al circuito, generar la ecuación, reducirla y obtener tabla de verdad
 
 ![img](./assets/Clase1_S6_33.png)

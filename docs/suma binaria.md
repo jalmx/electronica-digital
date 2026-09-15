@@ -1,4 +1,4 @@
-![banner](assets/banner_class_85.png)
+![banner](../assets/banner_class_85.png)
 
 # Ejercicios de suma binaria
 

@@ -10,7 +10,7 @@ Las compuertas se pueden comprobar de manera eléctrica usando interruptores y c
 
 Siguiendo el siguiente circuito esquemático, armar en su protoboard.
 
-![and](assets/compuertas_switch_AND.svg)
+![and](../assets/compuertas_switch_AND.svg)
 
 
 Rellenar la siguiente tabla, con la palabra `encendido` o `apagado` en el estado del led, en función de la posición de los interruptores.
@@ -29,7 +29,7 @@ Las compuertas se pueden comprobar de manera eléctrica usando interruptores y c
 
 Siguiendo el siguiente circuito esquemático, armar en su protoboard.
 
-![and](assets/compuertas_switch_OR.svg)
+![and](../assets/compuertas_switch_OR.svg)
 
 
 Rellenar la siguiente tabla, con la palabra `encendido` o `apagado` en el estado del led, en función de la posición de los interruptores.

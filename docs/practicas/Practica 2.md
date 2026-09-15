@@ -87,11 +87,11 @@ Ahora vamos a realizar las combinaciones en la entrada y ver los voltajes que te
 
 Ahora vas a colocar un led a la salida de cada compuerta que contenga el IC, realizando las combinaciones de la tabla de verdad y ver lo que sucede con el estado del LED
 
-![](assets/verifica_compuertas_bb.svg)
+![](../assets/verifica_compuertas_bb.svg)
 
 **AND 7408**
 
-![and](assets/and.svg)
+![and](../assets/and.svg)
 
 |A|B|ESTADO LED|
 |---|---|---|
@@ -102,7 +102,7 @@ Ahora vas a colocar un led a la salida de cada compuerta que contenga el IC, rea
 
 **OR 7432**
 
-![and](assets/or.svg)
+![and](../assets/or.svg)
 
 |A|B|ESTADO LED|
 |---|---|---|
@@ -113,7 +113,7 @@ Ahora vas a colocar un led a la salida de cada compuerta que contenga el IC, rea
 
 **NOT 7404**
 
-![and](assets/not.svg)
+![and](../assets/not.svg)
 
 |A|ESTADO LED|
 |---|---|
