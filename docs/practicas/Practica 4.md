@@ -25,13 +25,13 @@ Construir y analizar el comportamiento de circuitos digitales, creando tablas de
 
 Reducir la expresión booleana, generar la tabla de verdad y su diagrama
 
-$$A\bar{B} + AB\bar{C}$$
+$$A\overline{B} + AB\overline{C}$$
 
 ### Paso 2: Circuito digital 2
 
 Reducir la expresión booleana, generar la tabla de verdad y su diagrama
 
-$$A\bar{B}C + ABC + AB\bar{C}$$
+$$A\overline{B}C + ABC + AB\overline{C}$$
 
 ---
 

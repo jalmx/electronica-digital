@@ -30,7 +30,7 @@ En esta practica a prenderás a identificar las compuerta lógicas, en sus entra
 
 Para realizar la identificación de entradas y salidas se debe tomar el datasheet de cada compuerta. En su hoja de especificaciones vamos observar la distribución de pines
 
-![pines gates](./assets/compuerta_all.png)
+![pines gates](../assets/compuerta_all.png)
 
 ### Paso 2: Probar niveles de voltaje de entrada
 
@@ -125,7 +125,7 @@ Ahora vas a colocar un led a la salida de cada compuerta que contenga el IC, rea
 ## Resultado
 
 <details>
-    <img src="assets/videos/gates_1.gif">
+    <img src="../assets/videos/gates_1.gif">
 </details>
 
 ---

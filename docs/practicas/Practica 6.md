@@ -14,7 +14,7 @@ Construir y analizar el comportamiento de circuitos digitales, creando tablas de
 |1|IC 7404|Compuerta |
 |1|IC 7408|Compuerta |
 |1|IC7432|Compuerta |
-|x|Leds||
+|x|Leds|Leds de colores|
 |x|Resistencias 330||
 |x|Resistencias 1k||
 |1|Dipswitch o push button||
