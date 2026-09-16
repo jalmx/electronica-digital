@@ -169,7 +169,8 @@ Por ejemplo, si tenemos el número $11011010_2$ hacemos las siguientes operacion
 
 Nótese que cuatro bits binarios corresponden a un dígito hexadecimal. Esto es, se requieren exactamente cuatro bits para contar desde 0 hasta F. Para representar números binarios como números hexadecimales, se forman grupos de cuatro, comenzando en el punto binario y en dirección a la izquierda.
 
-_Un número binario de ocho bits puede representarse adecuadamente con dos dígitos hexadecimales._
+!!!note
+    Un número binario de ocho bits puede representarse adecuadamente con dos dígitos hexadecimales.
 
 ![img](./assets/Clase1_S1_47.png)
 

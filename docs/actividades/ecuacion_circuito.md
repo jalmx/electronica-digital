@@ -19,27 +19,27 @@ Con base al circuito mostrado, crear la ecuacion que lo representa, con su tabla
 
 1.
 
-![ejercicio](./assets/circuito_ejercicio_1.png)
+![ejercicio](../assets/circuito_ejercicio_1.png)
 
 ---
 
 2.
 
-![ejercicio](./assets/circuito_ejercicio_2.png)
+![ejercicio](../assets/circuito_ejercicio_2.png)
 
 ---
 
 3.
 
-![ejercicio](./assets/circuito_ejercicio_3.png)
+![ejercicio](../assets/circuito_ejercicio_3.png)
 
 ---
  
 4.
-![ejercicio](./assets/circuito_ejercicio_4.png)
+![ejercicio](../assets/circuito_ejercicio_4.png)
 
 ---
 
 5.
 
-![ejercicio](./assets/circuito_ejercicio_5.png)
+![ejercicio](../assets/circuito_ejercicio_5.png)

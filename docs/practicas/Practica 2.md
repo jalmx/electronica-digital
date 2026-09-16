@@ -44,19 +44,19 @@ Montar el circuito integrado en el protoboard y darle alimentación (voltaje). R
 !!! note
     Si cuentas con una pila de 9V, utilizar un regulador de voltaje 7805
 
-![](./assets/fritzing/verifica_compuertas_alone.svg)
+![img](../assets/circuitos/fritzing/verifica_compuertas_alone.svg)
 
 Una vez realizada las conexiones realizar las combinaciones en la entrada (en el dipswitch) para cada compuerta que tenga el IC.
 
 Primero revisaras los valores de entrada, que serian la entrada **A** y **B**
 
-![](./assets/fritzing/verifica_compuertas_mult_in.svg)
+![img](../assets/circuitos/fritzing/verifica_compuertas_mult_in.svg)
 
 ### Paso 3: Verificar niveles de voltaje de Salida
 
 Ahora vamos a realizar las combinaciones en la entrada y ver los voltajes que tenemos a la salida de cada compuerta.
 
-![](./assets/fritzing/verifica_compuertas_mult_out.svg)
+![verificar](../assets/circuitos/fritzing/verifica_compuertas_mult_out.svg)
 
 **AND 7408**
 
@@ -87,7 +87,7 @@ Ahora vamos a realizar las combinaciones en la entrada y ver los voltajes que te
 
 Ahora vas a colocar un led a la salida de cada compuerta que contenga el IC, realizando las combinaciones de la tabla de verdad y ver lo que sucede con el estado del LED
 
-![](../assets/verifica_compuertas_bb.svg)
+![img](../assets/verifica_compuertas_bb.svg)
 
 **AND 7408**
 
@@ -133,5 +133,3 @@ Ahora vas a colocar un led a la salida de cada compuerta que contenga el IC, rea
 > Circuitos digitales
 
 > Mecatrónica
-
----

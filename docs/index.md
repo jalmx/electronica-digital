@@ -2,24 +2,6 @@
 
 # Electronica Digital
 
-## Secuencia
-
-1. Bases numéricas, conversiones
-   1.  Decimal
-   2.  Binario
-   3.  Hexadecimal
-2. Operaciones binarias
-    1.  Suma
-3.  Electronica analógica vs digital
-4.  Dígitos binarios (0,1)(ALTO, BAJO)(niveles TTL)
-5.  Niveles lógicos
-   1. Niveles de lógicos e incertidumbre
-6.  Formas de onda
-   1. Niveles y flancos
-7.  Operaciones lógicas, simbología
-   1. NOT
-   2. AND
-   3. OR
 8.  Compuertas, su tabla de verdad
    1. AND 7408
    2. NOT 7404

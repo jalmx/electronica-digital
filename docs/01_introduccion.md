@@ -3,11 +3,9 @@ title: "Introduccion a la electronica digital"
 ---
 
 
-![banner](../assets/banner_class_85.png)
+![banner](./assets/banner_class_85.png)
 
 # Introduccion a la electronica digital
-
-# Introducción al diseño digital
 
 En el mundo actual, el término digital se ha convertido en parte de nuestro vocabulario común, debido a la dramática forma en que los circuitos y las técnicas digitales se han vuelto tan utilizados en casi todas las áreas de la vida: computadoras, automatización, robots, ciencia médica y tecnología, transporte, telecomunicaciones, entretenimiento, exploración en el espacio, etcétera.
 
