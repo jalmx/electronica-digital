@@ -226,8 +226,6 @@ La  _operación NOT_  es distinta de las operaciones OR y AND, ya que puede real
 
 En donde la barra superior representa la operación NOT. Esta expresión se lee como “ _x es igual a NOT A_ ” o “ _x es igual al inverso de A_ ” o “ _x es igual al complemento de A_ ”.
 
-![img](./assets/Clase1_S3_19.png)
-
 Cada una de estas expresiones es de uso común y todas indican que el valor lógico de x = ‘A es el opuesto del valor lógico de  _A_ .
 
 ![img](./assets/Clase1_S3_20.png)
@@ -244,8 +242,6 @@ La operación NOT también se conoce como  _inversión_  o  _complementación_ ,
 
 Ambos deben reconocerse como símbolos que indican la operación de inversión.
 
-![img](./assets/Clase1_S3_24.png)
-
 ## Circuito NOT (INVERSOR)
 
 Se muestra el símbolo para un  __circuito NOT__ , al cual se le conoce más comúnmente como  __INVERSOR__ . Este circuito siempre tiene una sola entrada y su nivel lógico de salida siempre es opuesto al nivel lógico de esta entrada.
@@ -253,8 +249,6 @@ Se muestra el símbolo para un  __circuito NOT__ , al cual se le conoce más com
 ![img](./assets/Clase1_S3_25.png)
 
 El círculo que aparece en la salida del símbolo, se conoce como círculo de inversión.
-
-![img](./assets/Clase1_S3_26.png)
 
 ![img](./assets/Clase1_S3_27.png)
 

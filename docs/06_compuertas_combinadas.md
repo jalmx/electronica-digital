@@ -16,7 +16,6 @@ Por ello, la compuerta NOR opera de manera similar a una compuerta OR seguida de
 
 La tabla de verdad muestra que la salida de la compuerta NOR es el inverso exacto de la salida de la compuerta OR para todas las posibles condiciones de entrada. La salida de una compuerta OR cambia a ALTO cuando cualquiera de sus entradas se encuentra en ALTO; la salida de la compuerta NOR cambia a BAJO cuando cualquiera de sus entradas se encuentra en ALTO. Esta misma operación puede aplicarse a las compuertas NOR con más de dos entradas.
 
-![img](./assets/Clase1_S3_48.png)
 
 ![img](./assets/Clase1_S3_49.png)
 
@@ -28,23 +27,18 @@ _La puerta NOR_  genera una salida a nivel BAJO cuando cualquiera de sus entrada
 
 Para el caso concreto de la puerta NOR de dos entradas, con la designación A y B para las entradas y X para la salida.
 
-![img](./assets/Clase1_S3_51.png)
-
-> En una puerta NOR de dos entradas: la salida X es un nivel BAJO si cualquiera de sus entradas A o B está a nivel ALTO, o si ambas entradas A y B están a nivel ALTO; X es un nivel ALTO si A y B están a nivel BAJO.
+!!! note
+    En una puerta NOR de dos entradas: la salida X es un nivel BAJO si cualquiera de sus entradas A o B está a nivel ALTO, o si ambas entradas A y B están a nivel ALTO; X es un nivel ALTO si A y B están a nivel BAJO.
 
 ![img](./assets/Clase1_S3_52.png)
 
 Esta operación genera un nivel de salida opuesto al que genera la puerta OR. En una puerta NOR, el nivel BAJO es el nivel activo o verdadero de salida, como indica el círculo de la salida.
-
-![img](./assets/Clase1_S3_53.png)
 
 Se ilustra el funcionamiento de una puerta NOR de dos entradas, para las cuatro posibles combinaciones de entrada.
 
 ![img](./assets/Clase1_S3_54.png)
 
 Esta operación genera un nivel de salida opuesto al que genera la puerta OR. En una puerta NOR, el nivel BAJO es el nivel activo o verdadero de salida, como indica el círculo de la salida.
-
-![img](./assets/Clase1_S3_55.png)
 
 La figura ilustra el funcionamiento de una puerta NOR de dos entradas, para las cuatro posibles combinaciones de entrada, y la Tabla es la tabla de verdad para la puerta NOR de dos entradas.
 
@@ -54,9 +48,13 @@ La figura ilustra el funcionamiento de una puerta NOR de dos entradas, para las 
 
 ![img](./assets/Clase1_S3_58.png)
 
+**Compuerta NOR con interruptores:**
+
 ![img](./assets/Clase1_S3_59.png)
 
 ![img](./assets/Clase1_S3_60.png)
+
+**Encapsulado de compuerta NOR**
 
 ![img](./assets/Clase1_S3_61.png)
 
@@ -86,13 +84,9 @@ La tabla de verdad se muestra que la salida de la compuerta NAND es el inverso e
 
 ![img](./assets/Clase1_S3_66.png)
 
-_La salida AND cambia a nivel ALTO sólo cuando todas las entradas se encuentran en ALTO_ , mientras que la salida _ NAND cambia a BAJO sólo cuando todas las entradas se encuentran en ALTO_ . Esta misma característica puede aplicarse a las compuertas NAND que tienen más de dos entradas.
-
-![img](./assets/Clase1_S3_67.png)
+_La salida AND cambia a nivel ALTO sólo cuando todas las entradas se encuentran en ALTO_ , mientras que la salida _NAND cambia a BAJO sólo cuando todas las entradas se encuentran en ALTO_ . Esta misma característica puede aplicarse a las compuertas NAND que tienen más de dos entradas.
 
 El término  _NAND_  es una contracción de  _NOT−AND_ , e implica una función AND con la salida complementada (negada).
-
-![img](./assets/Clase1_S3_68.png)
 
 Se muestra el símbolo lógico estándar para la puerta NAND de 2 entradas y su equivalente empleando los símbolos de la puerta AND seguida de un inversor, donde el símbolo  __≡__  significa “ _equivalente a_ ”.
 
@@ -100,9 +94,8 @@ Se muestra el símbolo lógico estándar para la puerta NAND de 2 entradas y su 
 
 La  _puerta NAND_  genera una salida a nivel BAJO solo cuando todas las entradas están a nivel ALTO. Cuando cualquiera de las entradas está a nivel BAJO, la salida se pondrá a nivel ALTO. Para el caso concreto de la puerta NAND de dos entradas, con la designación A y B para las entradas y X para la salida.
 
-![img](./assets/Clase1_S3_70.png)
-
-> En una puerta NAND de dos entradas, la salida X es un nivel BAJO si las entradas A y B están a nivel ALTO; X es un nivel ALTO si A o B están a nivel BAJO o si ambas, A y B, están a nivel BAJO.
+!!! note
+    En una puerta NAND de dos entradas, la salida X es un nivel BAJO si las entradas A y B están a nivel ALTO; X es un nivel ALTO si A o B están a nivel BAJO o si ambas, A y B, están a nivel BAJO.
 
 ![img](./assets/Clase1_S3_71.png)
 
@@ -112,7 +105,11 @@ Observe que esta operación, en términos de nivel de salida, es la opuesta a la
 
 ![img](./assets/Clase1_S3_73.png)
 
+**Compuerta NAD con interruptores**
+
 ![img](./assets/Clase1_S3_74.png)
+
+### Aplicacion de NAND
 
 Determine la forma de onda de salida de una compuerta NAND que tiene las entradas que se muestran
 
@@ -122,9 +119,8 @@ Determine la forma de onda de salida de una compuerta NAND que tiene las entrada
 
 Se muestran los símbolos estándar para la puerta OR−exclusiva (XOR). La puerta XOR tiene solo dos entradas. La salida de una puerta OR−exclusiva se pone a nivel ALTO solo cuando las dos entradas están a niveles lógicos opuestos. Esta operación se puede expresar, en función de dos entradas A y B y una salida X.
 
-![img](./assets/Clase1_S3_76.png)
-
-_En una puerta OR−exclusiva, la salida X es un nivel ALTO si la entrada A está a nivel BAJO y la entrada B está a nivel ALTO; o si la entrada A está a nivel ALTO y la entrada B está a nivel BAJO; X es un nivel BAJO si tanto A como B están a nivel ALTO o BAJO._
+!!! note
+    En una puerta OR−exclusiva, la salida X es un nivel ALTO si la entrada A está a nivel BAJO y la entrada B está a nivel ALTO; o si la entrada A está a nivel ALTO y la entrada B está a nivel BAJO; X es un nivel BAJO si tanto A como B están a nivel ALTO o BAJO._
 
 ![img](./assets/Clase1_S3_77.png)
 
@@ -186,12 +182,9 @@ Una forma abreviada que se utiliza algunas veces para indicar la expresión de s
 
 en donde el  __símbolo ⊕__  representa la operación de la c _ompuerta XOR_
 
-![img](./assets/Clase1_S3_93.png)
-
 Se sintetizan las características de una  _compuerta XOR_ :
 
 1. Sólo tiene dos entradas y su salida es
-
 2. Su salida está en  _ALTO_  solo cuando las dos entradas se encuentran en niveles  _distintos_ .
 
 ![img](./assets/Clase1_S3_94.png)
@@ -204,9 +197,7 @@ El funcionamiento de la compuerta se puede observar en la siguiente figura:
 
 En la gráfica se puede apreciar que en la primera y última figura hay en las entradas número par de unos lógicos, por consiguiente a la salida se apaga el LED indicando un cero lógico. En el resto de las figuras la salida es uno lógico, lo cual describe la tabla de verdad de esta operación lógica.
 
-![img](./assets/Clase1_S3_97.png)
-
-La referencia de la compuerta XOR de dos entradas es el número 74LS86, el cual tiene la siguiente estructura interna.
+La referencia de la compuerta XOR de dos entradas es el número **74LS86**, el cual tiene la siguiente estructura interna.
 
 ![img](./assets/Clase1_S3_98.png)
 
@@ -218,8 +209,6 @@ Un cierto sistema está formado por dos circuitos idénticos que funcionan en pa
 
 __Solucion__ : Las salidas de los circuitos se conectan a las entradas de una puerta XOR, como muestra. Un fallo en cualquiera de los circuitos hace que las entradas de la puerta XOR tengan niveles opuestos. Esta condición da lugar a nivel ALTO en la salida de la puerta XOR, que indica que uno de los circuitos ha fallado.
 
-![img](./assets/Clase1_S3_100.png)
-
 ## Compuerta NOR EXCLUSIVA (XNOR)
 
 El  _NOR exclusivo_ , también conocido en ocasiones como  _OR no exclusivo_ , tiene la tabla de verdad y el símbolo que se muestran.  _La salida, Y, tiene el nivel ALTO cuando las entradas son iguales, y BAJO si son distintas_ .
@@ -229,10 +218,6 @@ El  _NOR exclusivo_ , también conocido en ocasiones como  _OR no exclusivo_ , t
 El circuito NOR exclusivo (que se abrevia como  _XNOR_ ) opera en forma completamente opuesta al circuito XOR. Se muestra un circuito XNOR y su tabla de verdad correspondiente.
 
 ![img](./assets/Clase1_S3_102.png)
-
-La expresión de salida es
-
-_lo cual indica junto con la tabla de verdad que x será 1 para dos casos: A = B = 1 (el término AB) y A = B = 0 (el término A’ B’). _
 
 ![img](./assets/Clase1_S3_103.png)
 

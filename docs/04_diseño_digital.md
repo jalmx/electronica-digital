@@ -8,11 +8,7 @@ title: "Diseño Digital"
 
 En los sistemas digitales, la información que se procesa, por lo general, está presente en formato binario. Las cantidades binarias pueden representarse mediante cualquier dispositivo que solo tenga  _dos estados de operación o condiciones posibles_ .
 
-![img](./assets/Clase1_S2_1.png)
-
 Un interruptor solo tiene dos estados:  _abierto o cerrado_ . De manera arbitraria podemos permitir que un  _interruptor abierto represente el 0 binario_  y que un  _interruptor cerrado represente el 1 binario_.
-
-![img](./assets/Clase1_S2_2.png)
 
 Con esta asignación podemos ahora representar cualquier número binario. Se muestra un número en código binario para un dispositivo de apertura de puertas de garaje. Los pequeños interruptores están ajustados para formar el número binario 1000101010. La puerta se abrirá solo si coinciden los patrones de bits en el receptor y en el transmisor.
 
@@ -96,10 +92,6 @@ Las tensiones empleadas para representar un 1 y un 0 se denominan  _niveles lóg
 
 Sin embargo, en un circuito digital real, un nivel ALTO puede ser cualquier tensión entre un valor mínimo y un valor máximo especificados. Del mismo modo, un nivel BAJO puede ser cualquier tensión comprendida entre un mínimo y máximo especificados. No puede existir solapamiento entre el rango aceptado de niveles ALTO y el rango aceptado de niveles BAJO.
 
-![img](./assets/Clase1_S2_21.png)
-
-![img](./assets/Clase1_S2_22.png)
-
 Se ilustra el rango general de los niveles BAJO y ALTO aceptables para un circuito digital. La variable  _V_  _H(máx)_  representa el valor máximo de tensión para el nivel ALTO y  _V_  _H(mín)_  representa el valor de tensión mínimo para el nivel ALTO. El valor máximo de tensión para el nivel BAJO se representa mediante  _V_  _L(máx)_  y el valor mínimo de tensión para el nivel BAJO mediante  _V_  _L(mín)_ .
 
 ![img](./assets/Clase1_S2_23.png)
@@ -116,7 +108,7 @@ _La forma en que un circuito digital responde a una entrada se conoce como lógi
 
 ![img](./assets/Clase1_S2_25.png)
 
-## Circuitos digitales integrados
+### Circuitos digitales integrados
 
 Casi todos los circuitos digitales que se utilizan en los sistemas digitales modernos son circuitos integrados (CI). La amplia variedad de circuitos integrados lógicos disponibles, ha hecho posible la construcción de sistemas digitales complejos que son más pequeños y confiables que sus contrapartes fabricados con componentes discretos.
 
@@ -124,25 +116,15 @@ Casi todos los circuitos digitales que se utilizan en los sistemas digitales mod
 
 Existen varias tecnologías de fabricación de circuitos integrados utilizadas para producir circuitos integrados digitales, de las cuales las más comunes son CMOS, TTL, NMOS y ECL. Cada una difiere en cuanto al tipo de circuito utilizado para proporcionar la operación lógica deseada.
 
-![img](./assets/Clase1_S2_27.png)
-
 Por ejemplo, TTL (lógica de transistor\-transistor) utiliza el transistor bipolar como el elemento principal en el circuito, mientras que CMOS (semiconductor de metal óxido complementario) utiliza el MOSFET en modo mejorado como el elemento principal del circuito. Veremos sus características, ventajas y desventajas a medida que vayamos dominando los tipos básicos de circuitos lógicos.
 
-![img](./assets/Clase1_S2_28.png)
-
-## Formas de onda digitales
+### Formas de onda digitales
 
 Las formas de onda digitales consisten en niveles de tensión que varían entre los estados o niveles ALTO y BAJO. Se muestra que un  _impulso_  positivo se genera cuando la tensión (o la intensidad) pasa de su nivel normalmente BAJO hasta su nivel ALTO y luego vuelve otra vez a su nivel BAJO.
 
-![img](./assets/Clase1_S2_29.png)
-
 El impulso negativo se genera cuando la tensión pasa de su nivel normalmente ALTO a su nivel BAJO y vuelve a su nivel ALTO. Una señal digital está formada por una serie de impulsos.
 
-![img](./assets/Clase1_S2_30.png)
-
 __El impulso__ . Un impulso tiene dos flancos: un  __flanco anterior (__  _flanco de subida_  __)__  que se produce en el instante  _t_  _0_  y un  _flanco posterior (flanco de bajada)_  que se produce en el instante posterior  _t_  _1_ .
-
-![img](./assets/Clase1_S2_31.png)
 
 Para un impulso positivo, el flanco anterior es un flanco de subida y el flanco posterior es de bajada. Los impulsos mostrados son ideales porque se supone que los flancos de subida y de bajada ocurren en un tiempo cero (instantáneamente). En la práctica, estas transiciones no suceden de forma instantánea, aunque para la mayoría de las situaciones digitales podemos suponer que son impulsos ideales.
 
@@ -150,31 +132,19 @@ Para un impulso positivo, el flanco anterior es un flanco de subida y el flanco 
 
 Se muestra un impulso real (no ideal). En la práctica, todos los impulsos presentan alguna o todas de las características siguientes. En ocasiones, se producen picos de tensión y rizado debidos a los efectos capacitivos e inductivos parásitos. La caída puede ser provocada por las capacidades parásitas y la resistencia del circuito que forman un circuito RC con una constante de tiempo baja.
 
-![img](./assets/Clase1_S2_33.png)
-
-![img](./assets/Clase1_S2_34.png)
-
 El tiempo requerido para que un impulso pase desde su nivel BAJO hasta su nivel ALTO se denomina tiempo de subida ( _t_  _r_ ), y el tiempo requerido para la transición del nivel ALTO al nivel BAJO se denomina tiempo de bajada ( _t_  _f_ ).
 
-![img](./assets/Clase1_S2_35.png)
-
 En la práctica, el tiempo de subida se mide como el tiempo que tarda en pasar del 10% (altura respecto de la línea) al 90% de la amplitud del impulso y el tiempo de bajada se mide como el tiempo que tarda en pasar del 90% al 10% de la amplitud del impulso.
-
-![img](./assets/Clase1_S2_36.png)
 
 La razón de que el 10% inferior y el 10% superior no se incluyan en los tiempos de subida y de bajada se debe a la no linealidad de la señal en esas áreas. El ancho del impulso ( _t_  _W_ ) es una medida de la duración del impulso y, a menudo, se define como el intervalo de tiempo que transcurre entre los puntos en que la amplitud es del 50% en los flancos de subida y de bajada, como se indica.
 
 ![img](./assets/Clase1_S2_37.png)
 
-## Características de la forma de onda
+### Características de la forma de onda
 
 La mayoría de las formas de onda que se pueden encontrar en los sistemas digitales están formadas por series de impulsos, algunas veces denominados también trenes de impulsos, y pueden clasificarse en periódicas y no periódicas.
 
-![img](./assets/Clase1_S2_38.png)
-
 Un tren de impulsos  _periódico_  es aquel que se repite a intervalos de tiempo fijos; este intervalo de tiempo fijo se denomina  _período (T)_ . La  _frecuencia (f)_  es la velocidad a la que se repite y se mide en hercios (Hz).
-
-![img](./assets/Clase1_S2_39.png)
 
 Por supuesto, un tren de impulsos no periódico no se repite a intervalos de tiempo fijos y puede estar formado por impulsos de distintos anchos y/o impulsos que tienen intervalos distintos de tiempo entre los pulsos.
 
@@ -182,23 +152,20 @@ Por supuesto, un tren de impulsos no periódico no se repite a intervalos de tie
 
 La frecuencia  _(f)_  de un tren de pulsos (digital) es el inverso del período. La relación entre la frecuencia y el período se expresa como sigue:
 
-![img](./assets/Clase1_S2_41.png)
 
-![img](./assets/Clase1_S2_42.png)
+|Frecuencia|Tiempo|
+|:---:|:---:|
+|![img](./assets/Clase1_S2_41.png)|![img](./assets/Clase1_S2_42.png)|
 
 Una característica importante de una señal digital periódica es su  _ciclo de trabajo_ , que es el cociente entre el ancho del impulso ( _t_  _W_ ) y el período ( _T_ ) y puede expresarse como un porcentaje.
 
 ![img](./assets/Clase1_S2_43.png)
 
-## Diagramas de tiempos
+### Diagramas de tiempos
 
 Un diagrama de tiempos o cronograma es una gráfica de señales digitales que muestra la relación temporal real entre dos o más señales y cómo varía cada señal respecto a las demás.
 
-![img](./assets/Clase1_S2_44.png)
-
 Al examinar un diagrama de tiempos, es posible determinar los estados (ALTO o BAJO) de todas las formas de onda en cualquier punto de tiempo especificado y el instante exacto en el que una forma de onda cambia de estado respecto a las restantes.
-
-![img](./assets/Clase1_S2_45.png)
 
 A partir de este diagrama de tiempos podemos ver, por ejemplo, que las tres formas de onda A, B y C están a nivel ALTO solo durante el séptimo ciclo de reloj y las tres cambian de nuevo a nivel BAJO cuando termina dicho ciclo (área sombreada).
 
@@ -222,11 +189,7 @@ A menudo los números binarios se descomponen en grupos de cuatro bits, como con
 
 Los términos bit, nibble y byte representan un número fijo de dígitos binarios. A medida que los sistemas han ido creciendo a lo largo de los años, también ha crecido su capacidad (¿apetito?) de manejar datos binarios. Una palabra es un grupo de bits que representa una cierta unidad de información.
 
-![img](./assets/Clase1_S2_49.png)
-
 El tamaño de la palabra depende del tamaño de la ruta de datos en el sistema que utiliza la información. El tamaño de palabra puede definirse como el número de bits en la palabra binaria con el que opera un sistema digital.
-
-![img](./assets/Clase1_S2_50.png)
 
 Por ejemplo, tal vez la computadora en su horno de microondas solo pueda manejar un byte a la vez. Tiene un tamaño de palabra de ocho bits. Por otro lado, la computadora personal en su escritorio puede manejar ocho bytes a la vez, por lo que tiene un tamaño de palabra de 64 bits.
 
@@ -238,10 +201,7 @@ El código alfanumérico más utilizado es el  _Código estándar estadounidense
 
 Se muestra un listado del código ASCII estándar de siete bits. La tabla proporciona los equivalentes en hexadecimal y decimal. Para obtener el código binario de siete bits para cada carácter hay que convertir el valor hexadecimal en binario.
 
-![img](./assets/Clase1_S2_52.png)
-
 La tabla proporciona los equivalentes en hexadecimal y decimal. Para obtener el código binario de siete bits para cada carácter hay que convertir el valor hexadecimal en binario.
 
 ![img](./assets/Clase1_S2_53.png)
 
-![img](./assets/Clase1_S2_54.png)
