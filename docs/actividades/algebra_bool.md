@@ -43,7 +43,8 @@ $$X = A \cdot B \cdot C \cdot D + A \cdot \overline{B} \cdot C \cdot D + \overli
 
 
 10. 
-$$X = A \cdot B \cdot C \cdot D \cdot E + A \cdot B \cdot C \cdot D \cdot \overline{E} + A \cdot B \cdot C \cdot \overline{D} \cdot E$$ 
+$$X = A \cdot B \cdot C \cdot D \cdot E + A \cdot B \cdot C \cdot D \cdot \overline{E} + A \cdot B \cdot C \cdot \overline{D} \cdot E$$
+
 $$+ A \cdot B \cdot C \cdot \overline{D} \cdot \overline{E} + A \cdot \overline{B} \cdot C \cdot D \cdot E + A \cdot \overline{B} \cdot C \cdot D \cdot \overline{E}$$
 
 
