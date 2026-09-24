@@ -1147,59 +1147,61 @@
 
 
 <h1 id="algebra-booleana">Algebra booleana</h1>
-<p>Resolver los siguientes ejercicios, obtener la ecuacion reducida a su minima expresion mostrando el procedimiento algebraico aplicado en cada paso, generar el diagrama de la ecuacion inicial y la reducida, y la tabla de verdad (es la misma para ambos casos).</p>
+<p>Resolver los siguientes ejercicios, obtener la ecuacion reducida a su minima expresion mostrando el procedimiento <strong>algebraico</strong> aplicado en cada paso, generar el diagrama de la ecuacion inicial y la reducida, y la tabla de verdad (es la misma para ambos casos).</p>
 <p>Para ver los ejemplos <a href="../../08_aplicacion_algebra_booleana/">da click aquí</a></p>
 <h2 id="ejercicios">Ejercicios</h2>
 <ol>
 <li>
-<div class="arithmatex">\[F_1 = A + A \cdot B\]</div>
+<div class="arithmatex">\[X = A + A \cdot B\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_2 = A \cdot B + A \cdot \overline{B}\]</div>
+<div class="arithmatex">\[X = A \cdot B + A \cdot \overline{B}\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_3 = A \cdot B \cdot C + A \cdot B \cdot \overline{C} + A \cdot \overline{B} \cdot C\]</div>
+<div class="arithmatex">\[X = A \cdot B \cdot C + A \cdot B \cdot \overline{C} + A \cdot \overline{B} \cdot C\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_4 = (A + B) \cdot (A + \overline{B} + C)\]</div>
+<div class="arithmatex">\[X = (A + B) \cdot (A + \overline{B} + C)\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_5 = A \cdot \overline{B} \cdot C + A \cdot B \cdot C + \overline{A} \cdot B \cdot C + \overline{A} \cdot \overline{B} \cdot C\]</div>
+<div class="arithmatex">\[X = A \cdot \overline{B} \cdot C + A \cdot B \cdot C + \overline{A} \cdot B \cdot C + \overline{A} \cdot \overline{B} \cdot C\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_6 = A \cdot B \cdot C \cdot D + A \cdot B \cdot C \cdot \overline{D} + A \cdot B \cdot \overline{C} \cdot D + A \cdot B \cdot \overline{C} \cdot \overline{D}\]</div>
+<div class="arithmatex">\[X = A \cdot B \cdot C \cdot D + A \cdot B \cdot C \cdot \overline{D} + A \cdot B \cdot \overline{C} \cdot D + A \cdot B \cdot \overline{C} \cdot \overline{D}\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_7 = A \cdot B + A \cdot \overline{B} \cdot C \cdot D + A \cdot \overline{B} \cdot C \cdot \overline{D} + \overline{A} \cdot B \cdot C\]</div>
+<div class="arithmatex">\[X = A \cdot B + A \cdot \overline{B} \cdot C \cdot D + A \cdot \overline{B} \cdot C \cdot \overline{D} + \overline{A} \cdot B \cdot C\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_8 = (A + B + C) \cdot (A + B + \overline{C}) \cdot (A + \overline{B} + C)\]</div>
+<div class="arithmatex">\[X = (A + B + C) \cdot (A + B + \overline{C}) \cdot (A + \overline{B} + C)\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_9 = A \cdot B \cdot C \cdot D + A \cdot \overline{B} \cdot C \cdot D + \overline{A} \cdot B \cdot C \cdot D + \overline{A} \cdot \overline{B} \cdot C \cdot D + A \cdot B \cdot \overline{C} \cdot D\]</div>
+<div class="arithmatex">\[X = A \cdot B \cdot C \cdot D + A \cdot \overline{B} \cdot C \cdot D + \overline{A} \cdot B \cdot C \cdot D + \overline{A} \cdot \overline{B} \cdot C \cdot D + A \cdot B \cdot \overline{C} \cdot D\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_{10} = A \cdot B \cdot C \cdot D \cdot E + A \cdot B \cdot C \cdot D \cdot \overline{E} + A \cdot B \cdot C \cdot \overline{D} \cdot E + A \cdot B \cdot C \cdot \overline{D} \cdot \overline{E} + A \cdot \overline{B} \cdot C \cdot D \cdot E + A \cdot \overline{B} \cdot C \cdot D \cdot \overline{E}\]</div>
+<div class="arithmatex">\[X = A \cdot B \cdot C \cdot D \cdot E + A \cdot B \cdot C \cdot D \cdot \overline{E} + A \cdot B \cdot C \cdot \overline{D} \cdot E\]</div>
 </li>
 </ol>
+<div class="arithmatex">\[+ A \cdot B \cdot C \cdot \overline{D} \cdot \overline{E} + A \cdot \overline{B} \cdot C \cdot D \cdot E + A \cdot \overline{B} \cdot C \cdot D \cdot \overline{E}\]</div>
 <p><strong>Aplicación del Teorema de De Morgan</strong></p>
 <ol>
 <li>
-<div class="arithmatex">\[F_{11} = \overline{\overline{A} + B} + A \cdot B\]</div>
+<div class="arithmatex">\[Z = \overline{\overline{A} + B} + A \cdot B\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_{12} = \overline{A + \overline{B} \cdot C} \cdot (A + C)\]</div>
+<div class="arithmatex">\[Z = \overline{A + \overline{B} \cdot C} \cdot (A + C)\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_{13} = \overline{\overline{A} \cdot B + C \cdot \overline{D}} \cdot (A + \overline{C})\]</div>
+<div class="arithmatex">\[Z = \overline{\overline{A} \cdot B + C \cdot \overline{D}} \cdot (A + \overline{C})\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_{14} = \overline{\overline{A \cdot B + C} + \overline{D}} + A \cdot \overline{B} \cdot C\]</div>
+<div class="arithmatex">\[Z = \overline{\overline{A \cdot B + C} + \overline{D}} + A \cdot \overline{B} \cdot C\]</div>
 </li>
 <li>
-<div class="arithmatex">\[F_{15} = \overline{\overline{A \cdot B \cdot C + D} + \overline{E}} + A \cdot B \cdot C \cdot \overline{D} \cdot E\]</div>
+<div class="arithmatex">\[Z = \overline{\overline{A \cdot B \cdot C + D} + \overline{E}} + A \cdot B \cdot C \cdot \overline{D} \cdot E\]</div>
 </li>
 </ol>
+<p><a href="../algebra_bool_result.txt">.</a></p>
 
 
 
