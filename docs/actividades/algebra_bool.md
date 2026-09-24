@@ -1,6 +1,6 @@
 # Algebra booleana
 
-Resolver los siguientes ejercicios, obtener la ecuacion reducida a su minima expresion mostrando el procedimiento **algebraico** aplicado en cada paso, generar el diagrama de la ecuacion inicial y la reducida, y la tabla de verdad (es la misma para ambos casos).
+Resolver correctamente los siguientes ejercicios, obtener la ecuación reducida a su mínima expresión mostrando el procedimiento **algebraico** aplicado en cada paso, generar el diagrama de la ecuación inicial y la reducida, y la tabla de verdad (es la misma para ambos casos).
 
 Para ver los ejemplos [da click aquí](../08_aplicacion_algebra_booleana.md)
 
@@ -44,7 +44,6 @@ $$X = A \cdot B \cdot C \cdot D + A \cdot \overline{B} \cdot C \cdot D + \overli
 
 10. 
 $$X = A \cdot B \cdot C \cdot D \cdot E + A \cdot B \cdot C \cdot D \cdot \overline{E} + A \cdot B \cdot C \cdot \overline{D} \cdot E$$ 
-
 $$+ A \cdot B \cdot C \cdot \overline{D} \cdot \overline{E} + A \cdot \overline{B} \cdot C \cdot D \cdot E + A \cdot \overline{B} \cdot C \cdot D \cdot \overline{E}$$
 
 

@@ -396,7 +396,7 @@ A partir del circuito mostrado, obtener la ECUACIÓN BOOLEANA que representa su 
 
 3️⃣ REALIZAR LA TABLA DE VERDAD 📊
 
-Elaborar la TABLA DE VERDAD correspondiente a cada circuito.
+**Elaborar la TABLA DE VERDAD correspondiente a cada circuito.**
 
 La tabla deberá incluir:
 
@@ -465,3 +465,96 @@ CIRCUITO 🔌 → ECUACIÓN BOOLEANA 🧮 → TABLA DE VERDAD 📊 → VERIFICAC
 Los tres elementos deben corresponder al MISMO circuito y representar correctamente su funcionamiento.
 
 ¡ÉXITO! 💪⚡
+
+## 5. REDUCCIÓN DE ECUACIONES BOOLEANAS
+
+Resolver correctamente los siguientes ejercicios, obtener la ecuación reducida a su mínima expresión mostrando el procedimiento **algebraico** aplicado en cada paso, generar el diagrama de la ecuación inicial y la reducida, y la tabla de verdad (es la misma para ambos casos).
+*Indicadas en el documento PDF o material proporcionado.*
+
+🎯 OBJETIVO
+
+Aplicar correctamente las leyes y propiedades del ÁLGEBRA BOOLEANA para simplificar las ecuaciones hasta obtener una expresión equivalente y reducida.
+
+✍️ FORMA DE REALIZACIÓN
+
+Todos los ejercicios deberán realizarse A MANO.
+
+📌 Es obligatorio mostrar TODO EL PROCEDIMIENTO de reducción.
+
+❌ No se deben entregar únicamente los resultados finales.
+
+En cada ejercicio deberán mostrar, paso a paso, las operaciones realizadas y la ley o propiedad del álgebra booleana que se está aplicando cuando corresponda.
+
+🧠 RECUERDA UTILIZAR CORRECTAMENTE LAS LEYES DEL ÁLGEBRA BOOLEANA, por ejemplo:
+
+- Ley de identidad
+- Ley de dominación
+- Ley de idempotencia
+- Ley del complemento
+- Ley de involución
+- Ley conmutativa
+- Ley asociativa
+- Ley distributiva
+- Ley de absorción
+- Leyes de De Morgan
+
+📌 El objetivo es demostrar cómo se obtiene la ecuación simplificada, por lo que el procedimiento es una parte importante de la actividad.
+
+📄 ENTREGA
+
+La actividad deberá entregarse en UN SOLO ARCHIVO PDF.
+
+Si realizas los ejercicios a mano, puedes:
+
+📸 Tomar fotografías de las hojas.
+📑 Escanear las hojas.
+
+En cualquiera de los dos casos, TODAS las hojas deberán integrarse en UN SOLO archivo PDF.
+
+🚨 NO SE ACEPTA:
+
+- ❌ Entregar únicamente los resultados.
+- ❌ Fotografías por separado.
+- ❌ Varios archivos PDF.
+- ❌ Archivos Word.
+- ❌ Archivos de Excel.
+- ❌ Archivos fuente o editables.
+- ❌ Archivos comprimidos (.zip o .rar).
+
+📸 SI TOMAS FOTOGRAFÍAS:
+
+Las fotografías deberán ser:
+
+- ✅ Claras
+- ✅ Legibles
+- ✅ Bien iluminadas
+- ✅ Sin partes cortadas
+- ✅ Con la hoja completa visible
+
+👤 DATOS DEL ALUMNO
+
+Colocar en el trabajo:
+
+👤 Nombre completo
+🏫 Grupo
+
+✅ ANTES DE ENTREGAR, REVISA:
+
+- [ ] Realicé todos los ejercicios.
+- [ ] Los ejercicios fueron realizados A MANO.
+- [ ] Mostré TODO el procedimiento.
+- [ ] Apliqué correctamente las leyes del álgebra booleana.
+- [ ] Revisé que cada paso sea correcto.
+- [ ] Obtuve la ecuación reducida correspondiente.
+- [ ] Revisé mis resultados.
+- [ ] El trabajo es claro y legible.
+- [ ] Coloqué mi nombre completo y grupo.
+- [ ] Todas las hojas están reunidas en UN SOLO archivo PDF.
+
+📌 RECUERDA:
+
+ECUACIÓN ORIGINAL 🧮 → APLICAR LEYES BOOLEANAS ⚙️ → SIMPLIFICAR 🔄 → ECUACIÓN REDUCIDA ✅
+
+💡 Lo importante NO es solamente llegar al resultado final, sino demostrar mediante el procedimiento cómo llegaste a él.
+
+¡ÉXITO! 💪🔢
