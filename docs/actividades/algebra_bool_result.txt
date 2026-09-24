@@ -1,0 +1,94 @@
+# Clave de Respuestas y Soluciones Paso a Paso
+
+### Ejercicio 1
+* **Factorización:** $F_1 = A(1 + B)$
+* **Ley de Dominancia ($1 + B = 1$):** $F_1 = A(1)$
+* **Resultado:** $F_1 = A$
+
+### Ejercicio 2
+* **Factor común $A$:** $F_2 = A(B + \bar{B})$
+* **Ley del Complemento ($B + \bar{B} = 1$):** $F_2 = A(1)$
+* **Resultado:** $F_2 = A$
+
+### Ejercicio 3
+* **Factorizar términos 1 y 2:** $A \cdot B (C + \bar{C}) + A \cdot \bar{B} \cdot C = A \cdot B (1) + A \cdot \bar{B} \cdot C = A \cdot B + A \cdot \bar{B} \cdot C$
+* **Factor común $A$:** $A(B + \bar{B} \cdot C)$
+* **Ley de Redundancia ($B + \bar{B} \cdot C = B + C$):** $A(B + C)$
+* **Resultado:** $F_3 = A \cdot B + A \cdot C$ (o $A(B + C)$)
+
+### Ejercicio 4
+* **Propiedad distributiva:** $F_4 = A \cdot A + A \cdot \bar{B} + A \cdot C + B \cdot A + B \cdot \bar{B} + B \cdot C$
+* **Simplificación ($A \cdot A = A$, $B \cdot \bar{B} = 0$):** $A + A \cdot \bar{B} + A \cdot C + A \cdot B + B \cdot C$
+* **Factor común $A$:** $A(1 + \bar{B} + C + B) + B \cdot C = A(1) + B \cdot C$
+* **Resultado:** $F_4 = A + B \cdot C$
+
+### Ejercicio 5
+* **Agrupar por factor $C$:** $C \cdot (A \cdot \bar{B} + A \cdot B + \bar{A} \cdot B + \bar{A} \cdot \bar{B})$
+* **Factorizar dentro del paréntesis:** $C \cdot [A(B + \bar{B}) + \bar{A}(B + \bar{B})] = C \cdot [A(1) + \bar{A}(1)] = C \cdot [A + \bar{A}]$
+* **Resultado:** $F_5 = C$
+
+### Ejercicio 6
+* **Agrupar de dos en dos:** $A \cdot B \cdot C \cdot (D + \bar{D}) + A \cdot B \cdot \bar{C} \cdot (D + \bar{D}) = A \cdot B \cdot C(1) + A \cdot B \cdot \bar{C}(1)$
+* **Factor común $A \cdot B$:** $A \cdot B \cdot (C + \bar{C}) = A \cdot B \cdot (1)$
+* **Resultado:** $F_6 = A \cdot B$
+
+### Ejercicio 7
+* **Simplificar términos 2 y 3:** $A \cdot \bar{B} \cdot C \cdot (D + \bar{D}) = A \cdot \bar{B} \cdot C$
+* **Expresión intermedia:** $A \cdot B + A \cdot \bar{B} \cdot C + \bar{A} \cdot B \cdot C$
+* **Factorizar $B$ en términos 1 y 3:** $B \cdot (A + \bar{A} \cdot C) + A \cdot \bar{B} \cdot C = B \cdot (A + C) + A \cdot \bar{B} \cdot C = A \cdot B + B \cdot C + A \cdot \bar{B} \cdot C$
+* **Factorizar $C$ en últimos dos términos:** $A \cdot B + C \cdot (B + A \cdot \bar{B}) = A \cdot B + C \cdot (B + A)$
+* **Resultado:** $F_7 = A \cdot B + A \cdot C + B \cdot C$
+
+### Ejercicio 8
+* **Multiplicar primeros dos factores:** $(A + B + C)(A + B + \bar{C}) = (A + B) + C \cdot \bar{C} = A + B$
+* **Multiplicar por el tercer factor:** $(A + B)(A + \bar{B} + C) = A + B \cdot \bar{B} + B \cdot C = A + 0 + B \cdot C$
+* **Resultado:** $F_8 = A + B \cdot C$
+
+### Ejercicio 9
+* **Factorizar los primeros 4 términos por $C \cdot D$:** $C \cdot D \cdot (A \cdot B + A \cdot \bar{B} + \bar{A} \cdot B + \bar{A} \cdot \bar{B}) + A \cdot B \cdot \bar{C} \cdot D = C \cdot D \cdot (1) + A \cdot B \cdot \bar{C} \cdot D$
+* **Factor común $D$:** $D \cdot (C + A \cdot B \cdot \bar{C})$
+* **Ley de Redundancia ($C + A \cdot B \cdot \bar{C} = C + A \cdot B$):** $D \cdot (C + A \cdot B)$
+* **Resultado:** $F_9 = A \cdot B \cdot D + C \cdot D$
+
+### Ejercicio 10
+* **Agrupar pares de términos con $E + \bar{E}$:**
+  * Términos 1 y 2: $A \cdot B \cdot C \cdot D \cdot (E + \bar{E}) = A \cdot B \cdot C \cdot D$
+  * Términos 3 y 4: $A \cdot B \cdot C \cdot \bar{D} \cdot (E + \bar{E}) = A \cdot B \cdot C \cdot \bar{D}$
+  * Términos 5 y 6: $A \cdot \bar{B} \cdot C \cdot D \cdot (E + \bar{E}) = A \cdot \bar{B} \cdot C \cdot D$
+* **Expresión reducida 1:** $A \cdot B \cdot C \cdot D + A \cdot B \cdot C \cdot \bar{D} + A \cdot \bar{B} \cdot C \cdot D$
+* **Agrupar primeros dos términos:** $A \cdot B \cdot C \cdot (D + \bar{D}) + A \cdot \bar{B} \cdot C \cdot D = A \cdot B \cdot C + A \cdot \bar{B} \cdot C \cdot D$
+* **Factor común $A \cdot C$:** $A \cdot C \cdot (B + \bar{B} \cdot D) = A \cdot C \cdot (B + D)$
+* **Resultado:** $F_{10} = A \cdot B \cdot C + A \cdot C \cdot D$
+
+### Ejercicio 11
+* **Aplicar De Morgan a $\overline{\bar{A} + B}$:** $\overline{\bar{A}} \cdot \bar{B} = A \cdot \bar{B}$
+* **Sustituir:** $A \cdot \bar{B} + A \cdot B$
+* **Factor común $A$:** $A(\bar{B} + B) = A(1)$
+* **Resultado:** $F_{11} = A$
+
+### Ejercicio 12
+* **Aplicar De Morgan a $\overline{A + \bar{B} \cdot C}$:** $\bar{A} \cdot \overline{\bar{B} \cdot C} = \bar{A} \cdot (B + \bar{C}) = \bar{A} \cdot B + \bar{A} \cdot \bar{C}$
+* **Multiplicar por $(A + C)$:** $(\bar{A} \cdot B + \bar{A} \cdot \bar{C}) \cdot (A + C)$
+* **Expandir:** $\bar{A} \cdot B \cdot A + \bar{A} \cdot B \cdot C + \bar{A} \cdot \bar{C} \cdot A + \bar{A} \cdot \bar{C} \cdot C = 0 + \bar{A} \cdot B \cdot C + 0 + 0$
+* **Resultado:** $F_{12} = \bar{A} \cdot B \cdot C$
+
+### Ejercicio 13
+* **Aplicar De Morgan al primer factor:** $\overline{\bar{A} \cdot B} \cdot \overline{C \cdot \bar{D}} = (A + \bar{B}) \cdot (\bar{C} + D)$
+* **Multiplicar con $(A + \bar{C})$:** $(A + \bar{B}) \cdot (A + \bar{C}) \cdot (\bar{C} + D)$
+* **Simplificar $(A + \bar{B})(A + \bar{C})$:** $A + \bar{B} \cdot \bar{C}$
+* **Multiplicar por $(\bar{C} + D)$:** $(A + \bar{B} \cdot \bar{C}) \cdot (\bar{C} + D) = A \cdot \bar{C} + A \cdot D + \bar{B} \cdot \bar{C} \cdot \bar{C} + \bar{B} \cdot \bar{C} \cdot D$
+* **Simplificar $\bar{B}\bar{C} + \bar{B}\bar{C}D = \bar{B}\bar{C}(1 + D) = \bar{B}\bar{C}$:**
+* **Resultado:** $F_{13} = A \cdot \bar{C} + A \cdot D + \bar{B} \cdot \bar{C}$
+
+### Ejercicio 14
+* **Aplicar De Morgan al término principal:** $\overline{\overline{A \cdot B + C}} \cdot \bar{\bar{D}} = (A \cdot B + C) \cdot D = A \cdot B \cdot D + C \cdot D$
+* **Sumar el último término:** $A \cdot B \cdot D + C \cdot D + A \cdot \bar{B} \cdot C$
+* **Factorizar $C$:** $A \cdot B \cdot D + C \cdot (D + A \cdot \bar{B})$
+* **Resultado:** $F_{14} = A \cdot B \cdot D + C \cdot D + A \cdot \bar{B} \cdot C$
+
+### Ejercicio 15
+* **Aplicar De Morgan al primer bloque:** $\overline{\overline{A \cdot B \cdot C + D}} \cdot \bar{\bar{E}} = (A \cdot B \cdot C + D) \cdot E = A \cdot B \cdot C \cdot E + D \cdot E$
+* **Sumar con el término restante:** $A \cdot B \cdot C \cdot E + D \cdot E + A \cdot B \cdot C \cdot \bar{D} \cdot E$
+* **Agrupar términos 1 y 3 por $A \cdot B \cdot C \cdot E$:** $A \cdot B \cdot C \cdot E \cdot (1 + \bar{D}) + D \cdot E = A \cdot B \cdot C \cdot E \cdot (1) + D \cdot E$
+* **Factor común $E$:** $E \cdot (A \cdot B \cdot C + D)$
+* **Resultado:** $F_{15} = A \cdot B \cdot C \cdot E + D \cdot E$ (o $E(A \cdot B \cdot C + D)$)
