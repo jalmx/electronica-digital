@@ -1,0 +1,24 @@
+## Plan de evaluación P1
+
+|Actividad|Porcentaje|
+|---|---|
+|Infografia, códigos BCD, gray, ASCII|10%|
+|Infografia, compuertas lógicas|10%|
+|Examen de conversiones|10%|
+|Examen de suma binaria|10%|
+|Prácticas|40%|
+|Examen de conceptos generales|20%|
+
+## Plan de evaluación P2
+
+|Actividad|Porcentaje|
+|---|---|
+|Infografía, decodificadores y codificadores digitales |10%|
+|Infografía, multiplexores, demultipliplexores |10%|
+|Infografía, compuertas complementarias, NAND,NOR, OR EXCLUSIVA |10%|
+|Video explicativo|20%|
+|Prácticas|30%|
+|Carrito seguidor de linea|30%|
+|Infografia, FPGA, GAL y VHDL|10%|
+|Prácticas (sensores)|10%|
+|Proyecto|10%|
