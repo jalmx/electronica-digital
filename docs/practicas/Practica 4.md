@@ -1,4 +1,9 @@
+---
+create_index: true
+---
+
 ![banner](../assets/banner_class_85.png)
+
 # Practica 4 - Álgebra booleana básico
 
 ## Objetivo

@@ -1,4 +1,6 @@
-
+---
+create_index: true
+---
 
 # Práctica 9 - Sistema de alarma
 

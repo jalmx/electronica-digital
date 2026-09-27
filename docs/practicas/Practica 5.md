@@ -1,3 +1,7 @@
+---
+create_index: true
+---
+
 ![banner](../assets/banner_class_85.png)
 
 # Practica 5 - Álgebra booleana básico

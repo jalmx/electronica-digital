@@ -21,6 +21,8 @@ theme:
     - navigation.footer
     - content.code.copy
 
+hooks:
+  - hooks/generate_index.py
 
 repo_url: https://github.com/jalmx/electronica-digital
 

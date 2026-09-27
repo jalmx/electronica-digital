@@ -1,4 +1,6 @@
-
+---
+create_index: true
+---
 
 # Práctica 8 - Mapa de Karnaugh
 

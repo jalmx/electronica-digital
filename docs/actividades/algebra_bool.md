@@ -1,3 +1,5 @@
+![banner](../assets/banner_class_85.png)
+
 # Algebra booleana
 
 Resolver correctamente los siguientes ejercicios, obtener la ecuación reducida a su mínima expresión mostrando el procedimiento **algebraico** aplicado en cada paso, generar el diagrama de la ecuación inicial y la reducida, y la tabla de verdad (es la misma para ambos casos).

@@ -1,4 +1,6 @@
-
+---
+create_index: true
+---
 
 # Práctica 7 - Display de 7 segmentos
 

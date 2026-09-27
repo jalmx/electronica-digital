@@ -1,3 +1,5 @@
+![banner](../assets/banner_class_85.png)
+
 # Ecuaciones Booleanas y Circuitos lógicos
 
 ## De ecuacion a circito
