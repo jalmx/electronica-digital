@@ -1,14 +1,15 @@
 ---
 create_index: true
+title: "Práctica 2 - Comprobación de compuertas y niveles lógicos"
 ---
 
 ![banner](../assets/banner_class_85.png)
 
-# Practica 2 - Comprobación de compuertas y niveles lógicos
+# Práctica 2 - Comprobación de compuertas y niveles lógicos
 
 ## Objetivo
 
-En esta practica a prenderás a identificar las compuerta lógicas, en sus entradas, salidas, pines de alimentación, niveles de voltaje, y saber si tienes un 1 o un 0 lógico.
+En esta Práctica a prenderás a identificar las compuerta lógicas, en sus entradas, salidas, pines de alimentación, niveles de voltaje, y saber si tienes un 1 o un 0 lógico.
 
 ## Materiales
 
@@ -128,9 +129,11 @@ Ahora vas a colocar un led a la salida de cada compuerta que contenga el IC, rea
 
 ## Resultado
 
-<details>
-    <img src="../assets/videos/gates_1.gif">
+<details markdown="1">
+<!-- <img src ="../../assets/videos/gates_1.gif"> -->
+![video](../../assets/videos/gates_1.gif)
 </details>
+
 
 ---
 

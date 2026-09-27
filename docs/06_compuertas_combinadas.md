@@ -1,3 +1,10 @@
+---
+title: "Compuertas combinadas NOR y NAND"
+create_index: true
+---
+
+![banner](./assets/banner_class_85.png)
+
 # Compuertas Combinadas NOR Y NAND
 
 En los circuitos digitales se utilizan mucho otros dos tipos de compuertas lógicas: _NOR y NAND_ .  _Estas compuertas combinan las operaciones básicas AND, OR y NOT_ , por lo que es muy sencillo escribir sus expresiones booleanas.

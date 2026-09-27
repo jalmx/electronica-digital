@@ -1,3 +1,10 @@
+---
+title: "Lógica combinacional"
+create_index: true
+---
+
+![banner](./assets/banner_class_85.png)
+
 # Lógica combinacional
 
 Para producir una forma de onda de salida deseada, a menudo es necesario utilizar una combinación de compuertas. Por ejemplo, supóngase que se necesita generar una señal de control formada por los pulsos 2' y 5' a partir de las formas de onda del reloj con retardo y del contador de corrimiento.

@@ -1,3 +1,10 @@
+---
+title: "Aplicación: Mapa de Karnaugh"
+create_index: true
+---
+
+![banner](./assets/banner_class_85.png)
+
 # Aplicación: Mapa de Karnaugh
 
 ## Ejemplo básico 1

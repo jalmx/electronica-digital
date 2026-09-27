@@ -1,10 +1,11 @@
 ---
 create_index: true
+title: "Práctica 5 - Álgebra booleana básico"
 ---
 
 ![banner](../assets/banner_class_85.png)
 
-# Practica 5 - Álgebra booleana básico
+# Práctica 5 - Álgebra booleana básico
 
 ## Objetivo
 
@@ -43,5 +44,3 @@ Realizar el siguiente circuito, generar la tabla de verdad y su ecuación
 > Circuitos digitales
 
 > Mecatrónica
-
----

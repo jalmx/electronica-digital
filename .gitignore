@@ -220,3 +220,4 @@ __marimo__/
 .streamlit/secrets.toml
 
 *-backups
+imagenes_no_usadas.txt

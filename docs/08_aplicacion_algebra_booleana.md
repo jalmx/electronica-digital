@@ -1,3 +1,10 @@
+---
+title: "Aplicando Álgebra Booleana"
+create_index: true
+---
+
+![banner](./assets/banner_class_85.png)
+
 # Aplicando Álgebra Booleana
 
 Simplifique la expresión, comprobar tabla de verdad y crear su circuito digital

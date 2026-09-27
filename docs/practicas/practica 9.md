@@ -1,5 +1,7 @@
 ---
 create_index: true
+title: "Práctica 9 - Sistema de alarma"
+
 ---
 
 # Práctica 9 - Sistema de alarma
@@ -13,189 +15,52 @@ Aplicar los conocimientos de sistemas digitales de control a un sistema de segur
 
 ## Material
 
-
-<table>
- <tr>
-  <th>Cantidad</th>
-  <th>Nombre</th>
-  <th>Descripción</th>
- </tr>
- <tr>
-  <td>1</td>
-  <td>Multímetro</td>
-  <td>Voltímetro</td>
- </tr>
- <tr>
-  <td>1</td>
-  <td>IC 7404</td>
-  <td>Compuerta</td>
- </tr>
- <tr>
-  <td>1</td>
-  <td>IC 7408</td>
-  <td>Compuerta</td>
- </tr>
- <tr>
-  <td>1</td>
-  <td>IC7432</td>
-  <td>Compuerta</td>
- </tr>
- <tr>
-  <td>1</td>
-  <td>Led</td>
-  <td></td>
- </tr>
- <tr>
-  <td>1</td>
-  <td>Resistencias 330</td>
-  <td></td>
- </tr>
- <tr>
-  <td>2</td>
-  <td>Resistencias 1k</td>
-  <td></td>
- </tr>
- <tr>
-  <td>1</td>
-  <td>Sensor de presencia</td>
-  <td>Sensor PIR</td>
- </tr>
- <tr>
-  <td>1</td>
-  <td>Buzzer activo</td>
-  <td>Buzzer</td>
- </tr>
-</table>
-
-
-
-
-Cantidad Nombre
-
-
-1
-
-
-1
-
-
-Dipswitch o push button
-
-
-Dipswitch o push button
-
-
-Descripción
-
+| Cantidad | Nombre                  | Descripción |
+| -------- | ----------------------- | ----------- |
+| 1        | Multímetro              | Voltímetro  |
+| 1        | IC 7404                 | Compuerta   |
+| 1        | IC 7408                 | Compuerta   |
+| 1        | IC7432                  | Compuerta   |
+| 1        | Led                     |             |
+| 1        | Resistencias 330        |             |
+| 2        | Resistencias 1k         |             |
+| 1        | Sensor de presencia     | Sensor PIR  |
+| 1        | Buzzer activo           | Buzzer      |
+| 1        | Dipswitch o push button |             |
+| 1        | Dipswitch o push button |             |
 
 ## Desarrollo
 
 
-## Filosofía de operación
+### Filosofía de operación
 
 
 Tenemos la siguiente arquitectura, y se debe desarrollar el circuito de control para lograrlo:
 
-
-## Sistema de control
-
+![arq](../../assets/arquitectura_alarma.png)
 
 Las condiciones para que se activen los actuadores con base a los sensores son:
 
-
 1. Si existe presencia, hay un obstáculo y no hay luz, se debe activar el buzzer, el cual indica que hay una presencia en el lugar. Y apagara el led de OK, encender la lámpara.
-
 2. Si no hay luz, ni obstáculo y si hay presencia, se debe encender la lámpara, y estar el led OK encendido, el buzzer apagado
-
 3. Si hay obstáculo, no hay luz y ni presencia, se activa el buzzer, se apaga el led OK, y la lámpara se enciende.
-
 4. Hay luz, la lámpara se debe estar apagada. El resto de sensores no importan.
-
 5. Si no hay presencia, ni obstáculo, el led de OK debe estar encendido
-
-
-�. Si no hay presencia, ni obstáculo, el buzzer debe estar apagado.
-
-
-
-
-<table>
- <tr>
-  <th>Si hay obstáculo, se debe activar el buzzer<br/>Si no hay obstáculo, se debe encender el led de OK<br/>de circuito de control<br/>base a la información anterior, desarrollar el circuito, haciendo uso de la técnica de Algebra o<br/>Karnaugh. Obtén la tabla de verdad y realiza los pasos necesarios para generar tu circuito de<br/>e implementalo.</th>
- </tr>
- <tr>
-  <th>Tabla</th>
- </tr>
-</table>
-
+6. Si no hay presencia, ni obstáculo, el buzzer debe estar apagado.
+7. Si hay obstáculo, se debe activar el buzzer
+8.  Si no hay obstáculo, se debe encender el led de OK
 
 ## Diseño
 
-![arq](./arquitectura.png)
+Con base a la información anterior, desarrollar el circuito, haciendo uso de la técnica de Algebra o Mapa de Karnaugh. Obtén la tabla de verdad y realiza los pasos necesarios para generar tu circuito de control digital e implementalo.
 
-
-<table>
- <tr>
-  <th>0</th>
-  <td>0</td>
-  <td>1</td>
- </tr>
- <tr>
-  <th>0</th>
-  <td>1</td>
-  <td>0</td>
- </tr>
- <tr>
-  <th>0</th>
-  <td>1</td>
-  <td>1</td>
- </tr>
- <tr>
-  <th>1</th>
-  <td>0</td>
-  <td>0</td>
- </tr>
- <tr>
-  <th>1</th>
-  <td>0</td>
-  <td>1</td>
- </tr>
- <tr>
-  <th>1</th>
-  <td>1</td>
-  <td>0</td>
- </tr>
-</table>
-
-
-1
-
-
-Obstáculo Luz
-
-
-0
-
-
-0
-
-
-1
-
-
-1
-
-
-Buzzer LED Lámpara
-
-
-<table>
- <tr>
-  <th>Circuitos digitales<br/>Mecatrónica</th>
- </tr>
- <tr>
-  <td></td>
- </tr>
-</table>
-
-
+|  PIR  | Obstáculo |  Luz  | Buzzer/LED | Lámpara | LED |
+| :---: | :-------: | :---: | ---------- | ------- | --- |
+|   0   |     0     |   0   |            |         |     |
+|   0   |     0     |   1   |            |         |     |
+|   0   |     1     |   0   |            |         |     |
+|   0   |     1     |   1   |            |         |     |
+|   1   |     0     |   0   |            |         |     |
+|   1   |     0     |   1   |            |         |     |
+|   1   |     1     |   0   |            |         |     |
+|   1   |     1     |   1   |            |         |     |

@@ -1,5 +1,6 @@
 ---
 title: "Operaciones Binarias"
+create_index: true
 ---
 
 ![banner](./assets/banner_class_85.png)

@@ -1,5 +1,6 @@
 ---
 title: "Introduccion a la electronica digital"
+create_index: true
 ---
 
 

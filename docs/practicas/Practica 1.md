@@ -1,10 +1,11 @@
 ---
+title: "Práctica 1 - Generación de compuertas básicas con interruptores"
 create_index: true
 ---
 
 ![banner](../assets/banner_class_85.png)
 
-# Practica 1 - Generación de compuertas básicas con interruptores
+# Práctica 1 - Generación de compuertas básicas con interruptores
 
 Realizar las comprobaciones de las compuerta básicas AND, OR con interruptores.
 
@@ -55,5 +56,3 @@ Rellenar la siguiente tabla, con la palabra `encendido` o `apagado` en el estado
 > Circuitos digitales
 
 > Mecatrónica
-
----

@@ -30,14 +30,14 @@ def extract_metadata_and_title(file_path: Path) -> tuple[dict, str | None]:
             h1_title = match.group(1).strip()
             
     except Exception as e:
-        print(f"[Hook Error] Error procesando {file_path.name}: {e}")
+        print(f"[HOOK Error] Error procesando {file_path.name}: {e}")
         
     return metadata, h1_title
 
 
 def on_pre_build(config):
     docs_dir = Path(config["docs_dir"])
-    
+        
     # Escaneamos todas las subcarpetas dentro de docs/
     for current_dir, dirs, files in os.walk(docs_dir):
         folder_path = Path(current_dir)
@@ -65,12 +65,15 @@ def on_pre_build(config):
             
             # Nombre de la carpeta formateado para el título del índice
             folder_title = folder_path.name.replace("-", " ").replace("_", " ").title()
+
+            if folder_title.lower() == "docs":
+                folder_title = config["site_name"]
             
             lines = [
                 "---",
                 f"title: {folder_title}",
                 "---\n",
-                "![banner](../assets/banner_class_85.png)\n",
+                "![banner](assets/banner_class_85.png)\n",
                 "<!-- GENENRATED AUTOMATIC - NO CHANGE -->\n",
                 f"# {folder_title}",
                 
@@ -105,4 +108,4 @@ def on_pre_build(config):
             with open(index_path, "w", encoding="utf-8") as f:
                 f.write("\n".join(lines) + "\n\n<!-- GENENRATED AUTOMATIC - NO CHANGE -->")
                 
-            print(f"[Hook] ÍNDICE GENERADO -> {index_path.relative_to(docs_dir)}")
+            print(f"[HOOK] ÍNDICE GENERADO -> {index_path.relative_to(docs_dir)}")

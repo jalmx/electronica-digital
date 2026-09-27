@@ -1,10 +1,11 @@
 ---
 create_index: true
+title: "Práctica 6 - Álgebra booleana - Tabla de verdad"
 ---
 
 ![banner](../assets/banner_class_85.png)
 
-# Practica 6 - Álgebra booleana - Tabla de verdad
+# Práctica 6 - Álgebra booleana - Tabla de verdad
 
 ## Objetivo
 

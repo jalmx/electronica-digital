@@ -1,5 +1,7 @@
 site_name: Electrónica Digital
 
+site_url: https://www.alejandro-leyva.com/electronica-digital/
+
 theme:
   name: material
   locale: es

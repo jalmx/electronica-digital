@@ -1,10 +1,11 @@
 ---
 create_index: true
+title: "Práctica 3 - Circuitos digitales básicos"
 ---
 
 ![banner](../assets/banner_class_85.png)
 
-# Practica 3 - Circuitos digitales básicos
+# Práctica 3 - Circuitos digitales básicos
 
 ## Objetivo
 

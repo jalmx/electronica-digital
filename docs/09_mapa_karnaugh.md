@@ -1,3 +1,10 @@
+---
+title: "Mapa de Karnaugh"
+create_index: true
+---
+
+![banner](./assets/banner_class_85.png)
+
 # Mapa de Karnaugh
 
 ## Introduccion a los Mapas de Karnaugh

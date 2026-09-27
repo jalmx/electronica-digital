@@ -1,10 +1,11 @@
 ---
 create_index: true
+title: "Práctica 4 - Álgebra booleana básico"
 ---
 
 ![banner](../assets/banner_class_85.png)
 
-# Practica 4 - Álgebra booleana básico
+# Práctica 4 - Álgebra booleana básico
 
 ## Objetivo
 
