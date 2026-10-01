@@ -9,7 +9,7 @@ title: "Práctica 2 - Comprobación de compuertas y niveles lógicos"
 
 ## Objetivo
 
-En esta Práctica a prenderás a identificar las compuerta lógicas, en sus entradas, salidas, pines de alimentación, niveles de voltaje, y saber si tienes un 1 o un 0 lógico.
+En esta Práctica a prenderás a identificar las compuerta lógicas, en sus entradas, salidas, pines de alimentación, niveles de voltaje, y saber si tienes un `1` o un `0` lógico.
 
 ## Materiales
 
@@ -21,8 +21,8 @@ En esta Práctica a prenderás a identificar las compuerta lógicas, en sus entr
 |1|IC 7408|Compuerta |
 |1|IC7432|Compuerta |
 |1|Led||
-|1|Resistencias 330||
-|2|Resistencias 1k||
+|1|R330|Resistencias 330|
+|2|R1k|Resistencias 1k|
 |1|Dipswitch o push button||
 |1|Datasheet|Hoja de datos del 7404|
 |1|Datasheet|Hoja de datos del 7408|
@@ -36,6 +36,14 @@ En esta Práctica a prenderás a identificar las compuerta lógicas, en sus entr
 Para realizar la identificación de entradas y salidas se debe tomar el datasheet de cada compuerta. En su hoja de especificaciones vamos observar la distribución de pines
 
 ![pines gates](../assets/compuerta_all.png)
+
+- [7408](../datasheet/7408.pdf)
+- [7404](../datasheet/7404.pdf)
+- [7432](../datasheet/7432.pdf)
+
+|7404|7408|7432|
+|---|---|---|
+|![08](../datasheet/7408_1.png)|![08](../datasheet/7404_1.png)|![08](../datasheet/7432_1.png)|
 
 ### Paso 2: Probar niveles de voltaje de entrada
 

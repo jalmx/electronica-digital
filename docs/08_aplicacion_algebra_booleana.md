@@ -7,321 +7,268 @@ create_index: true
 
 # Aplicando Álgebra Booleana
 
+## Reducción de ecuacion y generación de circuito y tabla de verdad
+
+## Ejercicio 1
 Simplifique la expresión, comprobar tabla de verdad y crear su circuito digital
 
-![img](./assets/Clase1_S6_1.png)
+|             Ecuación             |
+| :------------------------------: |
+| ![img](./assets/Clase1_S6_1.png) |
+
+### Desarrollo
 
 Simplificando la expresión, la ecuación es:
 
-Factorizamos las variables comunes  _AB_ ’
+Factorizamos las variables comunes  $A\overline{B}$. Nos queda para reducir la $D$ con su complemento $D’$, y aplicamos la fórmula, nos da como resultado:
 
-Nos queda para reducir la D con su complemento D’, y aplicamos la fórmula:
+| Pasos | Operación                                 |
+| :---: | ----------------------------------------- |
+|   1   | ![img](./assets/Clase1_S6_3.png)          |
+|   2   | Se reduce $D + \overline{D} = 1$          |
+|   3   | ![img](./assets/Clase1_S6_4.png)          |
+|   4   | Resolvemos la multiplicación y nos queda: |
+|   5   | ![img](./assets/Clase1_S6_5.png)          |
 
-Nos da como resultado:
-
-![img](./assets/Clase1_S6_2.png)
-
-![img](./assets/Clase1_S6_3.png)
-
-![img](./assets/Clase1_S6_4.png)
-
-![img](./assets/Clase1_S6_5.png)
-
-![img](./assets/Clase1_S6_6.png)
+### Resultado
 
 Crear el circuito de la ecuación reducida:
 
-![img](./assets/Clase1_S6_7.png)
+|             Ecuación             |         Tabla de verdad          |
+| :------------------------------: | :------------------------------: |
+| ![img](./assets/Clase1_S6_5.png) | ![img](./assets/Clase1_S6_6.png) |
+
+### Circuito
 
 ![img](./assets/Clase1_S6_8.png)
 
+## Ejercicio 2
+
 Simplifique la expresión, comprobar tabla de verdad y crear su circuito digital
 
-![img](./assets/Clase1_S6_9.png)
 
-Simplificando la expresión, la ecuación es:
+|             Ecuación             |
+| :------------------------------: |
+| ![img](./assets/Clase1_S6_9.png) |
 
-Realizamos la multiplicación:
+### Desarrollo
 
-Ahora podemos aplicar los teoremas siguientes:
+| Pasos | Operación                                                                        |
+| :---: | -------------------------------------------------------------------------------- |
+|   1   | ![img](./assets/Clase1_S6_9.png)                                                 |
+|   2   | Realizamos la multiplicación:                                                    |
+|   3   | ![img](./assets/Clase1_S6_11.png)                                                |
+|   4   | Ahora podemos aplicar los teoremas siguientes: ![img](./assets/Clase1_S6_12.png) |
+|   5   | Sustituimos en la ecuación: ![img](./assets/Clase1_S6_13.png)                    |
+|   6   | ![img](./assets/Clase1_S6_14.png)                                                |
+|       | Reducimos y nos queda:                                                           |
+|       | ![img](./assets/Clase1_S6_15.png)                                                |
+|       | Factorizamos a B                                                                 |
+|       | ![img](./assets/Clase1_S6_16.png)                                                |
+|       | Nos da como resultado:                                                           |
+|       | ![img](./assets/Clase1_S6_17.png)                                                |
 
-Sustituimos en la ecuación:
+|             Ecuación              |          Tabla de verdad          |
+| :-------------------------------: | :-------------------------------: |
+| ![img](./assets/Clase1_S6_17.png) | ![img](./assets/Clase1_S6_20.png) |
 
-![img](./assets/Clase1_S6_10.png)
-
-![img](./assets/Clase1_S6_11.png)
-
-![img](./assets/Clase1_S6_12.png)
-
-![img](./assets/Clase1_S6_13.png)
-
-![img](./assets/Clase1_S6_14.png)
-
-Reducimos y nos queda:
-
-Factorizamos a B
-
-Nos da como resultado:
-
-![img](./assets/Clase1_S6_15.png)
-
-![img](./assets/Clase1_S6_16.png)
-
-![img](./assets/Clase1_S6_17.png)
-
-![img](./assets/Clase1_S6_18.png)
+### Circuito
 
 ![img](./assets/Clase1_S6_19.png)
 
-![img](./assets/Clase1_S6_20.png)
+## Ejercicio 3
 
 Simplifique la expresión, comprobar tabla de verdad y crear su circuito digital:
 
-![img](./assets/Clase1_S6_21.png)
+|             Ecuación              |
+| :-------------------------------: |
+| ![img](./assets/Clase1_S6_21.png) |
 
-Simplificando la expresión, la ecuación es:
+### Desarrollo
 
-Si factorizamos las variables comunes CD, tenemos que
+| Pasos | Operación                                                                     |
+| :---: | ----------------------------------------------------------------------------- |
+|   1   | Simplificando la expresión, la ecuación es:                                   |
+|   2   | ![img](./assets/Clase1_S6_22.png)                                             |
+|   3   | Si factorizamos las variables comunes $CD$, tenemos que                       |
+|   4   | ![img](./assets/Clase1_S6_23.png)                                             |
+|   5   | Utilizando el  _teorema_  podemos sustituir ![img](./assets/Clase1_S6_24.png) |
+|   6   | Quedándonos:                                                                  |
+|   7   | ![img](./assets/Clase1_S6_25.png)                                             |
+|   8   | Volvemos a multiplicar todo, para el resultado final                          |
+|   9   | ![img](./assets/Clase1_S6_26.png)                                             |
 
-Utilizando el  _teorema_  podemos sustituir
 
-![img](./assets/Clase1_S6_22.png)
+|             Ecuación              |          Tabla de verdad          |
+| :-------------------------------: | :-------------------------------: |
+| ![img](./assets/Clase1_S6_26.png) | ![img](./assets/Clase1_S6_29.png) |
 
-![img](./assets/Clase1_S6_23.png)
-
-![img](./assets/Clase1_S6_24.png)
-
-Quedándonos:
-
-Volvemos a multiplicar todo, para el resultado final
-
-![img](./assets/Clase1_S6_25.png)
-
-![img](./assets/Clase1_S6_26.png)
-
-![img](./assets/Clase1_S6_27.png)
-
-![img](./assets/Clase1_S6_28.png)
-
-![img](./assets/Clase1_S6_29.png)
-
-![img](./assets/Clase1_S6_30.png)
+### Circuito
 
 ![img](./assets/Clase1_S6_31.png)
 
-![img](./assets/Clase1_S6_32.png)
+## A partir de circuito generar ecuación y reducción
+
+## Ejercicio 4
 
 Con base al circuito, generar la ecuación, reducirla y obtener tabla de verdad
 
-![img](./assets/Clase1_S6_33.png)
+|         Circuito inicial          |
+| :-------------------------------: |
+| ![img](./assets/Clase1_S6_33.png) |
+
+### Desarrollo
 
 Vamos asignando los valores por cada compuerta y su salida
 
-Nos da como resultado:
+| Pasos | Operación                                  |
+| :---: | ------------------------------------------ |
+|   1   | Inicio                                     |
+|   2   | ![img](./assets/Clase1_S6_34.png)          |
+|   3   | Nos da como resultado:                     |
+|   4   | ![img](./assets/Clase1_S6_35.png)          |
+|   5   | Nos da como resultado la ecuación booleana |
+|   6   | ![img](./assets/Clase1_S6_36.png)          |
 
-![img](./assets/Clase1_S6_34.png)
+|             Ecuación              |          Tabla de verdad          |
+| :-------------------------------: | :-------------------------------: |
+| ![img](./assets/Clase1_S6_36.png) | ![img](./assets/Clase1_S6_37.png) |
 
-![img](./assets/Clase1_S6_35.png)
-
-Nos da como resultado:
-
-La tabla de verdad:
-
-![img](./assets/Clase1_S6_36.png)
-
-![img](./assets/Clase1_S6_37.png)
+### Circuito 
 
 ![img](./assets/Clase1_S6_38.png)
 
+## Ejercicio 5
+
 Con base al circuito, generar la ecuación, reducirla y obtener tabla de verdad
 
-![img](./assets/Clase1_S6_39.png)
+|         Circuito inicial          |
+| :-------------------------------: |
+| ![img](./assets/Clase1_S6_39.png) |
 
-Vamos asignando los valores por cada compuerta y su salida
 
-Nos da como resultado:
+### Desarrollo
 
-![img](./assets/Clase1_S6_40.png)
+| Pasos | Operación                                                                                             |
+| :---: | ----------------------------------------------------------------------------------------------------- |
+|   1   | Vamos asignando los valores por cada compuerta y su salida                                            |
+|   2   | ![img](./assets/Clase1_S6_40.png)                                                                     |
+|   3   | Nos da como resultado:                                                                                |
+|   4   | ![img](./assets/Clase1_S6_41.png)                                                                     |
+|   5   | La función obtenida fue:                                                                              |
+|   6   | ![img](./assets/Clase1_S6_42.png)                                                                     |
+|   7   | Para simplificar, aplicaremos **Teorema de Morgan** en las negaciones                                 |
+|   8   | Con esto aplicamos para que la suma se convierta en multiplicación: ![img](./assets/Clase1_S6_43.png) |
+|   9   | Nos queda de la siguiente manera al aplicar el teorema de Morgan                                      |
+|  10   | ![img](./assets/Clase1_S6_44.png)                                                                     |
+|  11   | Ahora, aplicamos el teorema para ![img](./assets/Clase1_S6_45.png)                                    |
+|  12   | Con esto la ecuación nos queda:                                                                       |
+|  13   | ![img](./assets/Clase1_S6_46.png)                                                                     |
+|  14   | Volvemos a aplicar teorema de Morgan:                                                                 |
+|  15   | ![img](./assets/Clase1_S6_47.png)                                                                     |
+|  16   | Aplicamos el teorema                                                                                  |
+|  17   | ![img](./assets/Clase1_S6_48.png)                                                                     |
+|  18   | Con esto la ecuación se reduce                                                                        |
+|  19   | ![img](./assets/Clase1_S6_49.png)                                                                     |
+|  20   | Se reduce, quedando:                                                                                  |
+|  21   | ![img](./assets/Clase1_S6_50.png)                                                                     |
+|  22   | Aplicamos el teorema ![img](./assets/Clase1_S6_51.png)                                                |
+|  23   | Multiplicamos los factores                                                                            |
+|  24   | Para llegar al resultado final:                                                                       |
+|  25   | ![img](./assets/Clase1_S6_52.png)                                                                     |
 
-![img](./assets/Clase1_S6_41.png)
+|         Ecuación Reducida         |          Tabla de verdad          |
+| :-------------------------------: | :-------------------------------: |
+| ![img](./assets/Clase1_S6_52.png) | ![img](./assets/Clase1_S6_56.png) |
 
-La función obtenida fue:
-
-Para simplificar, aplicaremos Teorema de Morgan en las negaciones
-
-Con esto aplicamos para que la suma se convierta en multiplicación:
-
-![img](./assets/Clase1_S6_42.png)
-
-![img](./assets/Clase1_S6_43.png)
-
-![img](./assets/Clase1_S6_44.png)
-
-Ahora, aplicamos el teorema para
-
-Con esto la ecuación nos queda:
-
-Volvemos a aplicar teorema de Morgan:
-
-![img](./assets/Clase1_S6_45.png)
-
-![img](./assets/Clase1_S6_46.png)
-
-![img](./assets/Clase1_S6_47.png)
-
-Aplicamos el teorema
-
-Con esto la ecuación se reduce
-
-Multiplicamos los factores:
-
-Aplicamos el teorema
-
-![img](./assets/Clase1_S6_48.png)
-
-![img](./assets/Clase1_S6_49.png)
-
-![img](./assets/Clase1_S6_50.png)
-
-![img](./assets/Clase1_S6_51.png)
-
-Para llegar al resultado final:
-
-![img](./assets/Clase1_S6_52.png)
-
-![img](./assets/Clase1_S6_53.png)
-
-Creamos la tabla de verdad y comprobamos (sin reducción)
-
-![img](./assets/Clase1_S6_54.png)
-
-![img](./assets/Clase1_S6_55.png)
-
-![img](./assets/Clase1_S6_56.png)
-
-Creamos la tabla de verdad y comprobamos
-
-![img](./assets/Clase1_S6_57.png)
+### Circuito
 
 ![img](./assets/Clase1_S6_58.png)
 
-![img](./assets/Clase1_S6_59.png)
+## Ejercicio 6
 
 Con base al circuito, generar la ecuación, reducirla y obtener tabla de verdad
 
-![img](./assets/Clase1_S6_60.png)
+|         Circuito inicial          |
+| :-------------------------------: |
+| ![img](./assets/Clase1_S6_60.png) |
+
+### Desarrollo
 
 Vamos asignando los valores por cada compuerta y su salida
 
-![img](./assets/Clase1_S6_61.png)
+| Pasos | Operación                                                                       |
+| :---: | ------------------------------------------------------------------------------- |
+|   1   | Inicio                                                                          |
+|   1   | ![img](./assets/Clase1_S6_61.png)                                               |
+|       | Nos dá como resultado:                                                          |
+|       | ![img](./assets/Clase1_S6_62.png)                                               |
+|       | La función resultante fue:                                                      |
+|       | ![img](./assets/Clase1_S6_63.png)                                               |
+|       | Aplicamos el **teorema de Morgan**: $\overline{XY} = \overline{X}+\overline{Y}$ |
+|       | ![img](./assets/Clase1_S6_64.png)                                               |
+|       | Se reduce $\overline{\overline{A}}=A$. Cancelamos los inversos en $A$ y $C$     |
+|       | ![img](./assets/Clase1_S6_65.png)                                               |
+|       | Multiplicamos los factores:                                                     |
+|       | ![img](./assets/Clase1_S6_66.png)                                               |
+|       | Reduzimos $A \times A = A$. Nos queda:                                          |
+|       | ![img](./assets/Clase1_S6_67.png)                                               |
+|       | Fatorizamos $AC$.                                                               |
+|       | ![img](./assets/Clase1_S6_68.png)                                               |
+|       | Reduzimos las B complementarias:                                                |
+|       | ![img](./assets/Clase1_S6_69.png)                                               |
+|       | Nos queda:                                                                      |
+|       | ![img](./assets/Clase1_S6_70.png)                                               |
+|       | Aún podemos factorizar para que nos quede:                                      |
+|       | ![img](./assets/Clase1_S6_71.png)                                               |
 
-Nos dá como resultado:
+|         Ecuación Reducida         |          Tabla de verdad          |
+| :-------------------------------: | :-------------------------------: |
+| ![img](./assets/Clase1_S6_71.png) | ![img](./assets/Clase1_S6_74.png) |
 
-![img](./assets/Clase1_S6_62.png)
-
-La función resultante fue:
-
-Aplicamos el teorema de Morgan:
-
-Cancelamos los inversos en A y C
-
-Multiplicamos los factores:
-
-![img](./assets/Clase1_S6_63.png)
-
-![img](./assets/Clase1_S6_64.png)
-
-![img](./assets/Clase1_S6_65.png)
-
-![img](./assets/Clase1_S6_66.png)
-
-Reduzimos A.A = A
-
-Fatorizamos AC
-
-Reduzimos las B complementarias:
-
-Nos queda:
-
-![img](./assets/Clase1_S6_67.png)
-
-![img](./assets/Clase1_S6_68.png)
-
-![img](./assets/Clase1_S6_69.png)
-
-![img](./assets/Clase1_S6_70.png)
-
-Aún podemos factorizar para que nos quede:
-
-![img](./assets/Clase1_S6_71.png)
-
-![img](./assets/Clase1_S6_72.png)
-
-![img](./assets/Clase1_S6_73.png)
-
-![img](./assets/Clase1_S6_74.png)
-
-![img](./assets/Clase1_S6_75.png)
-
-![img](./assets/Clase1_S6_76.png)
+### Circuito
 
 ![img](./assets/Clase1_S6_77.png)
 
-![img](./assets/Clase1_S6_78.png)
-
-![img](./assets/Clase1_S6_79.png)
+## Ejercicio 7
 
 Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital
 
-![img](./assets/Clase1_S6_80.png)
+|           Tabla inicial           |
+| :-------------------------------: |
+| ![img](./assets/Clase1_S6_79.png) |
 
-Primero se debe obtener los valores de las salidas que sean 1:
+### Desarrollo
 
-Una vez tenemos las salidas en 1, se genera la ecuación sumando cada producto:
 
-![img](./assets/Clase1_S6_81.png)
+| Pasos | Operación                                                                                                                                          |
+| :---: | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   1   | Primero se debe obtener los valores de las salidas que sean 1                                                                                      |
+|   2   | ![img](./assets/Clase1_S6_82.png)                                                                                                                  |
+|       | Una vez tenemos las salidas en 1, se genera la ecuación sumando cada producto:                                                                     |
+|       | ![img](./assets/Clase1_S6_81.png)                                                                                                                  |
+|       | Ahora debemos reducir la ecuación, para esto vamos a aplicar el teorema  $x + x = x$ , con  $ABC$ ; duplicamos para reducir más fácil la ecuación: |
+|       | ![img](./assets/Clase1_S6_87.png)                                                                                                                  |
+|       | Factorizamos los términos:                                                                                                                         |
+|       | ![img](./assets/Clase1_S6_88.png)                                                                                                                  |
+|       | Hacemos las reducciones necesarias y llegamos a la resultante                                                                                      |
+|       | ![img](./assets/Clase1_S6_89.png)                                                                                                                  |
 
-![img](./assets/Clase1_S6_82.png)
+|         Ecuación Reducida         |          Tabla de verdad          |
+| :-------------------------------: | :-------------------------------: |
+| ![img](./assets/Clase1_S6_89.png) | ![img](./assets/Clase1_S6_96.png) |
 
-![img](./assets/Clase1_S6_83.png)
-
-![img](./assets/Clase1_S6_84.png)
-
-![img](./assets/Clase1_S6_85.png)
-
-![img](./assets/Clase1_S6_86.png)
-
-Ahora debemos reducir la ecuación, para esto vamos a aplicar el teorema  _x + x = x_ , con  _ABC_ ; duplicamos para reducir más fácil la ecuación:
-
-Factorizamos los términos:
-
-Hacemos las reducciones necesarias y llegamos a la resultante
-
-![img](./assets/Clase1_S6_87.png)
-
-![img](./assets/Clase1_S6_88.png)
-
-![img](./assets/Clase1_S6_89.png)
-
-![img](./assets/Clase1_S6_90.png)
-
-Armamos el circuito resultante
-
-![img](./assets/Clase1_S6_91.png)
-
-![img](./assets/Clase1_S6_92.png)
-
-![img](./assets/Clase1_S6_93.png)
-
-La tabla de verdad resultante:
-
-![img](./assets/Clase1_S6_94.png)
+### Circuito
 
 ![img](./assets/Clase1_S6_95.png)
 
-![img](./assets/Clase1_S6_96.png)
+### Ejercicio 8
 
-![img](./assets/Clase1_S6_97.png)
+Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital
+
+|           Tabla inicial           |
+| :-------------------------------: |
+| ![img](./assets/Clase1_S6_97.png) |
 
 Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital
 
@@ -381,7 +328,7 @@ Factorizamos A:
 
 Aplicamos el complemento en B:
 
-Aún podemos reducir más, aplicando el Teorama  _x + xy = x + y_ . En este caso  _x = A_  y  _y = BCD,_  nos queda:
+Aún podemos reducir más, aplicando el Teorama  $x + \overline{x}y = x + y$ . En este caso  $x = A$  y  $y = BCD,$  nos queda:
 
 ![img](./assets/Clase1_S6_114.png)
 
@@ -392,12 +339,6 @@ Aún podemos reducir más, aplicando el Teorama  _x + xy = x + y_ . En este caso
 ![img](./assets/Clase1_S6_117.png)
 
 ![img](./assets/Clase1_S6_118.png)
-
-La tabla de verdad resultante:
-
-![img](./assets/Clase1_S6_119.png)
-
-![img](./assets/Clase1_S6_120.png)
 
 La tabla de verdad resultante:
 

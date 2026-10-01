@@ -315,3 +315,8 @@ Los símbolos rectangulares para las compuertas NAND y NOR son los mismos que pa
 
 ![img](./assets/Clase1_S3_44.png)
 
+## Resumen de compuertas
+
+![gates](assets/compuertas_full.png)
+
+Descargar [aquí](assets/compuertas_full.pdf)

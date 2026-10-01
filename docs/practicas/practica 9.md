@@ -15,25 +15,22 @@ Aplicar los conocimientos de sistemas digitales de control a un sistema de segur
 
 ## Material
 
-| Cantidad | Nombre                  | Descripción |
-| -------- | ----------------------- | ----------- |
-| 1        | Multímetro              | Voltímetro  |
-| 1        | IC 7404                 | Compuerta   |
-| 1        | IC 7408                 | Compuerta   |
-| 1        | IC7432                  | Compuerta   |
-| 1        | Led                     |             |
-| 1        | Resistencias 330        |             |
-| 2        | Resistencias 1k         |             |
-| 1        | Sensor de presencia     | Sensor PIR  |
-| 1        | Buzzer activo           | Buzzer      |
-| 1        | Dipswitch o push button |             |
-| 1        | Dipswitch o push button |             |
+| Cantidad | Nombre                  | Descripción   |
+| -------- | ----------------------- | ------------- |
+| 1        | Multímetro              | Voltímetro    |
+| x        | IC 7404                 | Compuerta     |
+| x        | IC 7408                 | Compuerta     |
+| x        | IC7432                  | Compuerta     |
+| x        | Led                     |               |
+| 1        | Resistencias 330        |               |
+| 2        | Resistencias 1k         |               |
+| 1        | Sensor de presencia     | Sensor PIR    |
+| 1        | Buzzer                  | Buzzer activo |
+| 1        | Dipswitch o push button |               |
 
 ## Desarrollo
 
-
 ### Filosofía de operación
-
 
 Tenemos la siguiente arquitectura, y se debe desarrollar el circuito de control para lograrlo:
 
