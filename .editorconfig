@@ -1,0 +1,41 @@
+# EditorConfig configuration for MkDocs Material & Python projects
+# https://editorconfig.org
+
+root = true
+
+# Standard settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# Python configuration (PEP 8 standard)
+[*.py]
+indent_style = space
+indent_size = 4
+max_line_length = 88
+
+# Markdown configuration (MkDocs Material standard)
+[*.md]
+indent_style = space
+indent_size = 4
+# Trailing whitespace in Markdown can signify hard line breaks (<br/>)
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# YAML configuration (mkdocs.yml and MkDocs Material extensions)
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Web assets (for custom MkDocs Material hooks, templates or styles)
+[*.{css,scss,js,json}]
+indent_style = space
+indent_size = 2
+
+# Makefiles
+[Makefile]
+indent_style = tab
