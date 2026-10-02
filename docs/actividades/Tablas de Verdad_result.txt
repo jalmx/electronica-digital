@@ -1,0 +1,16 @@
+# Tablas de Verdad: Respuestas
+
+- Ejercicio 1
+  - $$F_1(A, B) = A \cdot \bar{B} + \bar{A} \cdot B$$
+- Ejercicio 2
+  - $$F_2(A, B) = \overline{A \cdot B} \cdot (A + B)$$
+- Ejercicio 3
+  - $$F_3(A, B, C) = A \cdot B + \bar{A} \cdot C$$
+- Ejercicio 4
+    - $$F_4(A, B, C) = (A + B) \cdot (\bar{B} + C)$$
+- Ejercicio 5
+  - $$F_5(A, B, C) = \overline{A + B} + A \cdot C$$
+- Ejercicio 6
+  - $$F_6(A, B, C, D) = A \cdot B + \bar{C} \cdot D$$
+- Ejercicio 7
+  - $$F_7(A, B, C, D) = (A + C) \cdot (\bar{B} + \bar{D})$$

@@ -20,15 +20,16 @@ Simplifique la expresión, comprobar tabla de verdad y crear su circuito digital
 
 Simplificando la expresión, la ecuación es:
 
-Factorizamos las variables comunes  $A\overline{B}$. Nos queda para reducir la $D$ con su complemento $D’$, y aplicamos la fórmula, nos da como resultado:
+Factorizamos las variables comunes  $A\overline{B}$. Nos queda para reducir la $D$ con su complemento $\overline{D}$, y aplicamos la fórmula, nos da como resultado:
 
-| Pasos | Operación                                 |
-| :---: | ----------------------------------------- |
-|   1   | ![img](./assets/Clase1_S6_3.png)          |
-|   2   | Se reduce $D + \overline{D} = 1$          |
-|   3   | ![img](./assets/Clase1_S6_4.png)          |
-|   4   | Resolvemos la multiplicación y nos queda: |
-|   5   | ![img](./assets/Clase1_S6_5.png)          |
+| Pasos | Operación                                                          |
+| :---: | ------------------------------------------------------------------ |
+|   1   | Se reduce $D + \overline{D} = 1$                                   |
+|   2   | ![img](./assets/Clase1_S6_3.png)                                   |
+|   3   | Se multiplica el resultadode la reducción con el factor resultante |
+|   4   | ![img](./assets/Clase1_S6_4.png)                                   |
+|   5   | Resolvemos la multiplicación y nos queda:                          |
+|   6   | ![img](./assets/Clase1_S6_5.png)                                   |
 
 ### Resultado
 
@@ -200,27 +201,27 @@ Vamos asignando los valores por cada compuerta y su salida
 | Pasos | Operación                                                                       |
 | :---: | ------------------------------------------------------------------------------- |
 |   1   | Inicio                                                                          |
-|   1   | ![img](./assets/Clase1_S6_61.png)                                               |
-|       | Nos dá como resultado:                                                          |
-|       | ![img](./assets/Clase1_S6_62.png)                                               |
-|       | La función resultante fue:                                                      |
-|       | ![img](./assets/Clase1_S6_63.png)                                               |
-|       | Aplicamos el **teorema de Morgan**: $\overline{XY} = \overline{X}+\overline{Y}$ |
-|       | ![img](./assets/Clase1_S6_64.png)                                               |
-|       | Se reduce $\overline{\overline{A}}=A$. Cancelamos los inversos en $A$ y $C$     |
-|       | ![img](./assets/Clase1_S6_65.png)                                               |
-|       | Multiplicamos los factores:                                                     |
-|       | ![img](./assets/Clase1_S6_66.png)                                               |
-|       | Reduzimos $A \times A = A$. Nos queda:                                          |
-|       | ![img](./assets/Clase1_S6_67.png)                                               |
-|       | Fatorizamos $AC$.                                                               |
-|       | ![img](./assets/Clase1_S6_68.png)                                               |
-|       | Reduzimos las B complementarias:                                                |
-|       | ![img](./assets/Clase1_S6_69.png)                                               |
-|       | Nos queda:                                                                      |
-|       | ![img](./assets/Clase1_S6_70.png)                                               |
-|       | Aún podemos factorizar para que nos quede:                                      |
-|       | ![img](./assets/Clase1_S6_71.png)                                               |
+|   2   | ![img](./assets/Clase1_S6_61.png)                                               |
+|   3   | Nos dá como resultado:                                                          |
+|   4   | ![img](./assets/Clase1_S6_62.png)                                               |
+|   5   | La función resultante fue:                                                      |
+|   6   | ![img](./assets/Clase1_S6_63.png)                                               |
+|   7   | Aplicamos el **teorema de Morgan**: $\overline{XY} = \overline{X}+\overline{Y}$ |
+|   8   | ![img](./assets/Clase1_S6_64.png)                                               |
+|   9   | Se reduce $\overline{\overline{A}}=A$. Cancelamos los inversos en $A$ y $C$     |
+|  10   | ![img](./assets/Clase1_S6_65.png)                                               |
+|  11   | Multiplicamos los factores:                                                     |
+|  12   | ![img](./assets/Clase1_S6_66.png)                                               |
+|  13   | Reduzimos $A \times A = A$. Nos queda:                                          |
+|  14   | ![img](./assets/Clase1_S6_67.png)                                               |
+|  15   | Fatorizamos $AC$.                                                               |
+|  16   | ![img](./assets/Clase1_S6_68.png)                                               |
+|  17   | Reduzimos las B complementarias:                                                |
+|  18   | ![img](./assets/Clase1_S6_69.png)                                               |
+|  19   | Nos queda:                                                                      |
+|  20   | ![img](./assets/Clase1_S6_70.png)                                               |
+|  21   | Aún podemos factorizar para que nos quede:                                      |
+|  22   | ![img](./assets/Clase1_S6_71.png)                                               |
 
 |         Ecuación Reducida         |          Tabla de verdad          |
 | :-------------------------------: | :-------------------------------: |
@@ -245,14 +246,14 @@ Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir
 | :---: | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 |   1   | Primero se debe obtener los valores de las salidas que sean 1                                                                                      |
 |   2   | ![img](./assets/Clase1_S6_82.png)                                                                                                                  |
-|       | Una vez tenemos las salidas en 1, se genera la ecuación sumando cada producto:                                                                     |
-|       | ![img](./assets/Clase1_S6_81.png)                                                                                                                  |
-|       | Ahora debemos reducir la ecuación, para esto vamos a aplicar el teorema  $x + x = x$ , con  $ABC$ ; duplicamos para reducir más fácil la ecuación: |
-|       | ![img](./assets/Clase1_S6_87.png)                                                                                                                  |
-|       | Factorizamos los términos:                                                                                                                         |
-|       | ![img](./assets/Clase1_S6_88.png)                                                                                                                  |
-|       | Hacemos las reducciones necesarias y llegamos a la resultante                                                                                      |
-|       | ![img](./assets/Clase1_S6_89.png)                                                                                                                  |
+|   3   | Una vez tenemos las salidas en 1, se genera la ecuación sumando cada producto:                                                                     |
+|   4   | ![img](./assets/Clase1_S6_81.png)                                                                                                                  |
+|   5   | Ahora debemos reducir la ecuación, para esto vamos a aplicar el teorema  $x + x = x$ , con  $ABC$ ; duplicamos para reducir más fácil la ecuación: |
+|   6   | ![img](./assets/Clase1_S6_87.png)                                                                                                                  |
+|   7   | Factorizamos los términos:                                                                                                                         |
+|   8   | ![img](./assets/Clase1_S6_88.png)                                                                                                                  |
+|   9   | Hacemos las reducciones necesarias y llegamos a la resultante                                                                                      |
+|  10   | ![img](./assets/Clase1_S6_89.png)                                                                                                                  |
 
 |         Ecuación Reducida         |          Tabla de verdad          |
 | :-------------------------------: | :-------------------------------: |
