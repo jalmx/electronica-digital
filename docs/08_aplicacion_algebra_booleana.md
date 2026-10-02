@@ -135,7 +135,7 @@ Vamos asignando los valores por cada compuerta y su salida
 | :-------------------------------: | :-------------------------------: |
 | ![img](./assets/Clase1_S6_36.png) | ![img](./assets/Clase1_S6_37.png) |
 
-### Circuito 
+### Circuito
 
 ![img](./assets/Clase1_S6_38.png)
 
@@ -275,39 +275,39 @@ Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir
 
 ### Desarrollo
 
-| Pasos | Operación                                                                       |
-| :---: | ------------------------------------------------------------------------------- |
-|   1   | Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital|
-|1|Primero se debe obtener los valores de las salidas que sean 1:|
-||![img](./assets/Clase1_S6_98.png)|
-||La ecuación generada es:|
-||![img](./assets/Clase1_S6_99.png)<br>![img](./assets/Clase1_S6_100.png)|
-||Creamos el circuito original con base la ecuación sin reducción|
-||![img](./assets/Clase1_S6_102.png)|
-||Retomando la ecuacion obtenida|
-||![img](./assets/Clase1_S6_99.png)<br>![img](./assets/Clase1_S6_100.png)|
-||Vamos a factorizar los complementos en $D$|
-||![img](./assets/Clase1_S6_109.png)|
-||La ecuación reducida nos queda:|
-||![img](./assets/Clase1_S6_110.png)|
-||Volvemos factorizar los complementos de $C$:|
-||![img](./assets/Clase1_S6_111.png)|
-||La ecuación reducida nos queda:|
-||![img](./assets/Clase1_S6_112.png)|
-||Factorizamos $A$|
-||![img](./assets/Clase1_S6_113.png)|
-||Aplicamos el complemento en $B$|
-||![img](./assets/Clase1_S6_114.png)|
-||Aún podemos reducir más, aplicando el Teorama  $x + \overline{x}y = x + y$.<br>En este caso  $x = A$  y  $y = BCD,$  nos queda:|
-||![img](./assets/Clase1_S6_115.png)|
+| Pasos | Operación                                                                                                                       |
+| :---: | ------------------------------------------------------------------------------------------------------------------------------- |
+|   1   | Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital                              |
+|   2   | Primero se debe obtener los valores de las salidas que sean 1:                                                                  |
+|   3   | ![img](./assets/Clase1_S6_98.png)                                                                                               |
+|   4   | La ecuación generada es:                                                                                                        |
+|   5   | ![img](./assets/Clase1_S6_99.png)<br>![img](./assets/Clase1_S6_100.png)                                                         |
+|   6   | Creamos el circuito original con base la ecuación sin reducción                                                                 |
+|   7   | ![img](./assets/Clase1_S6_102.png)                                                                                              |
+|   8   | Retomando la ecuacion obtenida                                                                                                  |
+|   9   | ![img](./assets/Clase1_S6_99.png)<br>![img](./assets/Clase1_S6_100.png)                                                         |
+|  10   | Vamos a factorizar los complementos en $D$                                                                                      |
+|  11   | ![img](./assets/Clase1_S6_109.png)                                                                                              |
+|  12   | La ecuación reducida nos queda:                                                                                                 |
+|  13   | ![img](./assets/Clase1_S6_110.png)                                                                                              |
+|  14   | Volvemos factorizar los complementos de $C$:                                                                                    |
+|  15   | ![img](./assets/Clase1_S6_111.png)                                                                                              |
+|  16   | La ecuación reducida nos queda:                                                                                                 |
+|  17   | ![img](./assets/Clase1_S6_112.png)                                                                                              |
+|  18   | Factorizamos $A$                                                                                                                |
+|  19   | ![img](./assets/Clase1_S6_113.png)                                                                                              |
+|  20   | Aplicamos el complemento en $B$                                                                                                 |
+|  21   | ![img](./assets/Clase1_S6_114.png)                                                                                              |
+|  22   | Aún podemos reducir más, aplicando el Teorama  $x + \overline{x}y = x + y$.<br>En este caso  $x = A$  y  $y = BCD,$  nos queda: |
+|  23   | ![img](./assets/Clase1_S6_115.png)                                                                                              |
 
 ??? note "Ecuación raw"
     ( ~A B C D) + (A ~B ~C ~D ) + (A ~B ~C D ) + (A ~B C ~ D) + (A ~B C D) + (A B ~C ~D) + (A B ~C D ) + ( A B C ~D) + (A B C D)
 
 
-|         Ecuación Reducida         |          Tabla de verdad          |
-| :-------------------------------: | :-------------------------------: |
-|![img](./assets/Clase1_S6_115.png)|![img](./assets/Clase1_S6_105.png)|
+|         Ecuación Reducida          |          Tabla de verdad           |
+| :--------------------------------: | :--------------------------------: |
+| ![img](./assets/Clase1_S6_115.png) | ![img](./assets/Clase1_S6_105.png) |
 
 
 ### Circuito
@@ -316,5 +316,43 @@ Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir
 
 ![img](./assets/Clase1_S6_122.png)
 
+## Ejercicio 9
+
+Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital
+
+|              Tabla inicial               |
+| :--------------------------------------: |
+| ![tabla](./assets/tabla_ejercicio_9.png) |
 
 
+### Desarrollo
+
+| Pasos | Operación                                                      |
+| :---: | -------------------------------------------------------------- |
+|   1   | Se identifican las salidas que tienen uno                      |
+|   2   | ![tabla](./assets/tabla_ejercicio_9_2.png)                     |
+|   3   | La ecuación que se obtiene es                                  |
+|   4   | $\color{blue}{\overline{AB}C+A\overline{BC} + \overline{ABC}}$ |
+|   5   | Analizandola y viendo con detenimiento, **no tiene reducción** |
+
+!!! danger "Atención"
+    No todas las tablas o ecuaciones tienen reducción
+
+!!! note "Ecuación Raw"
+    ~A ~B C + A ~B ~C + A B C
+
+|                        Ecuación Reducida                         |            Tabla de verdad             |
+| :--------------------------------------------------------------: | :------------------------------------: |
+| $\color{blue}{X=\overline{AB}C+A\overline{BC} + \overline{ABC}}$ | ![img](./assets/tabla_ejer9_logic.png) |
+
+### Circuito
+
+![circuito](./assets/circuito_9.png)
+
+## Ejercicio 10
+
+Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital
+
+|              Tabla inicial               |
+| :--------------------------------------: |
+| ![tabla](./assets/tabla_eje_10.png) |
