@@ -231,6 +231,8 @@ Vamos asignando los valores por cada compuerta y su salida
 
 ![img](./assets/Clase1_S6_77.png)
 
+## A partir de Tabla de verdad generar ecuación y reducción
+
 ## Ejercicio 7
 
 Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital
@@ -263,7 +265,7 @@ Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir
 
 ![img](./assets/Clase1_S6_95.png)
 
-### Ejercicio 8
+## Ejercicio 8
 
 Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital
 
@@ -271,78 +273,48 @@ Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir
 | :-------------------------------: |
 | ![img](./assets/Clase1_S6_97.png) |
 
-Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital
+### Desarrollo
 
-![img](./assets/Clase1_S6_98.png)
+| Pasos | Operación                                                                       |
+| :---: | ------------------------------------------------------------------------------- |
+|   1   | Con base a la tabla de verdad, obtener ecuación, reducir ecuación, y construir el circuito digital|
+|1|Primero se debe obtener los valores de las salidas que sean 1:|
+||![img](./assets/Clase1_S6_98.png)|
+||La ecuación generada es:|
+||![img](./assets/Clase1_S6_99.png)<br>![img](./assets/Clase1_S6_100.png)|
+||Creamos el circuito original con base la ecuación sin reducción|
+||![img](./assets/Clase1_S6_102.png)|
+||Retomando la ecuacion obtenida|
+||![img](./assets/Clase1_S6_99.png)<br>![img](./assets/Clase1_S6_100.png)|
+||Vamos a factorizar los complementos en $D$|
+||![img](./assets/Clase1_S6_109.png)|
+||La ecuación reducida nos queda:|
+||![img](./assets/Clase1_S6_110.png)|
+||Volvemos factorizar los complementos de $C$:|
+||![img](./assets/Clase1_S6_111.png)|
+||La ecuación reducida nos queda:|
+||![img](./assets/Clase1_S6_112.png)|
+||Factorizamos $A$|
+||![img](./assets/Clase1_S6_113.png)|
+||Aplicamos el complemento en $B$|
+||![img](./assets/Clase1_S6_114.png)|
+||Aún podemos reducir más, aplicando el Teorama  $x + \overline{x}y = x + y$.<br>En este caso  $x = A$  y  $y = BCD,$  nos queda:|
+||![img](./assets/Clase1_S6_115.png)|
 
-Primero se debe obtener los valores de las salidas que sean 1:
+??? note "Ecuación raw"
+    ( ~A B C D) + (A ~B ~C ~D ) + (A ~B ~C D ) + (A ~B C ~ D) + (A ~B C D) + (A B ~C ~D) + (A B ~C D ) + ( A B C ~D) + (A B C D)
 
-La ecuación generada es:
 
-( ~A B C D) + (A ~B ~C ~D ) + (A ~B ~C D ) +
+|         Ecuación Reducida         |          Tabla de verdad          |
+| :-------------------------------: | :-------------------------------: |
+|![img](./assets/Clase1_S6_115.png)|![img](./assets/Clase1_S6_105.png)|
 
-(A ~B C ~ D) + (A ~B C D) + (A B ~C ~D) + (A B ~C D )
 
-( A B C ~D) + (A B C D)
-
-![img](./assets/Clase1_S6_99.png)
-
-![img](./assets/Clase1_S6_100.png)
-
-![img](./assets/Clase1_S6_101.png)
-
-![img](./assets/Clase1_S6_102.png)
-
-![img](./assets/Clase1_S6_103.png)
-
-![img](./assets/Clase1_S6_104.png)
-
-![img](./assets/Clase1_S6_105.png)
-
-![img](./assets/Clase1_S6_106.png)
-
-La función obtenida es:
-
-Vamos a factorizar los complementos en D:
-
-La ecuación reducida nos queda:
-
-![img](./assets/Clase1_S6_107.png)
-
-![img](./assets/Clase1_S6_108.png)
-
-![img](./assets/Clase1_S6_109.png)
-
-![img](./assets/Clase1_S6_110.png)
-
-Volvemos factorizar los complementos de C:
-
-La ecuación reducida nos queda:
-
-Factorizamos A:
-
-![img](./assets/Clase1_S6_111.png)
-
-![img](./assets/Clase1_S6_112.png)
-
-![img](./assets/Clase1_S6_113.png)
-
-Aplicamos el complemento en B:
-
-Aún podemos reducir más, aplicando el Teorama  $x + \overline{x}y = x + y$ . En este caso  $x = A$  y  $y = BCD,$  nos queda:
-
-![img](./assets/Clase1_S6_114.png)
-
-![img](./assets/Clase1_S6_115.png)
-
-![img](./assets/Clase1_S6_116.png)
-
-![img](./assets/Clase1_S6_117.png)
+### Circuito
 
 ![img](./assets/Clase1_S6_118.png)
 
-La tabla de verdad resultante:
-
-![img](./assets/Clase1_S6_121.png)
-
 ![img](./assets/Clase1_S6_122.png)
+
+
+
