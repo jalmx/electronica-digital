@@ -11,3 +11,8 @@ create_index: true
 - Morris Mano, M., & Ciletti, M. D. (2019). Diseño digital (6ª ed.). Pearson.
 - Brown, S., & Vranesic, Z. (2020). Fundamentos de diseño lógico y computadoras (7ª ed.). McGraw-Hill.
 
+---
+
+https://tablesgenerator.com/html_tables
+
+https://html-online.com/html-editor/
