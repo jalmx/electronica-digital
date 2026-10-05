@@ -333,8 +333,8 @@ Se tiene un circuito electroneumatico el cual se debe automatizar aplicando logi
 
 ![logicsim](./assets/electroneumatica_circuito_logico.png)
 
-| Tabla de verdad                               |
-| --------------------------------------------- |
+|                Tabla de verdad                |
+| :-------------------------------------------: |
 | ![tabla](./assets/electroneumatica_tabla.png) |
 
  | Variable  | Mapa K                                              |
