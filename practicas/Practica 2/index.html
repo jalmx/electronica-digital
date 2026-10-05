@@ -807,6 +807,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Paso 1: Identificación de salidas digitales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datasheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datasheets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -825,6 +840,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Paso 3: Verificar niveles de voltaje de Salida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#and-7408" class="md-nav__link">
+    <span class="md-ellipsis">
+      AND 7408
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#or-7432" class="md-nav__link">
+    <span class="md-ellipsis">
+      OR 7432
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-7404" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOT 7404
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -842,9 +890,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado" class="md-nav__link">
+  <a href="#ejemplo" class="md-nav__link">
     <span class="md-ellipsis">
-      Resultado
+      Ejemplo
     </span>
   </a>
   
@@ -1074,6 +1122,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Paso 1: Identificación de salidas digitales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datasheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datasheets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1092,6 +1155,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Paso 3: Verificar niveles de voltaje de Salida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#and-7408" class="md-nav__link">
+    <span class="md-ellipsis">
+      AND 7408
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#or-7432" class="md-nav__link">
+    <span class="md-ellipsis">
+      OR 7432
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-7404" class="md-nav__link">
+    <span class="md-ellipsis">
+      NOT 7404
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1109,9 +1205,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado" class="md-nav__link">
+  <a href="#ejemplo" class="md-nav__link">
     <span class="md-ellipsis">
-      Resultado
+      Ejemplo
     </span>
   </a>
   
@@ -1171,8 +1267,13 @@
 </tr>
 <tr>
 <td>1</td>
-<td>Led</td>
-<td></td>
+<td>Fuente de 5V</td>
+<td>Fuente regulada de 5V (Cargador de 5V, Pila 9V con su regulador, fuente variable)</td>
+</tr>
+<tr>
+<td>X</td>
+<td>LEDs</td>
+<td>LEDs de los colores que desees (no ultrabrillantes)</td>
 </tr>
 <tr>
 <td>1</td>
@@ -1208,8 +1309,10 @@
 </table>
 <h2 id="desarrollo">Desarrollo</h2>
 <h3 id="paso-1-identificacion-de-salidas-digitales">Paso 1: Identificación de salidas digitales</h3>
-<p>Para realizar la identificación de entradas y salidas se debe tomar el datasheet de cada compuerta. En su hoja de especificaciones vamos observar la distribución de pines</p>
+<p>Para realizar la identificación de entradas y salidas se debe tomar el datasheet de cada compuerta. En su hoja de especificaciones vamos observar la distribución de pines.
+<strong>Esto realizarlo para todas las compuertas que tiene dentro el circuito integrado.</strong></p>
 <p><img alt="pines gates" src="../../assets/compuerta_all.png" /></p>
+<h4 id="datasheets">Datasheets</h4>
 <ul>
 <li><a href="../../datasheet/7408.pdf">7408</a></li>
 <li><a href="../../datasheet/7404.pdf">7404</a></li>
@@ -1231,106 +1334,459 @@
 </tr>
 </tbody>
 </table>
-<h3 id="paso-2-probar-niveles-de-voltaje-de-entrada">Paso 2: Probar niveles de voltaje de entrada</h3>
-<p>Montar el circuito integrado en el protoboard y darle alimentación (voltaje). Realizando la siguiente conexión:</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>Las compuertas soportan máximo 6V (Revisar datasheet), si se pasa de ese voltaje quemaras el IC.</p>
+<p>Las compuertas soportan máximo 5.5V (Revisar datasheet), <strong>si se pasa de ese voltaje quemaras la compuerta</strong>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Si cuentas con una pila de 9V, utilizar un regulador de voltaje 7805</p>
+<p>Si cuentas con una pila de 9V, utilizar un regulador de voltaje 7805 o algun regulador para 5V.</p>
 </div>
+<h3 id="paso-2-probar-niveles-de-voltaje-de-entrada">Paso 2: Probar niveles de voltaje de entrada</h3>
+<p>Montar el circuito integrado en el protoboard y darle alimentación (<em>voltaje</em>). Realizando la siguiente conexión:</p>
 <p><img alt="img" src="../../assets/circuitos/fritzing/verifica_compuertas_alone.svg" /></p>
-<p>Una vez realizada las conexiones realizar las combinaciones en la entrada (en el dipswitch) para cada compuerta que tenga el IC.</p>
-<p>Primero revisaras los valores de entrada, que serian la entrada <strong>A</strong> y <strong>B</strong></p>
+<p>Primero revisaras los valores de entrada, que serian la entrada <strong>A</strong> y <strong>B</strong>. Es decir, el voltaje en cada pin de entrada de cada compuerta.</p>
 <p><img alt="img" src="../../assets/circuitos/fritzing/verifica_compuertas_mult_in.svg" /></p>
 <h3 id="paso-3-verificar-niveles-de-voltaje-de-salida">Paso 3: Verificar niveles de voltaje de Salida</h3>
 <p>Ahora vamos a realizar las combinaciones en la entrada y ver los voltajes que tenemos a la salida de cada compuerta.</p>
 <p><img alt="verificar" src="../../assets/circuitos/fritzing/verifica_compuertas_mult_out.svg" /></p>
-<p><strong>AND 7408</strong></p>
+<p>Una vez realizada las conexiones realizar las combinaciones en la entrada (en el dipswitch) para cada compuerta que tenga el IC.</p>
+<h4 id="and-7408">AND 7408</h4>
+<p>Voltaje en <span class="arithmatex">\(V_{cc}\)</span> y <span class="arithmatex">\(GND\)</span> de la compuerta</p>
 <table>
 <thead>
 <tr>
-<th>A</th>
-<th>B</th>
-<th>Voltaje de salida</th>
+<th>Pin</th>
+<th>Voltaje</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>0</td>
+<td><span class="arithmatex">\(V_{cc}\)</span> (14)</td>
 <td></td>
 </tr>
 <tr>
-<td>0</td>
-<td>1</td>
-<td></td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td></td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
+<td><span class="arithmatex">\(GND\)</span> (7)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p><strong>OR 7432</strong></p>
+<p><strong>Compuerta 1</strong></p>
 <table>
 <thead>
 <tr>
-<th>A</th>
-<th>B</th>
-<th>Voltaje de salida</th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">Voltaje de salida</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>0</td>
-<td></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>0</td>
-<td>1</td>
-<td></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>1</td>
-<td>0</td>
-<td></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>1</td>
-<td>1</td>
-<td></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-<p><strong>NOT 7404</strong></p>
+<p><strong>Compuerta 2</strong></p>
 <table>
 <thead>
 <tr>
-<th>A</th>
-<th>Voltaje de salida</th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">Voltaje de salida</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 3</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 4</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="or-7432">OR 7432</h4>
+<p>Voltaje en <span class="arithmatex">\(V_{cc}\)</span> y <span class="arithmatex">\(GND\)</span> de la compuerta</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>Voltaje</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(V_{cc}\)</span> (14)</td>
 <td></td>
 </tr>
 <tr>
-<td>1</td>
+<td><span class="arithmatex">\(GND\)</span> (7)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<p><strong>Compuerta 1</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 2</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 3</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 4</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="not-7404">NOT 7404</h4>
+<p>Voltaje en <span class="arithmatex">\(V_{cc}\)</span> y <span class="arithmatex">\(GND\)</span> de la compuerta</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pin</th>
+<th>Voltaje</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(V_{cc}\)</span> (14)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(GND\)</span> (7)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 1</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 2</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 3</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 4</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 5</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Compuerta 6</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">Voltaje de salida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Atención</p>
+<p>Si en caso alguna compuerta de todo el circuito integrado no te da el valor correcto, elimina ese IC, porque no sirve, esta dañado.</p>
+</div>
 <h3 id="paso-4-verificacion-de-salida-con-led">Paso 4: Verificación de salida con LED</h3>
 <p>Ahora vas a colocar un led a la salida de cada compuerta que contenga el IC, realizando las combinaciones de la tabla de verdad y ver lo que sucede con el estado del LED</p>
 <p><img alt="img" src="../../assets/verifica_compuertas_bb.svg" /></p>
@@ -1339,31 +1795,31 @@
 <table>
 <thead>
 <tr>
-<th>A</th>
-<th>B</th>
-<th>ESTADO LED</th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">ESTADO LED</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>0</td>
-<td></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>0</td>
-<td>1</td>
-<td></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>1</td>
-<td>0</td>
-<td></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>1</td>
-<td>1</td>
-<td></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
@@ -1372,31 +1828,31 @@
 <table>
 <thead>
 <tr>
-<th>A</th>
-<th>B</th>
-<th>ESTADO LED</th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">ESTADO LED</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>0</td>
-<td></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>0</td>
-<td>1</td>
-<td></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>1</td>
-<td>0</td>
-<td></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>1</td>
-<td>1</td>
-<td></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
@@ -1405,23 +1861,23 @@
 <table>
 <thead>
 <tr>
-<th>A</th>
-<th>ESTADO LED</th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">ESTADO LED</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
-<td>1</td>
-<td></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="resultado">Resultado</h2>
+<h2 id="ejemplo">Ejemplo</h2>
 <details>
 <!-- <img src ="../../assets/videos/gates_1.gif"> -->
 <p><img alt="video" src="../../assets/videos/gates_1.gif" /></p>
