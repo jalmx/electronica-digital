@@ -4,6 +4,10 @@
 
 Contamos con estacionamiento de 3 espacios y una pluma de control para el acceso. Cada espacio cuenta con un sensor (*Sx*), por ende, tenemos 3 sensores para detectar si el espacio esta ocupado o no. De igual manera para que el estacionamiento detecte y levante la pluma tiene un sensor para detectar si hay auto enfrente que quiere entrar.
 
+![infografia](assets/estacionamiento_infografia.jpeg)
+
+> *Infografía representativa*
+
 ### Descripcion
 
 Reglas para el estacionamiento son:
@@ -76,18 +80,24 @@ Reglas para el estacionamiento son:
 
 ![circuito](./assets/circuito_digital_estacionamiento.png)
 
+### Tabla de verdad y Mapa de Karnaugh
+
 | Tabla de verdad                              | Mapa K                                         |
 | -------------------------------------------- | ---------------------------------------------- |
 | ![tabla](./assets/tabla_estacionamiento.png) | ![mapa K](./assets/mapa_K_estacionamiento.png) |
 
 ??? note "Ecuacion raw"
-    AUTO ~S1 + AUTO ~S2 + AUTO ~S3
+    - PLUMA = AUTO ~S1 + AUTO ~S2 + AUTO ~S3
 
-[Descargar la simulacion](./assets/circuitos/estacionamiento.circ)
+[Descargar la simulación de Logisim](./assets/circuitos/estacionamiento.circ)
 
 ## Carrito seguidor de luz
 
-Se desarrollará un carrito que seguirá la luz, con 3 sensores de luz y 2 motores. Es decir, 3 bits de entrada, con 8 posibilidades de trabajo.
+Se diseñará e implementará un vehículo robótico móvil capaz de orientarse y desplazarse en dirección a una fuente luminosa mediante un sistema de control digital combinatorial.
+
+El sistema utiliza 3 sensores de luz (LDRs) alineados en la parte frontal como entradas digitales (3 bits de entrada, generando $2^3 = 8$ combinaciones posibles) y 2 motores independientes como actuadores para maniobrar la dirección del vehículo, además de un indicador visual de fallo.
+
+![info](./assets/seguidor_luz_infog.jpeg)
 
 ### Lógica de sensores y actuadores
 
@@ -143,7 +153,7 @@ Se desarrollará un carrito que seguirá la luz, con 3 sensores de luz y 2 motor
         </tr>
     </table>
 
-### Filosofía de operación
+### Descripción
 
 Tenemos 3 sensores de luz, los cuales captan la luz que se encuentra enfrente, contando con un sensor de lado izquierdo (S1), para detectar la luz en ese lado, la luz de frente (S2) y el sensor de la derecha (S3), para el control de 2 motores; un motor para giro a la derecha (motor izquierdo, M1) y para que gire a la izquierda (motor derecho, M2). Contando con una luz indicadora que nos indica si los sensores fallan, dado que esa combinación no es posible.
 
@@ -161,7 +171,7 @@ Tenemos 3 sensores de luz, los cuales captan la luz que se encuentra enfrente, c
 | :------------------: | :----------------: | :----------------: | :-----------------: | :---------------: | :--------------: |
 | **Sensor izquierdo** | **Sensor central** | **Sensor derecho** | **Motor izquierdo** | **Motor derecho** | **Código error** |
 |        **S1**        |       **S2**       |       **S3**       |       **M1**        |      **M2**       |      **E**       |
-|        **0**         |       **0**        |       **0**        |          0          |         0         |        1         |
+|        **0**         |       **0**        |       **0**        |          0          |         0         |      **1**       |
 |        **0**         |       **0**        |       **1**        |          1          |         0         |        0         |
 |        **0**         |       **1**        |       **0**        |          1          |         1         |        0         |
 |        **0**         |       **1**        |       **1**        |          1          |         0         |        0         |
@@ -176,15 +186,33 @@ Tenemos 3 sensores de luz, los cuales captan la luz que se encuentra enfrente, c
 
 ### Diagrama de control (lógica combinacional)
 
-pendiente...
+![logico](assets/carrito_seguidor_luz_logico.png)
+
+[Descargar la simulación](assets/circuitos/carrito_seguidor_luz.circ)
+
+### Tabla de verdad y Mapa de Karnaugh
+
+| Tabla de verdad                                   |
+| ------------------------------------------------- |
+| ![tabla](./assets/carrito_seguidor_luz_tabla.png) |
+
+
+|             Ecuación             |                       Mapa K                        |
+| :------------------------------: | :-------------------------------------------------: |
+|        $M1= S3 + ~S1 S2$         |  ![mapa K](./assets/carrito_seguidor_mapK_M1.png)   |
+|        $M2= S2 ~S3 + S1$         |  ![mapa K](./assets/carrito_seguidor_mapK_M2.png)   |
+| $ERROR= ~S1 ~S2 ~S3 + S1 ~S2 S3$ | ![mapa K](./assets/carrito_seguidor_mapK_Error.png) |
+
+??? Note "Ecuaciones Raw"
+    - M1= S3 + ~S1 S2
+
+    - M2= S2 ~S3 + S1
+
+    - ERROR= ~S1 ~S2 ~S3 + S1 ~S2 S3
 
 ### Diagrama esquemático
 
-pendiente...
-
-### Infografia de referencia
-
-![info](./assets/seguidor_luz_infog.jpeg)
+    pendiente...
 
 ## Contador Hexadecimal
 
@@ -194,7 +222,7 @@ pendiente...
 
 ### Descripción
 
-Se tienen 3 sensores de luz digitales. Cada sensor indica un estado, los cuales se describen a continuación:
+Se diseñará un sistema de iluminación inteligente automatizado mediante lógica combinacional, utilizando 3 sensores de luz digitales como entradas ($S1$, $S2$, $S3$) y 3 lámparas como salidas ($L1$, $L2$, $L3$).
 
 * **Solo** si el sensor de noche (S1) se debe encender todas las luces.
 * **Solo** si el sensor de luz media (S2) se debe encender 2 luces, que serán L1 y L3.
@@ -203,44 +231,16 @@ Se tienen 3 sensores de luz digitales. Cada sensor indica un estado, los cuales 
 * Si tenemos una luz baja, es decir, oscuridad al 75% aproximadamente, se van a encender luces L1 y L2.
 * Cuando se activen los sensores de manera no posible, es decir, no puede marcar que es noche y que hay 100% de luz, se enciende una lámpara que sería un código de error; se **encenderá solamente L1**. **Código de Error**.
 
-<table >
-    <tr >
-        <td  colspan="6" rowspan="1">
-            <p style="text-align:center;"><strong>Lógica de sensores</strong> </p>
-        </td>
-    </tr>
-    <tr >
-        <td  colspan="2" rowspan="1">
-            <p ><strong >S1 (indica noche)</strong></p>
-        </td>
-        <td  colspan="2" rowspan="1">
-            <p ><strong >S2 (indica luz al 50%)</strong></p>
-        </td>
-        <td  colspan="2" rowspan="1">
-            <p ><strong >S3 (indica que 100% luz)</strong></p>
-        </td>
-    </tr>
-    <tr >
-        <td  colspan="1" rowspan="1">
-            <p >0 (No es de noche)</p>
-        </td>
-        <td  colspan="1" rowspan="1">
-            <p >1 (Es noche)</p>
-        </td>
-        <td  colspan="1" rowspan="1">
-            <p >0 (No est&aacute; luz al 50%)</p>
-        </td>
-        <td  colspan="1" rowspan="1">
-            <p >1 (La luz est&aacute; al 50%)</p>
-        </td>
-        <td  colspan="1" rowspan="1">
-            <p >0 (Indica que no est&aacute; al 100% la luz)</p>
-        </td>
-        <td  colspan="1" rowspan="1">
-            <p >1 (Hay luz al 100%)</p>
-        </td>
-    </tr>
-</table>
+![infografia](assets/control_luces_infog.jpeg)
+
+### Lógica de sensores
+
+| Sensor | Condición Detectada | Estado Digital = 0 | Estado Digital = 1 |
+| ------ | ------------------- | ------------------ | ------------------ |
+| **S1** | Noche               | No es de noche     | Es de noche        |
+| **S2** | Luz al 50%          | Luz menor a 50%    | Luz al 50%         |
+| **S3** | Luz al 100%         | Luz menor a 100%   | Hay 100% de luz    |
+
 
 ### Tabla de verdad
 
@@ -255,23 +255,13 @@ Se tienen 3 sensores de luz digitales. Cada sensor indica un estado, los cuales 
 |   **1**    |    **1**     |     **0**     |   1   |   1   |   0   | Luz al 25% u Oscuridad 75% |
 |   **1**    |    **1**     |     **1**     |   1   |   0   |   0   |         No posible         |
 
-### Ecuaciones booleanas
-
-$$L1 = \overline{S3} + S1$$
-$$L2 = S1 \overline{S3}$$
-$$L3 = \overline{S1} S2 + S1 \overline{S2 S3}$$
-
-
 ### Mapas de Karnaugh
 
-|                      Mapa de Karnugh                      |                       Ecuación                       |
-| :-------------------------------------------------------: | :--------------------------------------------------: |
-|                          **L1**                           |                        **L1**                        |
-| ![mapa_k](./assets/mapa_l1_contro_luces_inteligentes.png) | ![ecu](./assets/ec_l1_contro_luces_inteligentes.png) |
-|                          **L2**                           |                        **L2**                        |
-| ![mapa_k](./assets/mapa_l2_contro_luces_inteligentes.png) | ![ecu](./assets/ec_l2_contro_luces_inteligentes.png) |
-|                          **L3**                           |                        **L3**                        |
-| ![mapa_k](./assets/mapa_l3_contro_luces_inteligentes.png) | ![ecu](./assets/ec_l3_contro_luces_inteligentes.png) |
+|                   Ecuación                    |                      Mapa de Karnugh                      |
+| :-------------------------------------------: | :-------------------------------------------------------: |
+|           $L1 = \overline{S3} + S1$           | ![mapa_k](./assets/mapa_l1_contro_luces_inteligentes.png) |
+|            $L2 = S1 \overline{S3}$            | ![mapa_k](./assets/mapa_l2_contro_luces_inteligentes.png) |
+| $L3 = \overline{S1} S2 + S1 \overline{S2 S3}$ | ![mapa_k](./assets/mapa_l3_contro_luces_inteligentes.png) |
 
 ### Circuito lógico combinacional
 
@@ -279,7 +269,16 @@ $$L3 = \overline{S1} S2 + S1 \overline{S2 S3}$$
 
 ![circuito_logisim](./assets/circuito_contro_luces_inteligentes.png)
 
+|             Tabla de verdad              |
+| :--------------------------------------: |
+| ![tabla](assets/control_luces_tabla.png) |
+
 [Descargar simulacion](./assets/circuitos/contro_luces_inteligentes.circ)
+
+??? Note "Ecuaciones RAW"
+    L1 = ~S3 + S1
+    L2 = S1 ~S3
+    L3 = ~S1 S2 + S1 ~S2 ~S3
 
 ### Diagrama esquemático
 
@@ -288,12 +287,19 @@ pendiente...
 
 ---
 
-
 ## Aplasta latas (Electroneumatica)
 
-Se tiene un circuito electroneumatico el cual se debe automatizar aplicando logica combinacional. Se debe controlar un cilindor de doble efecto controlado con una electrovalvula biestable. Se cuenta con 2 botones los cuales se deben accionar al mismo tiempo por seguridad del operador y el cilindro tiene 2 sensores Reed para conocer la posicion del embolo.
+Se requiere automatizar un sistema de prensado de latas mediante control electroneumático utilizando lógica combinacional.
+
+El sistema consta de un cilindro de doble efecto controlado por una electroválvula biestable 5/2 (solenoides Y1 para avance y Y2 para retroceso). Por seguridad del operador, la máquina requiere un accionamiento bimanual mediante dos pulsadores (S1 y S2). La posición del émbolo se monitorea mediante dos sensores magnéticos tipo Reed (1B1 en inicio de carrera y 1B2 en fin de carrera).
 
 ![circuito electroneumatico](./assets/circuito_electroneumatica_fluidsim.png)
+
+![video fluidsim](assets/videos/electroneumatica.gif)
+
+[Descarga video](assets/videos/electroneumatica.mp4)
+
+[Descargar simulacion FluidSIIM Electroneumatica](assets/circuitos/electroneumatico_1_fluidsim.ct)
 
 ### Desarrollo
 
@@ -305,26 +311,24 @@ Se tiene un circuito electroneumatico el cual se debe automatizar aplicando logi
 
 ### Tabla de verdad
 
-|  S1   |  S2   |  1B1  |  1B2  |  Y1   |  Y2   | FALLA |
+|  S1   |  S2   |  B1   |  B2   |  Y1   |  Y2   | FALLA |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |   0   |   0   |   0   |   0   | **0** | **1** | **0** |
-|   0   |   0   |   0   |   1   | **0** | **1** | **1** |
+|   0   |   0   |   0   |   1   | **0** | **1** | **0** |
 |   0   |   0   |   1   |   0   | **0** | **1** | **0** |
-|   0   |   0   |   1   |   1   | **0** | **1** | **1** |
+|   0   |   0   |   1   |   1   | **0** | **0** | **1** |
 |   0   |   1   |   0   |   0   | **0** | **1** | **0** |
-|   0   |   1   |   0   |   1   | **x** | **1** | **0** |
+|   0   |   1   |   0   |   1   | **0** | **1** | **0** |
 |   0   |   1   |   1   |   0   | **0** | **1** | **0** |
 |   0   |   1   |   1   |   1   | **0** | **1** | **1** |
 |   1   |   0   |   0   |   0   | **0** | **1** | **0** |
 |   1   |   0   |   0   |   1   | **0** | **1** | **0** |
 |   1   |   0   |   1   |   0   | **0** | **1** | **0** |
 |   1   |   0   |   1   |   1   | **0** | **1** | **1** |
-|   1   |   1   |   0   |   0   | **0** | **1** | **1** |
+|   1   |   1   |   0   |   0   | **0** | **1** | **0** |
 |   1   |   1   |   0   |   1   | **0** | **1** | **0** |
 |   1   |   1   |   1   |   0   | **1** | **0** | **0** |
 |   1   |   1   |   1   |   1   | **0** | **0** | **1** |
-
-> *Nota: Revisarla porque puede ser que se me haya pasado algo*
 
 
 ### Circuito lógico combinacional
@@ -337,26 +341,179 @@ Se tiene un circuito electroneumatico el cual se debe automatizar aplicando logi
 | :-------------------------------------------: |
 | ![tabla](./assets/electroneumatica_tabla.png) |
 
- | Variable  | Mapa K                                              |
- | :-------: | --------------------------------------------------- |
- |  **Y1**   | ![mapa 1](./assets/electroneumatica_mapK_y1.png)    |
- |  **Y2**   | ![mapa 1](./assets/electroneumatica_mapK_y2.png)    |
- | **ERROR** | ![mapa 1](./assets/electroneumatica_mapK_error.png) |
+ |                Variable                | Mapa K                                              |
+ | :------------------------------------: | --------------------------------------------------- |
+ |          $Y1 = S1 S2 B1 ~B2$           | ![mapa 1](./assets/electroneumatica_mapK_y1.png)    |
+ | $Y2 = ~S1 ~B2 + ~B1 + ~S1 S2 + S1 ~S2$ | ![mapa 1](./assets/electroneumatica_mapK_y2.png)    |
+ |            $ERROR = B1 B2$             | ![mapa 1](./assets/electroneumatica_mapK_error.png) |
 
+
+??? note "Expresion RAW"
+    - Y1 = S1 S2 B1 ~B2
+    - Y2 = ~S1 ~B2 + ~B1 + ~S1 S2 + S1 ~S2
+    - ERROR = B1 B2
 
 - [Descargar simulacion logisim](./assets/circuitos/electroneumatica_1.circ)
 - [Descargar simulacion fluidsim](./assets/circuitos/electroneumatico_1_fluidsim.ct)
-
-??? note "Expresion RAW"
-    Y1 = S1 S2 B1 ~B2
-    Y2 = ~S1 + ~S2 + ~B1
-    ERROR = ~S1 ~S2 B2 + B1 B2 + S1 S2 ~B1 ~B2
 
 ## Cepilladora
 
 ### Desarrollo
 
+### Tabla de verdad
+
+| Entrada # | `BP`  | `LSD` | `LSI` | `BD`  | `BI`  | Salida `MD` | Salida `MI` | Nota / Estado                                                  |
+| :-------: | :---: | :---: | :---: | :---: | :---: | :---------: | :---------: | :------------------------------------------------------------- |
+|     0     |   0   |   0   |   0   |   0   |   0   |    **0**    |    **0**    | Reposo total                                                   |
+|     1     |   0   |   0   |   0   |   0   |   1   |    **0**    |    **1**    | Presionas `BI` $\rightarrow$ Enciende Izquierda                |
+|     2     |   0   |   0   |   0   |   1   |   0   |    **1**    |    **0**    | Presionas `BD` $\rightarrow$ Enciende Derecha                  |
+|     3     |   0   |   0   |   0   |   1   |   1   |    **0**    |    **0**    | Conflicto (Ambos presionales a la vez)                         |
+|     4     |   0   |   0   |   1   |   0   |   0   |    **1**    |    **0**    | Toca Sensor Izquierdo $LSI \rightarrow$ Activa Derecha         |
+|     5     |   0   |   0   |   1   |   0   |   1   |    **1**    |    **0**    | Sensor $LSI$ + $BI$                                            |
+|     6     |   0   |   0   |   1   |   1   |   0   |    **1**    |    **0**    | Sensor $LSI$ + $BD$                                            |
+|     7     |   0   |   0   |   1   |   1   |   1   |    **0**    |    **0**    | Conflicto                                                      |
+|     8     |   0   |   1   |   0   |   0   |   0   |    **0**    |    **1**    | Toca Sensor Derecho $LSD \rightarrow$ Activa Izquierda         |
+|     9     |   0   |   1   |   0   |   0   |   1   |    **0**    |    **1**    | Sensor $LSD$ + $BI$                                            |
+|    10     |   0   |   1   |   0   |   1   |   0   |    **0**    |    **1**    | Sensor $LSD$ + $BD$                                            |
+|    11     |   0   |   1   |   0   |   1   |   1   |    **0**    |    **0**    | Conflicto                                                      |
+|  12 a 15  |   0   |   1   |   1   |   X   |   X   |    **0**    |    **0**    | Ambos sensores tocados al mismo tiempo (bloqueo)               |
+|  16 a 31  |   1   |   X   |   X   |   X   |   X   |    **0**    |    **0**    | **Todas las filas con $BP=1$ dan salida $0, 0$** (Paro activo) |
+
+
+| BP | LSD | LSI | BD | BI | MD_in | MI_in | MD_out | MI_out |
+|---|---|---|---|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 |
+| 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
+| 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 1 |
+| 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 |
+| 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
+| 0 | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 1 | 0 | 1 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 |
+| 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 1 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 1 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 0 |
+
 ### Circuito Ladder
+
+![ladder](assets/cepilladora_ladder.png)
 
 ### Simulacion (SimulIDE)
 

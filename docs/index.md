@@ -18,6 +18,6 @@ title: Electrónica Digital
 - [Mapa de Karnaugh](09_mapa_karnaugh.md)
 - [Aplicación: Mapa de Karnaugh](10_aplicacion_mapa_karnaugh.md)
 - [Aplicaciones](11_aplicaciones.md)
-- [Bibliografía](bibliografia.md)
+- [Bibliografía](bibliografia.md)![infografia](assets/Panorama_general_de_electrónica_digital.jpg)
 
 <!-- GENENRATED AUTOMATIC - NO CHANGE -->
