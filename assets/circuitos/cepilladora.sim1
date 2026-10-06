@@ -80,7 +80,7 @@
 
 <item itemtype="Resistor" CircId="Resistor-71" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-728,-60" rotation="0" hflip="1" vflip="1" label="Resistor-71" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="1 kΩ" />
 
-<item itemtype="DcMotor" CircId="DcMotor-76" mainComp="false" Show_id="true" Show_Val="false" Pos="-332,-144" rotation="-90" hflip="1" vflip="1" label="MOTOR" idLabPos="-29.6188,-48.4482" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+<item itemtype="DcMotor" CircId="DcMotor-76" mainComp="false" Show_id="true" Show_Val="false" Pos="-320,-176" rotation="0" hflip="1" vflip="1" label="MOTOR DERECHO" idLabPos="-39.8612,-45.8219" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
 
 <item itemtype="Ground" CircId="Ground-79" mainComp="false" Show_id="false" Show_Val="false" Pos="-260,-20" rotation="0" hflip="1" vflip="1" label="Ground-79" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
@@ -108,9 +108,11 @@
 
 <item itemtype="Resistor" CircId="Resistor-116" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-360,-44" rotation="0" hflip="1" vflip="1" label="Resistor-116" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="330 Ω" />
 
-<item itemtype="Led" CircId="Led-118" mainComp="false" Show_id="false" Show_Val="false" Pos="-308,-236" rotation="0" hflip="1" vflip="1" label="Led-118" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Green" Grounded="false" Threshold="3.5 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+<item itemtype="Led" CircId="Led-118" mainComp="false" Show_id="false" Show_Val="false" Pos="-300,-236" rotation="0" hflip="1" vflip="1" label="Led-118" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Green" Grounded="false" Threshold="3.5 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
 
-<item itemtype="Resistor" CircId="Resistor-120" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-352,-236" rotation="0" hflip="1" vflip="1" label="Resistor-120" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="330 Ω" />
+<item itemtype="Resistor" CircId="Resistor-120" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-344,-236" rotation="0" hflip="1" vflip="1" label="Resistor-120" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="330 Ω" />
+
+<item itemtype="DcMotor" CircId="DcMotor-132" mainComp="false" Show_id="true" Show_Val="false" Pos="-320,-92" rotation="0" hflip="1" vflip="1" label="MOTOR IZQ" idLabPos="-29.6188,-47.6603" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
 
 <item itemtype="Node" CircId="Node-15" mainComp="false" Pos="-756,-264" />
 
@@ -148,9 +150,13 @@
 
 <item itemtype="Node" CircId="Node-121" mainComp="false" Pos="-260,-44" />
 
-<item itemtype="Node" CircId="Node-127" mainComp="false" Pos="-388,-200" />
+<item itemtype="Node" CircId="Node-130" mainComp="false" Pos="-380,-176" />
 
-<item itemtype="Node" CircId="Node-128" mainComp="false" Pos="-388,-92" />
+<item itemtype="Node" CircId="Node-131" mainComp="false" Pos="-260,-176" />
+
+<item itemtype="Node" CircId="Node-133" mainComp="false" Pos="-388,-92" />
+
+<item itemtype="Node" CircId="Node-134" mainComp="false" Pos="-260,-92" />
 
 <item itemtype="Connector" uid="Connector-2" startpinid="Or Gate-1-out" endpinid="Or Gate-5-in0" pointList="-564,-240,-564,-228,-548,-228" />
 
@@ -286,7 +292,7 @@
 
 <item itemtype="Connector" uid="Connector-202" startpinid="Resistor-116-rPin" endpinid="Led-114-lPin" pointList="-344,-44,-332,-44" />
 
-<item itemtype="Connector" uid="Connector-205" startpinid="Resistor-120-rPin" endpinid="Led-118-lPin" pointList="-336,-236,-324,-236" />
+<item itemtype="Connector" uid="Connector-205" startpinid="Resistor-120-rPin" endpinid="Led-118-lPin" pointList="-328,-236,-316,-236" />
 
 <item itemtype="Connector" uid="Connector-208" startpinid="Led-114-rPin" endpinid="Node-121-1" pointList="-300,-44,-260,-44" />
 
@@ -296,18 +302,26 @@
 
 <item itemtype="Connector" uid="Connector-225" startpinid="Tunnel-21-pin" endpinid="Or Gate-1-in1" pointList="-620,-236,-596,-236" />
 
-<item itemtype="Connector" uid="Connector-228" startpinid="Node-121-2" endpinid="Led-118-rPin" pointList="-260,-44,-260,-236,-292,-236" />
+<item itemtype="Connector" uid="Connector-246" startpinid="DcMotor-76-lPin" endpinid="Node-130-1" pointList="-360,-176,-380,-176" />
 
-<item itemtype="Connector" uid="Connector-233" startpinid="DcMotor-76-rPin" endpinid="Node-127-1" pointList="-332,-184,-332,-200,-388,-200" />
+<item itemtype="Connector" uid="Connector-247" startpinid="Node-89-2" endpinid="Node-130-0" pointList="-416,-176,-380,-176" />
 
-<item itemtype="Connector" uid="Connector-234" startpinid="Node-89-2" endpinid="Node-127-0" pointList="-416,-176,-388,-176,-388,-200" />
+<item itemtype="Connector" uid="Connector-248" startpinid="Node-130-2" endpinid="Resistor-120-lPin" pointList="-380,-176,-380,-236,-360,-236" />
 
-<item itemtype="Connector" uid="Connector-235" startpinid="Node-127-2" endpinid="Resistor-120-lPin" pointList="-388,-200,-388,-236,-368,-236" />
+<item itemtype="Connector" uid="Connector-249" startpinid="DcMotor-76-rPin" endpinid="Node-131-1" pointList="-280,-176,-260,-176" />
 
-<item itemtype="Connector" uid="Connector-237" startpinid="DcMotor-76-lPin" endpinid="Node-128-1" pointList="-332,-104,-332,-92,-388,-92" />
+<item itemtype="Connector" uid="Connector-251" startpinid="Node-131-2" endpinid="Led-118-rPin" pointList="-260,-176,-260,-236,-284,-236" />
 
-<item itemtype="Connector" uid="Connector-238" startpinid="Resistor-116-lPin" endpinid="Node-128-0" pointList="-376,-44,-388,-44,-388,-92" />
+<item itemtype="Connector" uid="Connector-252" startpinid="DcMotor-132-lPin" endpinid="Node-133-1" pointList="-360,-92,-388,-92" />
 
-<item itemtype="Connector" uid="Connector-239" startpinid="Node-128-2" endpinid="Node-91-0" pointList="-388,-92,-404,-92" />
+<item itemtype="Connector" uid="Connector-253" startpinid="Resistor-116-lPin" endpinid="Node-133-0" pointList="-376,-44,-388,-44,-388,-92" />
+
+<item itemtype="Connector" uid="Connector-254" startpinid="Node-133-2" endpinid="Node-91-0" pointList="-388,-92,-404,-92" />
+
+<item itemtype="Connector" uid="Connector-255" startpinid="DcMotor-132-rPin" endpinid="Node-134-1" pointList="-280,-92,-260,-92" />
+
+<item itemtype="Connector" uid="Connector-256" startpinid="Node-121-2" endpinid="Node-134-0" pointList="-260,-44,-260,-92" />
+
+<item itemtype="Connector" uid="Connector-257" startpinid="Node-134-2" endpinid="Node-131-0" pointList="-260,-92,-260,-176" />
 
 </circuit>
