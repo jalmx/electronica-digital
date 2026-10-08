@@ -4,7 +4,7 @@
 
 Con base a cada tabla de verdad, genera la ecuacion que la representa, reduce la ecuacion, genera el circuito digital y comprueba que el circuito cumpla con la tabla de verdad.
 
-## Ejercicio 1: 
+## Ejercicio 1:
 
 |  $A$  |  $B$  | $X$ |
 | :---: | :---: | :---: |
@@ -19,8 +19,8 @@ Con base a cada tabla de verdad, genera la ecuacion que la representa, reduce la
 | :---: | :---: | :---: |
 |   0   |   0   | **0** |
 |   0   |   1   | **1** |
-|   1   |   0   | **1** |
-|   1   |   1   | **0** |
+|   1   |   0   | **0** |
+|   1   |   1   | **1** |
 
 ## Ejercicio 3
 
