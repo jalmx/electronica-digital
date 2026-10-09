@@ -214,10 +214,6 @@ Tenemos 3 sensores de luz, los cuales captan la luz que se encuentra enfrente, c
 
     pendiente...
 
-## Contador Hexadecimal
-
-pendiente...
-
 ## Control de luces inteligentes
 
 ### Descripción
@@ -276,9 +272,9 @@ Se diseñará un sistema de iluminación inteligente automatizado mediante lógi
 [Descargar simulacion](./assets/circuitos/contro_luces_inteligentes.circ)
 
 ??? Note "Ecuaciones RAW"
-    L1 = ~S3 + S1
-    L2 = S1 ~S3
-    L3 = ~S1 S2 + S1 ~S2 ~S3
+    - L1 = ~S3 + S1
+    - L2 = S1 ~S3
+    - L3 = ~S1 S2 + S1 ~S2 ~S3
 
 ### Diagrama esquemático
 

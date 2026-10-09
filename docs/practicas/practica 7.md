@@ -1,46 +1,57 @@
 ---
 create_index: true
-title: "Práctica 7 - Display de 7 segmentos"
-
+title: "Práctica 7 - Mapa de Karnaugh"
 ---
 
-# Práctica 7 - Display de 7 segmentos
-
+# Práctica 7 - Mapa de Karnaugh
 
 ## Objetivo
 
-
-Aplicar los conocimientos de algebra booleana a un display de 7 segmentos, mostrando una frase.
-
+Aplicar los conocimientos de reducción con mapa de Karnaugh.
 
 ## Materiales
 
-| Cantidad | Nombre | Descripción |
-| --- | --- | --- |
-| 1 | IC 7404 | Compuerta |
-| 1 | IC 7408 | Compuerta |
-| 1 | IC7432 | Compuerta |
-| 1 | Display 7 | Display de 7 segmentos de cátodo común |
-| 7 | Resistencias 330 |  |
-| 4 | Resistencias 1k |  |
-| 1 | Dipswitch o 4 push | button |
+| Cantidad | Nombre                  | Descripción |
+| -------- | ----------------------- | ----------- |
+| 1        | Multímetro              | Voltímetro  |
+| 1        | IC 7404                 | Compuerta   |
+| 1        | IC 7408                 | Compuerta   |
+| 1        | IC7432                  | Compuerta   |
+| 1        | Led                     |             |
+| 1        | Resistencias 330        |             |
+| 2        | Resistencias 1k         |             |
+| 1        | Dipswitch o push button |             |
+
+## Desarrollo
+
+### Paso 1: Circuito digital
+
+Realizar la siguiente tabla de verdad,realizar reduccion usando mapa de Karnaugh, armar el circuito resultante y comprobar la tabla de verdad.
+
+| A   | B   | C   | x   |
+| --- | --- | --- | --- |
+| 0   | 0   | 0   | 1   |
+| 0   | 0   | 1   | 0   |
+| 0   | 1   | 0   | 1   |
+| 0   | 1   | 1   | 0   |
+| 1   | 0   | 0   | 0   |
+| 1   | 0   | 1   | 0   |
+| 1   | 1   | 0   | 0   |
+| 1   | 1   | 1   | 1   |
+
+
+### Paso 2:  Circuito digital
+Realizar la siguiente tabla de verdad,realizar reduccion usando mapa de Karnaugh, armar el circuito resultante y comprobar la tabla de verdad.
 
 
 
-### Desarrollo
-
-
-## Paso 1: Circuito digital
-
-
-Crear la tabla de verdad, reducción y armar el circuito para lograr que en cada combinación se
-coloque una letra, que en secuencia muestre la palabra "HOLA".
-
-| Combinación | Letra |
-| --- | --- |
-| 00 | H |
-| 01 | O |
-| 10 | L |
-| 11 | A |
-
-![display](./display-hola.jpeg)
+| A   | B   | C   | x   |
+| --- | --- | --- | --- |
+| 0   | 0   | 0   | 0   |
+| 0   | 0   | 1   | 1   |
+| 0   | 1   | 0   | 0   |
+| 0   | 1   | 1   | 0   |
+| 1   | 0   | 0   | 1   |
+| 1   | 0   | 1   | 0   |
+| 1   | 1   | 0   | 0   |
+| 1   | 1   | 1   | 1   |
