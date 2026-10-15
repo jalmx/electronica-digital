@@ -80,8 +80,8 @@ Voltaje en $V_{cc}$ y $GND$ de la compuerta
 
 | Pin           | Voltaje |
 | ------------- | ------- |
-| $V_{cc}$ (14) |         |
-| $GND$ (7)     |         |
+| $V_{cc} (14)$ |         |
+| $GND (7)$     |         |
 
 
 **Compuerta 1**
@@ -128,8 +128,8 @@ Voltaje en $V_{cc}$ y $GND$ de la compuerta
 
 | Pin           | Voltaje |
 | ------------- | ------- |
-| $V_{cc}$ (14) |         |
-| $GND$ (7)     |         |
+| $V_{cc} (14)$ |         |
+| $GND (7)$     |         |
 
 
 **Compuerta 1**
@@ -176,8 +176,8 @@ Voltaje en $V_{cc}$ y $GND$ de la compuerta
 
 |      Pin      | Voltaje |
 | :-----------: | ------- |
-| $V_{cc}$ (14) |         |
-|   $GND$ (7)   |         |
+| $V_{cc} (14)$ |         |
+|   $GND (7)$   |         |
 
 
 **Compuerta 1**
