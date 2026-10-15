@@ -28,7 +28,7 @@ Construir y analizar el comportamiento de circuitos digitales, creando tablas de
 
 ## Desarrollo
 
-### Paso 1: Circuito 1
+### Circuito 1
 
 Construir el siguiente circuito y llenar la tabla de verdad correspondiente.
 
@@ -47,7 +47,7 @@ Llena la siguiente tabla:
 |1|1|0||
 |1|1|1||
 
-### Paso 2: Circuito 2
+### Circuito 2
 
 Construir el siguiente circuito y llenar la tabla de verdad correspondiente.
 
@@ -66,7 +66,7 @@ Llena la siguiente tabla:
 |1|1|0||
 |1|1|1||
 
-### Paso 3: Circuito 3
+### Circuito 3
 
 Construir el siguiente circuito y llenar la tabla de verdad correspondiente.
 
