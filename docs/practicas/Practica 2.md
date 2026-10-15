@@ -15,19 +15,19 @@ En esta Práctica a prenderás a identificar las compuerta lógicas, en sus entr
 
 
 | Cantidad | Nombre                  | Descripción                                                                       |
-| -------- | ----------------------- | --------------------------------------------------------------------------------- |
-| 1        | Multímetro              | Voltímetro                                                                        |
-| 1        | IC 7404                 | Compuerta                                                                         |
-| 1        | IC 7408                 | Compuerta                                                                         |
-| 1        | IC7432                  | Compuerta                                                                         |
-| 1        | Fuente de 5V            | Fuente regulada de 5V (Cargador de 5V, Pila 9V con su regulador, fuente variable) |
-| X        | LEDs                    | LEDs de los colores que desees (no ultrabrillantes)                               |
-| 1        | R330                    | Resistencias 330                                                                  |
-| 2        | R1k                     | Resistencias 1k                                                                   |
-| 1        | Dipswitch o push button |                                                                                   |
-| 1        | Datasheet               | Hoja de datos del 7404                                                            |
-| 1        | Datasheet               | Hoja de datos del 7408                                                            |
-| 1        | Datasheet               | Hoja de datos del 7432                                                            |
+| :------: | ----------------------- | --------------------------------------------------------------------------------- |
+|    1     | Multímetro              | Voltímetro                                                                        |
+|    1     | IC 7404                 | Compuerta                                                                         |
+|    1     | IC 7408                 | Compuerta                                                                         |
+|    1     | IC7432                  | Compuerta                                                                         |
+|    1     | Fuente de 5V            | Fuente regulada de 5V (Cargador de 5V, Pila 9V con su regulador, fuente variable) |
+|    X     | LEDs                    | LEDs de los colores que desees (no ultrabrillantes)                               |
+|    1     | R330                    | Resistencias 330                                                                  |
+|    2     | R1k                     | Resistencias 1k                                                                   |
+|    1     | Dipswitch o push button |                                                                                   |
+|    1     | Datasheet               | Hoja de datos del 7404                                                            |
+|    1     | Datasheet               | Hoja de datos del 7408                                                            |
+|    1     | Datasheet               | Hoja de datos del 7432                                                            |
 
 
 ## Desarrollo
@@ -86,39 +86,39 @@ Voltaje en $V_{cc}$ y $GND$ de la compuerta
 
 **Compuerta 1**
 
-|   A   |   B   | Voltaje de salida |
-| :---: | :---: | :---------------: |
-|   0   |   0   |                   |
-|   0   |   1   |                   |
-|   1   |   0   |                   |
-|   1   |   1   |                   |
+|   A   |   B   | Voltaje de salida | Valor lógico |
+| :---: | :---: | :---------------: | ------------ |
+|   0   |   0   |                   |              |
+|   0   |   1   |                   |              |
+|   1   |   0   |                   |              |
+|   1   |   1   |                   |              |
 
 **Compuerta 2**
 
-|   A   |   B   | Voltaje de salida |
-| :---: | :---: | :---------------: |
-|   0   |   0   |                   |
-|   0   |   1   |                   |
-|   1   |   0   |                   |
-|   1   |   1   |                   |
+|   A   |   B   | Voltaje de salida | Valor lógico |
+| :---: | :---: | :---------------: | ------------ |
+|   0   |   0   |                   |              |
+|   0   |   1   |                   |              |
+|   1   |   0   |                   |              |
+|   1   |   1   |                   |              |
 
 **Compuerta 3**
 
-|   A   |   B   | Voltaje de salida |
-| :---: | :---: | :---------------: |
-|   0   |   0   |                   |
-|   0   |   1   |                   |
-|   1   |   0   |                   |
-|   1   |   1   |                   |
+|   A   |   B   | Voltaje de salida | Valor lógico |
+| :---: | :---: | :---------------: | ------------ |
+|   0   |   0   |                   |              |
+|   0   |   1   |                   |              |
+|   1   |   0   |                   |              |
+|   1   |   1   |                   |              |
 
 **Compuerta 4**
 
-|   A   |   B   | Voltaje de salida |
-| :---: | :---: | :---------------: |
-|   0   |   0   |                   |
-|   0   |   1   |                   |
-|   1   |   0   |                   |
-|   1   |   1   |                   |
+|   A   |   B   | Voltaje de salida | Valor lógico |
+| :---: | :---: | :---------------: | ------------ |
+|   0   |   0   |                   |              |
+|   0   |   1   |                   |              |
+|   1   |   0   |                   |              |
+|   1   |   1   |                   |              |
 
 ---
 
@@ -134,39 +134,39 @@ Voltaje en $V_{cc}$ y $GND$ de la compuerta
 
 **Compuerta 1**
 
-|   A   |   B   | Voltaje de salida |
-| :---: | :---: | :---------------: |
-|   0   |   0   |                   |
-|   0   |   1   |                   |
-|   1   |   0   |                   |
-|   1   |   1   |                   |
+|   A   |   B   | Voltaje de salida | Valor lógico |
+| :---: | :---: | :---------------: | ------------ |
+|   0   |   0   |                   |              |
+|   0   |   1   |                   |              |
+|   1   |   0   |                   |              |
+|   1   |   1   |                   |              |
 
 **Compuerta 2**
 
-|   A   |   B   | Voltaje de salida |
-| :---: | :---: | :---------------: |
-|   0   |   0   |                   |
-|   0   |   1   |                   |
-|   1   |   0   |                   |
-|   1   |   1   |                   |
+|   A   |   B   | Voltaje de salida | Valor lógico |
+| :---: | :---: | :---------------: | ------------ |
+|   0   |   0   |                   |              |
+|   0   |   1   |                   |              |
+|   1   |   0   |                   |              |
+|   1   |   1   |                   |              |
 
 **Compuerta 3**
 
-|   A   |   B   | Voltaje de salida |
-| :---: | :---: | :---------------: |
-|   0   |   0   |                   |
-|   0   |   1   |                   |
-|   1   |   0   |                   |
-|   1   |   1   |                   |
+|   A   |   B   | Voltaje de salida | Valor lógico |
+| :---: | :---: | :---------------: | ------------ |
+|   0   |   0   |                   |              |
+|   0   |   1   |                   |              |
+|   1   |   0   |                   |              |
+|   1   |   1   |                   |              |
 
 **Compuerta 4**
 
-|   A   |   B   | Voltaje de salida |
-| :---: | :---: | :---------------: |
-|   0   |   0   |                   |
-|   0   |   1   |                   |
-|   1   |   0   |                   |
-|   1   |   1   |                   |
+|   A   |   B   | Voltaje de salida | Valor lógico |
+| :---: | :---: | :---------------: | ------------ |
+|   0   |   0   |                   |              |
+|   0   |   1   |                   |              |
+|   1   |   0   |                   |              |
+|   1   |   1   |                   |              |
 
 ----
 
@@ -182,45 +182,45 @@ Voltaje en $V_{cc}$ y $GND$ de la compuerta
 
 **Compuerta 1**
 
-|   A   | Voltaje de salida |
-| :---: | :---------------: |
-|   0   |                   |
-|   1   |                   |
+|   A   | Voltaje de salida | Valor lógico |
+| :---: | :---------------: | ------------ |
+|   0   |                   |              |
+|   1   |                   |              |
 
 **Compuerta 2**
 
-|   A   | Voltaje de salida |
-| :---: | :---------------: |
-|   0   |                   |
-|   1   |                   |
+|   A   | Voltaje de salida | Valor lógico |
+| :---: | :---------------: | ------------ |
+|   0   |                   |              |
+|   1   |                   |              |
 
 **Compuerta 3**
 
-|   A   | Voltaje de salida |
-| :---: | :---------------: |
-|   0   |                   |
-|   1   |                   |
+|   A   | Voltaje de salida | Valor lógico |
+| :---: | :---------------: | ------------ |
+|   0   |                   |              |
+|   1   |                   |              |
 
 **Compuerta 4**
 
-|   A   | Voltaje de salida |
-| :---: | :---------------: |
-|   0   |                   |
-|   1   |                   |
+|   A   | Voltaje de salida | Valor lógico |
+| :---: | :---------------: | ------------ |
+|   0   |                   |              |
+|   1   |                   |              |
 
 **Compuerta 5**
 
-|   A   | Voltaje de salida |
-| :---: | :---------------: |
-|   0   |                   |
-|   1   |                   |
+|   A   | Voltaje de salida | Valor lógico |
+| :---: | :---------------: | ------------ |
+|   0   |                   |              |
+|   1   |                   |              |
 
 **Compuerta 6**
 
-|   A   | Voltaje de salida |
-| :---: | :---------------: |
-|   0   |                   |
-|   1   |                   |
+|   A   | Voltaje de salida | Valor lógico |
+| :---: | :---------------: | ------------ |
+|   0   |                   |              |
+|   1   |                   |              |
 
 
 !!! warning "Atención"
@@ -236,32 +236,32 @@ Ahora vas a colocar un led a la salida de cada compuerta que contenga el IC, rea
 
 ![and](../assets/and.svg)
 
-|   A   |   B   | ESTADO LED |
-| :---: | :---: | :--------: |
-|   0   |   0   |            |
-|   0   |   1   |            |
-|   1   |   0   |            |
-|   1   |   1   |            |
+|   A   |   B   | ESTADO LED | Valor lógico |
+| :---: | :---: | :--------: | ------------ |
+|   0   |   0   |            |              |
+|   0   |   1   |            |              |
+|   1   |   0   |            |              |
+|   1   |   1   |            |              |
 
 **OR 7432**
 
 ![and](../assets/or.svg)
 
-|   A   |   B   | ESTADO LED |
-| :---: | :---: | :--------: |
-|   0   |   0   |            |
-|   0   |   1   |            |
-|   1   |   0   |            |
-|   1   |   1   |            |
+|   A   |   B   | ESTADO LED | Valor lógico |
+| :---: | :---: | :--------: | ------------ |
+|   0   |   0   |            |              |
+|   0   |   1   |            |              |
+|   1   |   0   |            |              |
+|   1   |   1   |            |              |
 
 **NOT 7404**
 
 ![and](../assets/not.svg)
 
-|   A   | ESTADO LED |
-| :---: | :--------: |
-|   0   |            |
-|   1   |            |
+|   A   | ESTADO LED | Valor lógico |
+| :---: | :--------: | ------------ |
+|   0   |            |              |
+|   1   |            |              |
 
 ---
 
