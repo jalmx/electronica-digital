@@ -99,6 +99,8 @@ El sistema utiliza 3 sensores de luz (LDRs) alineados en la parte frontal como e
 
 ![info](./assets/seguidor_luz_infog.jpeg)
 
+> *Infografía representativa*
+
 ### Descripción
 
 Tenemos 3 sensores de luz, los cuales captan la luz que se encuentra enfrente, contando con un sensor de lado izquierdo (S1), para detectar la luz en ese lado, la luz de frente (S2) y el sensor de la derecha (S3), para el control de 2 motores; un motor para giro a la derecha (motor izquierdo, M1) y para que gire a la izquierda (motor derecho, M2). Contando con una luz indicadora que nos indica si los sensores fallan, dado que esa combinación no es posible.
@@ -210,9 +212,9 @@ Tenemos 3 sensores de luz, los cuales captan la luz que se encuentra enfrente, c
 
     - ERROR= ~S1 ~S2 ~S3 + S1 ~S2 S3
 
-### Simulación SimulIDE
+<!-- ### Simulación SimulIDE
 
-    pendiente...
+    pendiente... -->
 
 ## Control de luces inteligentes
 
@@ -228,6 +230,8 @@ Se diseñará un sistema de iluminación inteligente automatizado mediante lógi
 * Cuando se activen los sensores de manera no posible, es decir, no puede marcar que es noche y que hay 100% de luz, se enciende una lámpara que sería un código de error; se **encenderá solamente L1**. **Código de Error**.
 
 ![infografia](assets/control_luces_infog.jpeg)
+
+> *Infografía representativa*
 
 ### Lógica de sensores
 
@@ -294,7 +298,7 @@ Se diseñará e implementará un sistema de alarma residencial automatizado medi
 - Se se da la situacion improbable se debe activar la alarma sonara, es decir, alguna que no cumpla algun estados logico o congruente (*una condición improbable/anómala suele ser cuando todos los sensores de apertura se activan al mismo tiempo estando la alarma apagada, o una falla en la secuencia de sensores*).
 
 ![infografia](./assets/alarma_casa_info.jpeg)
-> *Nota: Imagen de referencia*
+> *Infografía representativa*
 
 ### Lógica de sensores y Actuadores
 
@@ -432,160 +436,11 @@ El sistema consta de un cilindro de doble efecto controlado por una electroválv
 
 ## Cepilladora
 
+Se cuenta con una máquina cepilladora de metales; cuenta con un botón de paro (BP), un botón para detenerse, uno para la derecha (BD) y otro para que arranque a la izquierda (BI). De manera automática, cuando llegue a un extremo, debe cambiar de sentido; para ello tiene unos finales de carrera (Limit Switch). Cuando toque el limit switch derecho (LSD), debe hacer el cambio de giro, y cuando llegue al otro lado (LSI), se detiene y cambia el giro. Se cuenta con 2 motores para hacer el giro a la izquierda y el otro para el movimiento a la derecha. Además, tiene **un sistema de protección**, es decir, si la cepilladora arrancó hacia la derecha, no se puede invertir el giro hasta que se detenga; de igual manera, si estaba girando en sentido contrario.
+
 ### Desarrollo
 
-### Tabla de verdad
-
-| Entrada # | `BP`  | `LSD` | `LSI` | `BD`  | `BI`  | Salida `MD` | Salida `MI` | Nota / Estado                                                  |
-| :-------: | :---: | :---: | :---: | :---: | :---: | :---------: | :---------: | :------------------------------------------------------------- |
-|     0     |   0   |   0   |   0   |   0   |   0   |    **0**    |    **0**    | Reposo total                                                   |
-|     1     |   0   |   0   |   0   |   0   |   1   |    **0**    |    **1**    | Presionas `BI` $\rightarrow$ Enciende Izquierda                |
-|     2     |   0   |   0   |   0   |   1   |   0   |    **1**    |    **0**    | Presionas `BD` $\rightarrow$ Enciende Derecha                  |
-|     3     |   0   |   0   |   0   |   1   |   1   |    **0**    |    **0**    | Conflicto (Ambos presionales a la vez)                         |
-|     4     |   0   |   0   |   1   |   0   |   0   |    **1**    |    **0**    | Toca Sensor Izquierdo $LSI \rightarrow$ Activa Derecha         |
-|     5     |   0   |   0   |   1   |   0   |   1   |    **1**    |    **0**    | Sensor $LSI$ + $BI$                                            |
-|     6     |   0   |   0   |   1   |   1   |   0   |    **1**    |    **0**    | Sensor $LSI$ + $BD$                                            |
-|     7     |   0   |   0   |   1   |   1   |   1   |    **0**    |    **0**    | Conflicto                                                      |
-|     8     |   0   |   1   |   0   |   0   |   0   |    **0**    |    **1**    | Toca Sensor Derecho $LSD \rightarrow$ Activa Izquierda         |
-|     9     |   0   |   1   |   0   |   0   |   1   |    **0**    |    **1**    | Sensor $LSD$ + $BI$                                            |
-|    10     |   0   |   1   |   0   |   1   |   0   |    **0**    |    **1**    | Sensor $LSD$ + $BD$                                            |
-|    11     |   0   |   1   |   0   |   1   |   1   |    **0**    |    **0**    | Conflicto                                                      |
-|  12 a 15  |   0   |   1   |   1   |   X   |   X   |    **0**    |    **0**    | Ambos sensores tocados al mismo tiempo (bloqueo)               |
-|  16 a 31  |   1   |   X   |   X   |   X   |   X   |    **0**    |    **0**    | **Todas las filas con $BP=1$ dan salida $0, 0$** (Paro activo) |
-
-
-|  BP   |  LSD  |  LSI  |  BD   |  BI   | MD_in | MI_in | MD_out | MI_out |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :----: | :----: |
-|   0   |   0   |   0   |   0   |   0   |   0   |   0   |   0    |   0    |
-|   0   |   0   |   0   |   0   |   0   |   0   |   1   |   0    |   1    |
-|   0   |   0   |   0   |   0   |   0   |   1   |   0   |   1    |   0    |
-|   0   |   0   |   0   |   0   |   0   |   1   |   1   |   0    |   0    |
-|   0   |   0   |   0   |   0   |   1   |   0   |   0   |   0    |   1    |
-|   0   |   0   |   0   |   0   |   1   |   0   |   1   |   0    |   1    |
-|   0   |   0   |   0   |   0   |   1   |   1   |   0   |   0    |   0    |
-|   0   |   0   |   0   |   0   |   1   |   1   |   1   |   0    |   0    |
-|   0   |   0   |   0   |   1   |   0   |   0   |   0   |   1    |   0    |
-|   0   |   0   |   0   |   1   |   0   |   0   |   1   |   0    |   0    |
-|   0   |   0   |   0   |   1   |   0   |   1   |   0   |   1    |   0    |
-|   0   |   0   |   0   |   1   |   0   |   1   |   1   |   0    |   0    |
-|   0   |   0   |   0   |   1   |   1   |   0   |   0   |   0    |   0    |
-|   0   |   0   |   0   |   1   |   1   |   0   |   1   |   0    |   0    |
-|   0   |   0   |   0   |   1   |   1   |   1   |   0   |   0    |   0    |
-|   0   |   0   |   0   |   1   |   1   |   1   |   1   |   0    |   0    |
-|   0   |   0   |   1   |   0   |   0   |   0   |   0   |   1    |   0    |
-|   0   |   0   |   1   |   0   |   0   |   0   |   1   |   1    |   0    |
-|   0   |   0   |   1   |   0   |   0   |   1   |   0   |   0    |   0    |
-|   0   |   0   |   1   |   0   |   0   |   1   |   1   |   0    |   0    |
-|   0   |   0   |   1   |   0   |   1   |   0   |   0   |   1    |   0    |
-|   0   |   0   |   1   |   0   |   1   |   0   |   1   |   1    |   0    |
-|   0   |   0   |   1   |   0   |   1   |   1   |   0   |   0    |   0    |
-|   0   |   0   |   1   |   0   |   1   |   1   |   1   |   0    |   0    |
-|   0   |   0   |   1   |   1   |   0   |   0   |   0   |   1    |   0    |
-|   0   |   0   |   1   |   1   |   0   |   0   |   1   |   1    |   0    |
-|   0   |   0   |   1   |   1   |   0   |   1   |   0   |   0    |   0    |
-|   0   |   0   |   1   |   1   |   0   |   1   |   1   |   0    |   0    |
-|   0   |   0   |   1   |   1   |   1   |   0   |   0   |   0    |   0    |
-|   0   |   0   |   1   |   1   |   1   |   0   |   1   |   0    |   0    |
-|   0   |   0   |   1   |   1   |   1   |   1   |   0   |   0    |   0    |
-|   0   |   0   |   1   |   1   |   1   |   1   |   1   |   0    |   0    |
-|   0   |   1   |   0   |   0   |   0   |   0   |   0   |   0    |   1    |
-|   0   |   1   |   0   |   0   |   0   |   0   |   1   |   0    |   0    |
-|   0   |   1   |   0   |   0   |   0   |   1   |   0   |   0    |   1    |
-|   0   |   1   |   0   |   0   |   0   |   1   |   1   |   0    |   0    |
-|   0   |   1   |   0   |   0   |   1   |   0   |   0   |   0    |   1    |
-|   0   |   1   |   0   |   0   |   1   |   0   |   1   |   0    |   0    |
-|   0   |   1   |   0   |   0   |   1   |   1   |   0   |   0    |   1    |
-|   0   |   1   |   0   |   0   |   1   |   1   |   1   |   0    |   0    |
-|   0   |   1   |   0   |   1   |   0   |   0   |   0   |   0    |   1    |
-|   0   |   1   |   0   |   1   |   0   |   0   |   1   |   0    |   0    |
-|   0   |   1   |   0   |   1   |   0   |   1   |   0   |   0    |   1    |
-|   0   |   1   |   0   |   1   |   0   |   1   |   1   |   0    |   0    |
-|   0   |   1   |   0   |   1   |   1   |   0   |   0   |   0    |   0    |
-|   0   |   1   |   0   |   1   |   1   |   0   |   1   |   0    |   0    |
-|   0   |   1   |   0   |   1   |   1   |   1   |   0   |   0    |   0    |
-|   0   |   1   |   0   |   1   |   1   |   1   |   1   |   0    |   0    |
-|   0   |   1   |   1   |   0   |   0   |   0   |   0   |   0    |   0    |
-|   0   |   1   |   1   |   0   |   0   |   0   |   1   |   0    |   0    |
-|   0   |   1   |   1   |   0   |   0   |   1   |   0   |   0    |   0    |
-|   0   |   1   |   1   |   0   |   0   |   1   |   1   |   0    |   0    |
-|   0   |   1   |   1   |   0   |   1   |   0   |   0   |   0    |   0    |
-|   0   |   1   |   1   |   0   |   1   |   0   |   1   |   0    |   0    |
-|   0   |   1   |   1   |   0   |   1   |   1   |   0   |   0    |   0    |
-|   0   |   1   |   1   |   0   |   1   |   1   |   1   |   0    |   0    |
-|   0   |   1   |   1   |   1   |   0   |   0   |   0   |   0    |   0    |
-|   0   |   1   |   1   |   1   |   0   |   0   |   1   |   0    |   0    |
-|   0   |   1   |   1   |   1   |   0   |   1   |   0   |   0    |   0    |
-|   0   |   1   |   1   |   1   |   0   |   1   |   1   |   0    |   0    |
-|   0   |   1   |   1   |   1   |   1   |   0   |   0   |   0    |   0    |
-|   0   |   1   |   1   |   1   |   1   |   0   |   1   |   0    |   0    |
-|   0   |   1   |   1   |   1   |   1   |   1   |   0   |   0    |   0    |
-|   0   |   1   |   1   |   1   |   1   |   1   |   1   |   0    |   0    |
-|   1   |   0   |   0   |   0   |   0   |   0   |   0   |   0    |   0    |
-|   1   |   0   |   0   |   0   |   0   |   0   |   1   |   0    |   0    |
-|   1   |   0   |   0   |   0   |   0   |   1   |   0   |   0    |   0    |
-|   1   |   0   |   0   |   0   |   0   |   1   |   1   |   0    |   0    |
-|   1   |   0   |   0   |   0   |   1   |   0   |   0   |   0    |   0    |
-|   1   |   0   |   0   |   0   |   1   |   0   |   1   |   0    |   0    |
-|   1   |   0   |   0   |   0   |   1   |   1   |   0   |   0    |   0    |
-|   1   |   0   |   0   |   0   |   1   |   1   |   1   |   0    |   0    |
-|   1   |   0   |   0   |   1   |   0   |   0   |   0   |   0    |   0    |
-|   1   |   0   |   0   |   1   |   0   |   0   |   1   |   0    |   0    |
-|   1   |   0   |   0   |   1   |   0   |   1   |   0   |   0    |   0    |
-|   1   |   0   |   0   |   1   |   0   |   1   |   1   |   0    |   0    |
-|   1   |   0   |   0   |   1   |   1   |   0   |   0   |   0    |   0    |
-|   1   |   0   |   0   |   1   |   1   |   0   |   1   |   0    |   0    |
-|   1   |   0   |   0   |   1   |   1   |   1   |   0   |   0    |   0    |
-|   1   |   0   |   0   |   1   |   1   |   1   |   1   |   0    |   0    |
-|   1   |   0   |   1   |   0   |   0   |   0   |   0   |   0    |   0    |
-|   1   |   0   |   1   |   0   |   0   |   0   |   1   |   0    |   0    |
-|   1   |   0   |   1   |   0   |   0   |   1   |   0   |   0    |   0    |
-|   1   |   0   |   1   |   0   |   0   |   1   |   1   |   0    |   0    |
-|   1   |   0   |   1   |   0   |   1   |   0   |   0   |   0    |   0    |
-|   1   |   0   |   1   |   0   |   1   |   0   |   1   |   0    |   0    |
-|   1   |   0   |   1   |   0   |   1   |   1   |   0   |   0    |   0    |
-|   1   |   0   |   1   |   0   |   1   |   1   |   1   |   0    |   0    |
-|   1   |   0   |   1   |   1   |   0   |   0   |   0   |   0    |   0    |
-|   1   |   0   |   1   |   1   |   0   |   0   |   1   |   0    |   0    |
-|   1   |   0   |   1   |   1   |   0   |   1   |   0   |   0    |   0    |
-|   1   |   0   |   1   |   1   |   0   |   1   |   1   |   0    |   0    |
-|   1   |   0   |   1   |   1   |   1   |   0   |   0   |   0    |   0    |
-|   1   |   0   |   1   |   1   |   1   |   0   |   1   |   0    |   0    |
-|   1   |   0   |   1   |   1   |   1   |   1   |   0   |   0    |   0    |
-|   1   |   0   |   1   |   1   |   1   |   1   |   1   |   0    |   0    |
-|   1   |   1   |   0   |   0   |   0   |   0   |   0   |   0    |   0    |
-|   1   |   1   |   0   |   0   |   0   |   0   |   1   |   0    |   0    |
-|   1   |   1   |   0   |   0   |   0   |   1   |   0   |   0    |   0    |
-|   1   |   1   |   0   |   0   |   0   |   1   |   1   |   0    |   0    |
-|   1   |   1   |   0   |   0   |   1   |   0   |   0   |   0    |   0    |
-|   1   |   1   |   0   |   0   |   1   |   0   |   1   |   0    |   0    |
-|   1   |   1   |   0   |   0   |   1   |   1   |   0   |   0    |   0    |
-|   1   |   1   |   0   |   0   |   1   |   1   |   1   |   0    |   0    |
-|   1   |   1   |   0   |   1   |   0   |   0   |   0   |   0    |   0    |
-|   1   |   1   |   0   |   1   |   0   |   0   |   1   |   0    |   0    |
-|   1   |   1   |   0   |   1   |   0   |   1   |   0   |   0    |   0    |
-|   1   |   1   |   0   |   1   |   0   |   1   |   1   |   0    |   0    |
-|   1   |   1   |   0   |   1   |   1   |   0   |   0   |   0    |   0    |
-|   1   |   1   |   0   |   1   |   1   |   0   |   1   |   0    |   0    |
-|   1   |   1   |   0   |   1   |   1   |   1   |   0   |   0    |   0    |
-|   1   |   1   |   0   |   1   |   1   |   1   |   1   |   0    |   0    |
-|   1   |   1   |   1   |   0   |   0   |   0   |   0   |   0    |   0    |
-|   1   |   1   |   1   |   0   |   0   |   0   |   1   |   0    |   0    |
-|   1   |   1   |   1   |   0   |   0   |   1   |   0   |   0    |   0    |
-|   1   |   1   |   1   |   0   |   0   |   1   |   1   |   0    |   0    |
-|   1   |   1   |   1   |   0   |   1   |   0   |   0   |   0    |   0    |
-|   1   |   1   |   1   |   0   |   1   |   0   |   1   |   0    |   0    |
-|   1   |   1   |   1   |   0   |   1   |   1   |   0   |   0    |   0    |
-|   1   |   1   |   1   |   0   |   1   |   1   |   1   |   0    |   0    |
-|   1   |   1   |   1   |   1   |   0   |   0   |   0   |   0    |   0    |
-|   1   |   1   |   1   |   1   |   0   |   0   |   1   |   0    |   0    |
-|   1   |   1   |   1   |   1   |   0   |   1   |   0   |   0    |   0    |
-|   1   |   1   |   1   |   1   |   0   |   1   |   1   |   0    |   0    |
-|   1   |   1   |   1   |   1   |   1   |   0   |   0   |   0    |   0    |
-|   1   |   1   |   1   |   1   |   1   |   0   |   1   |   0    |   0    |
-|   1   |   1   |   1   |   1   |   1   |   1   |   0   |   0    |   0    |
-|   1   |   1   |   1   |   1   |   1   |   1   |   1   |   0    |   0    |
-
-### Circuito Ladder
+#### Circuito Ladder
 
 ![ladder](assets/cepilladora_ladder.png)
 
