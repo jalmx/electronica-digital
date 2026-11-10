@@ -1,0 +1,2127 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.alejandro-leyva.com/electronica-digital/actividades/ejercicios_aplicaciones/">
+      
+      
+        <link rel="prev" href="../ecuacion_circuito/">
+      
+      
+        <link rel="next" href="../mapak_1/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Ejercicios aplicaciones - Electrónica Digital</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejercicios-de-aplicacion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-header__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Electrónica Digital
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ejercicios aplicaciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-nav__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Electrónica Digital
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Electrónica Digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion a la electronica digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_bases_numericas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistemas Numéricos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_suma_binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operaciones Binarias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_dise%C3%B1o_digital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño Digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_compuertas_logicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas logicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_compuertas_combinadas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas combinadas NOR y NAND
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07_logica_combinacional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lógica combinacional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_aplicacion_algebra_booleana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicando Álgebra Booleana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10_aplicacion_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicación: Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11_aplicaciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Actividades
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dise%C3%B1o%20de%20un%20sistema%20de%20alarma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño de un sistema de alarma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algebra_bool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algebra bool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecuacion_circuito/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ecuacion circuito
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ejercicios aplicaciones
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios aplicaciones
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-1-sistema-automatico-de-llenado-de-un-tanque-de-agua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1 Sistema automático de llenado de un tanque de agua 💧
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 1 Sistema automático de llenado de un tanque de agua 💧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descripcion-del-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción del problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-de-entrada-y-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variables de entrada y salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reglas-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Reglas de funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-2-puerta-automatica-para-un-acceso-peatonal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2 Puerta automática para un acceso peatonal 🚪
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 2 Puerta automática para un acceso peatonal 🚪">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descripcion-del-problema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción del problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-de-entrada-y-salida_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variables de entrada y salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reglas-de-funcionamiento_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Reglas de funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-3-sistema-de-clasificacion-de-productos-en-una-banda-transportadora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3 Sistema de clasificación de productos en una banda transportadora 📦
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 3 Sistema de clasificación de productos en una banda transportadora 📦">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descripcion-del-problema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción del problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-de-entrada-y-salida_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variables de entrada y salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reglas-de-funcionamiento_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Reglas de funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-4-sistema-automatico-de-ventilacion-para-un-invernadero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 4 Sistema automático de ventilación para un invernadero 🌱
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 4 Sistema automático de ventilación para un invernadero 🌱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descripcion-del-problema_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción del problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-de-entrada-y-salida_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variables de entrada y salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reglas-de-funcionamiento_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Reglas de funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-5-sistema-de-seguridad-para-una-maquina-industrial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 5 Sistema de seguridad para una máquina industrial ⚙️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 5 Sistema de seguridad para una máquina industrial ⚙️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descripcion-del-problema_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción del problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-de-entrada-y-salida_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variables de entrada y salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reglas-de-funcionamiento_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Reglas de funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-6-control-de-nivel-y-ventilacion-en-invernadero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 6 Control de Nivel y Ventilación en Invernadero
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-7-dosificador-quimico-industrial-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 7 Dosificador Químico Industrial de Seguridad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-8-mezcladora-de-lote-automatizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 8 Mezcladora de Lote Automatizada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-9-sistema-de-extincion-contra-incendios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 9 Sistema de Extinción contra Incendios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-10-control-digital-de-faros-automotrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 10 Control Digital de Faros Automotrices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-11-sistema-de-estacion-de-bombeo-doble-redundancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 11 Sistema de Estación de Bombeo Doble (Redundancia)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapak_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapak 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suma%20binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Suma binaria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tablas_de_verdad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tablas de verdad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Practicas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Practicas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicas/Practica%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 1 - Generación de compuertas básicas con interruptores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicas/Practica%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2 - Comprobación de compuertas y niveles lógicos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicas/Practica%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 3 - Circuitos digitales básicos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicas/Practica%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4 - Álgebra booleana básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicas/Practica%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 5 - Álgebra booleana - Tabla de verdad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicas/practica%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 6 - Display de 7 segmentos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicas/practica%207/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 7 - Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicas/practica%208/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 9 - Sistema de alarma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-1-sistema-automatico-de-llenado-de-un-tanque-de-agua" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1 Sistema automático de llenado de un tanque de agua 💧
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 1 Sistema automático de llenado de un tanque de agua 💧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descripcion-del-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción del problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-de-entrada-y-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variables de entrada y salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reglas-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Reglas de funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-2-puerta-automatica-para-un-acceso-peatonal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2 Puerta automática para un acceso peatonal 🚪
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 2 Puerta automática para un acceso peatonal 🚪">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descripcion-del-problema_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción del problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-de-entrada-y-salida_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variables de entrada y salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reglas-de-funcionamiento_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Reglas de funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-3-sistema-de-clasificacion-de-productos-en-una-banda-transportadora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3 Sistema de clasificación de productos en una banda transportadora 📦
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 3 Sistema de clasificación de productos en una banda transportadora 📦">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descripcion-del-problema_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción del problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-de-entrada-y-salida_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variables de entrada y salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reglas-de-funcionamiento_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Reglas de funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-4-sistema-automatico-de-ventilacion-para-un-invernadero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 4 Sistema automático de ventilación para un invernadero 🌱
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 4 Sistema automático de ventilación para un invernadero 🌱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descripcion-del-problema_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción del problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-de-entrada-y-salida_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variables de entrada y salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reglas-de-funcionamiento_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Reglas de funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-5-sistema-de-seguridad-para-una-maquina-industrial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 5 Sistema de seguridad para una máquina industrial ⚙️
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicio 5 Sistema de seguridad para una máquina industrial ⚙️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-descripcion-del-problema_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción del problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variables-de-entrada-y-salida_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variables de entrada y salida
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reglas-de-funcionamiento_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Reglas de funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-6-control-de-nivel-y-ventilacion-en-invernadero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 6 Control de Nivel y Ventilación en Invernadero
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-7-dosificador-quimico-industrial-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 7 Dosificador Químico Industrial de Seguridad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-8-mezcladora-de-lote-automatizada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 8 Mezcladora de Lote Automatizada
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-9-sistema-de-extincion-contra-incendios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 9 Sistema de Extinción contra Incendios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-10-control-digital-de-faros-automotrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 10 Control Digital de Faros Automotrices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-11-sistema-de-estacion-de-bombeo-doble-redundancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 11 Sistema de Estación de Bombeo Doble (Redundancia)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p><img alt="banner" src="../../assets/banner_class_85.png" /></p>
+<h1 id="ejercicios-de-aplicacion">Ejercicios de Aplicación</h1>
+<p>Para cada ejercicio:</p>
+<ol>
+<li>La tabla de verdad generada de cada ejercicio.</li>
+<li>Ecuacion booleana o Mapa de Karnaugh (cualquiera de los 2 o los 2)</li>
+<li>El diagrama del circuito digital. (Usando logicsim)</li>
+<li>De 2 a 3 pantallazos de la simulacion (si lo haces a mano no aplica)</li>
+</ol>
+<blockquote>
+<p><em>Nota: En caso de no contar con Logisim, puedes buscar alguna aplicación que te pueda ayudar para resolverlo, pero la tienes que investigar y aprender a usarla.</em></p>
+</blockquote>
+<h2 id="ejercicio-1-sistema-automatico-de-llenado-de-un-tanque-de-agua">Ejercicio 1 Sistema automático de llenado de un tanque de agua 💧</h2>
+<h3 id="1-descripcion-del-problema">1. Descripción del problema</h3>
+<p>Se requiere diseñar un sistema digital para controlar el llenado de un tanque de agua. El sistema utiliza sensores para detectar el nivel del agua y verificar si existe suministro disponible.</p>
+<p>El objetivo es activar una bomba de agua únicamente cuando sea necesario llenar el tanque y se cumplan las condiciones de funcionamiento.</p>
+<h3 id="2-variables-de-entrada-y-salida">2. Variables de entrada y salida</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+<th>Estado 0</th>
+<th>Estado 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Sensor de nivel bajo</td>
+<td>El agua está por encima del nivel mínimo</td>
+<td>El agua alcanzó el nivel mínimo</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Sensor de nivel alto</td>
+<td>El tanque no está lleno</td>
+<td>El tanque está lleno</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Sensor de suministro</td>
+<td>No hay suministro de agua</td>
+<td>Hay suministro de agua</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Bomba de agua</td>
+<td>Bomba apagada</td>
+<td>Bomba encendida</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-reglas-de-funcionamiento">3. Reglas de funcionamiento</h3>
+<ol>
+<li>La bomba debe encenderse cuando el nivel del agua sea bajo y exista suministro de agua.</li>
+<li>Si el tanque está lleno, la bomba debe permanecer apagada.</li>
+<li>Si no hay suministro de agua, la bomba debe permanecer apagada.</li>
+<li>Si el nivel del agua es adecuado y no se requiere llenado, la bomba debe permanecer apagada.</li>
+</ol>
+<p>Para este ejercicio, se considera que el sensor A se activa cuando el agua alcanza el nivel mínimo de llenado, mientras que B indica que se alcanzó el nivel máximo. La combinación A = 1 y B = 1 representa una condición anómala que debe mantener la bomba apagada.</p>
+<!-- ### 4. Tabla de verdad
+
+| A | B | C | M | Descripción                       |
+|:-:|:-:|:-:|:-:|-----------------------------------|
+| 0 | 0 | 0 | 0 | Nivel adecuado, sin suministro    |
+| 0 | 0 | 1 | 0 | Nivel adecuado, con suministro    |
+| 0 | 1 | 0 | 0 | Tanque lleno, sin suministro      |
+| 0 | 1 | 1 | 0 | Tanque lleno, con suministro      |
+| 1 | 0 | 0 | 0 | Nivel bajo, sin suministro        |
+| 1 | 0 | 1 | 1 | Nivel bajo, con suministro        |
+| 1 | 1 | 0 | 0 | Condición anómala, sin suministro |
+| 1 | 1 | 1 | 0 | Condición anómala, con suministro | -->
+
+<h2 id="ejercicio-2-puerta-automatica-para-un-acceso-peatonal">Ejercicio 2 Puerta automática para un acceso peatonal 🚪</h2>
+<h3 id="1-descripcion-del-problema_1">1. Descripción del problema</h3>
+<p>Se desea diseñar un sistema digital para controlar la apertura de una puerta automática en la entrada de un edificio.
+El sistema dispone de un sensor de presencia, un lector de autorización y un sensor de seguridad que detecta si existe algún obstáculo en el recorrido de la puerta.
+La puerta solamente debe abrirse cuando se detecte una persona autorizada y no exista un obstáculo.</p>
+<h3 id="2-variables-de-entrada-y-salida_1">2. Variables de entrada y salida</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+<th>Estado 0</th>
+<th>Estado 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P</td>
+<td>Sensor de presencia</td>
+<td>No detecta una persona</td>
+<td>Detecta una persona</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Lector de acceso</td>
+<td>Acceso no autorizado</td>
+<td>Acceso autorizado</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Sensor de obstáculos</td>
+<td>No hay obstáculo</td>
+<td>Hay un obstáculo</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Motor de apertura</td>
+<td>Motor apagado</td>
+<td>Motor encendido</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-reglas-de-funcionamiento_1">3. Reglas de funcionamiento</h3>
+<ol>
+<li>El motor debe activarse cuando haya una persona, su acceso esté autorizado y no exista ningún obstáculo.</li>
+<li>Si no hay una persona, el motor debe permanecer apagado.</li>
+<li>Si el acceso no está autorizado, el motor debe permanecer apagado.</li>
+<li>Si se detecta un obstáculo, el motor de apertura debe permanecer apagado, independientemente de las otras entradas.</li>
+</ol>
+<!-- ### 4. Tabla de verdad
+
+| P | A | O | M | Descripción                              |
+|:-:|:-:|:-:|:-:|------------------------------------------|
+| 0 | 0 | 0 | 0 | Sin persona y sin autorización           |
+| 0 | 0 | 1 | 0 | Sin persona, con obstáculo               |
+| 0 | 1 | 0 | 0 | Autorización sin presencia               |
+| 0 | 1 | 1 | 0 | Sin presencia, con obstáculo             |
+| 1 | 0 | 0 | 0 | Persona sin autorización                 |
+| 1 | 0 | 1 | 0 | Persona sin autorización y con obstáculo |
+| 1 | 1 | 0 | 1 | Persona autorizada, sin obstáculo        |
+| 1 | 1 | 1 | 0 | Persona autorizada, con obstáculo        | -->
+
+<h2 id="ejercicio-3-sistema-de-clasificacion-de-productos-en-una-banda-transportadora">Ejercicio 3 Sistema de clasificación de productos en una banda transportadora 📦</h2>
+<h3 id="1-descripcion-del-problema_2">1. Descripción del problema</h3>
+<p>Una empresa utiliza una banda transportadora para clasificar productos según su peso y tamaño.
+El sistema cuenta con tres sensores digitales. Dependiendo de las características detectadas, se activará un actuador que desvía el producto hacia una línea de clasificación.
+Para este ejercicio, se considera que el producto debe desviarse cuando se cumplan determinadas combinaciones de peso y tamaño.</p>
+<h3 id="2-variables-de-entrada-y-salida_2">2. Variables de entrada y salida</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+<th>Estado 0</th>
+<th>Estado 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P</td>
+<td>Sensor de peso</td>
+<td>Peso dentro del rango permitido</td>
+<td>Peso fuera del rango permitido</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Sensor de tamaño</td>
+<td>Tamaño pequeño</td>
+<td>Tamaño grande</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Sensor de detección</td>
+<td>No detecta producto</td>
+<td>Detecta producto</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Cilindro de simple efecto (<em>Actuador</em>)</td>
+<td>No desvía el producto</td>
+<td>Desvía el producto</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-reglas-de-funcionamiento_2">3. Reglas de funcionamiento</h3>
+<ol>
+<li>El actuador debe activarse cuando se detecte un producto con peso fuera del rango permitido y tamaño grande.</li>
+<li>También debe activarse cuando se detecte un producto con peso fuera del rango permitido, independientemente de su tamaño.</li>
+<li>Si no se detecta un producto, el actuador debe permanecer apagado.</li>
+<li>Si el producto tiene un peso dentro del rango permitido, el actuador debe permanecer apagado.</li>
+</ol>
+<p>Las reglas 1 y 2 implican que cualquier producto detectado cuyo peso esté fuera del rango permitido debe desviarse, sin importar su tamaño.</p>
+<!-- ### 4. Tabla de verdad
+
+| P | T | D | S | Descripción                           |
+|:-:|:-:|:-:|:-:|---------------------------------------|
+| 0 | 0 | 0 | 0 | Sin producto                          |
+| 0 | 0 | 1 | 0 | Producto pequeño, peso permitido      |
+| 0 | 1 | 0 | 0 | Sin producto                          |
+| 0 | 1 | 1 | 0 | Producto grande, peso permitido       |
+| 1 | 0 | 0 | 0 | Sin producto                          |
+| 1 | 0 | 1 | 1 | Producto pequeño, peso fuera de rango |
+| 1 | 1 | 0 | 0 | Sin producto                          |
+| 1 | 1 | 1 | 1 | Producto grande, peso fuera de rango  | -->
+
+<h2 id="ejercicio-4-sistema-automatico-de-ventilacion-para-un-invernadero">Ejercicio 4 Sistema automático de ventilación para un invernadero 🌱</h2>
+<h3 id="1-descripcion-del-problema_3">1. Descripción del problema</h3>
+<p>Un invernadero cuenta con un sistema automático de ventilación para mantener condiciones adecuadas para el crecimiento de las plantas.
+El sistema utiliza sensores digitales para medir la temperatura, la humedad ambiental y la intensidad de la luz.
+Se desea activar un ventilador cuando las condiciones ambientales lo requieran, siguiendo las reglas establecidas para este ejercicio.</p>
+<h3 id="2-variables-de-entrada-y-salida_3">2. Variables de entrada y salida</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+<th>Estado 0</th>
+<th>Estado 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>Sensor de temperatura</td>
+<td>Temperatura normal</td>
+<td>Temperatura elevada</td>
+</tr>
+<tr>
+<td>H</td>
+<td>Sensor de humedad</td>
+<td>Humedad normal</td>
+<td>Humedad elevada</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Sensor de luminosidad</td>
+<td>Luminosidad baja</td>
+<td>Luminosidad elevada</td>
+</tr>
+<tr>
+<td>V</td>
+<td>Ventilador</td>
+<td>Apagado</td>
+<td>Encendido</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-reglas-de-funcionamiento_3">3. Reglas de funcionamiento</h3>
+<ol>
+<li>El ventilador debe encenderse cuando la temperatura sea elevada.</li>
+<li>También debe encenderse cuando la humedad sea elevada y la luminosidad sea elevada.</li>
+<li>Si la temperatura es normal y no se cumplen simultáneamente las condiciones de humedad y luminosidad elevadas, el ventilador debe permanecer apagado.</li>
+</ol>
+<!-- ### 4. Tabla de verdad
+
+| T | H | L | V | Descripción                               |
+|:-:|:-:|:-:|:-:|-------------------------------------------|
+| 0 | 0 | 0 | 0 | Condiciones normales                      |
+| 0 | 0 | 1 | 0 | Solo luminosidad elevada                  |
+| 0 | 1 | 0 | 0 | Solo humedad elevada                      |
+| 0 | 1 | 1 | 1 | Humedad y luminosidad elevadas            |
+| 1 | 0 | 0 | 1 | Temperatura elevada                       |
+| 1 | 0 | 1 | 1 | Temperatura elevada y luminosidad elevada |
+| 1 | 1 | 0 | 1 | Temperatura y humedad elevadas            |
+| 1 | 1 | 1 | 1 | Todas las condiciones elevadas            | -->
+
+<h2 id="ejercicio-5-sistema-de-seguridad-para-una-maquina-industrial">Ejercicio 5 Sistema de seguridad para una máquina industrial ⚙️</h2>
+<h3 id="1-descripcion-del-problema_4">1. Descripción del problema</h3>
+<p>Una máquina industrial cuenta con un sistema de seguridad que impide su funcionamiento cuando se detectan condiciones peligrosas.
+El sistema utiliza cuatro entradas digitales para supervisar el estado de la máquina y las condiciones de seguridad. Como salida, controla la activación del motor principal.
+La máquina solamente podrá funcionar cuando el sistema esté habilitado, la protección esté cerrada y no exista una condición de emergencia.</p>
+<h3 id="2-variables-de-entrada-y-salida_4">2. Variables de entrada y salida</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+<th>Estado 0</th>
+<th>Estado 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H</td>
+<td>Habilitación del sistema</td>
+<td>Sistema deshabilitado</td>
+<td>Sistema habilitado</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Sensor de protección</td>
+<td>Protección abierta</td>
+<td>Protección cerrada</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Paro de emergencia</td>
+<td>Paro activado</td>
+<td>Paro no activado</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Sensor de seguridad</td>
+<td>Condición insegura</td>
+<td>Condición segura</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Motor principal</td>
+<td>Motor apagado</td>
+<td>Motor encendido</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota:</strong> En la variable E, el estado 0 indica que el paro de emergencia está activado. Por seguridad, el motor debe permanecer apagado en ese estado.</p>
+<h3 id="3-reglas-de-funcionamiento_4">3. Reglas de funcionamiento</h3>
+<ol>
+<li>El motor debe encenderse cuando el sistema esté habilitado, la protección esté cerrada, el paro de emergencia no esté activado y el sensor de seguridad indique una condición segura.</li>
+<li>Si el sistema está deshabilitado, el motor debe permanecer apagado.</li>
+<li>Si la protección está abierta, el motor debe permanecer apagado.</li>
+<li>Si el paro de emergencia está activado, el motor debe permanecer apagado.</li>
+<li>Si el sensor de seguridad indica una condición insegura, el motor debe permanecer apagado.</li>
+</ol>
+<!-- ### 4. Tabla de verdad
+
+| H | P | E | S | M | Descripción                       |
+|:-:|:-:|:-:|:-:|:-:|-----------------------------------|
+| 0 | 0 | 0 | 0 | 0 | Sistema deshabilitado             |
+| 0 | 0 | 0 | 1 | 0 | Sistema deshabilitado             |
+| 0 | 0 | 1 | 0 | 0 | Sistema deshabilitado             |
+| 0 | 0 | 1 | 1 | 0 | Sistema deshabilitado             |
+| 0 | 1 | 0 | 0 | 0 | Sistema deshabilitado             |
+| 0 | 1 | 0 | 1 | 0 | Sistema deshabilitado             |
+| 0 | 1 | 1 | 0 | 0 | Sistema deshabilitado             |
+| 0 | 1 | 1 | 1 | 0 | Sistema deshabilitado             |
+| 1 | 0 | 0 | 0 | 0 | Protección abierta                |
+| 1 | 0 | 0 | 1 | 0 | Protección abierta                |
+| 1 | 0 | 1 | 0 | 0 | Protección abierta                |
+| 1 | 0 | 1 | 1 | 0 | Protección abierta                |
+| 1 | 1 | 0 | 0 | 0 | Paro de emergencia activado       |
+| 1 | 1 | 0 | 1 | 0 | Paro de emergencia activado       |
+| 1 | 1 | 1 | 0 | 0 | Condición insegura                |
+| 1 | 1 | 1 | 1 | 1 | Todas las condiciones son seguras | -->
+
+<h2 id="ejercicio-6-control-de-nivel-y-ventilacion-en-invernadero">Ejercicio 6 Control de Nivel y Ventilación en Invernadero</h2>
+<p><strong>Contexto:</strong> Un invernadero automatizado cuenta con un sensor de alta temperatura (<span class="arithmatex">\(T\)</span>), un sensor de humedad de suelo baja (<span class="arithmatex">\(H\)</span>) y un interruptor manual de mantenimiento (<span class="arithmatex">\(M\)</span>). Se controla una bomba de riego (<span class="arithmatex">\(R\)</span>) y un extractor de aire (<span class="arithmatex">\(E\)</span>).</p>
+<ul>
+<li><strong>Entradas:</strong></li>
+<li><span class="arithmatex">\(T\)</span>: 1 = Temperatura alta, 0 = Normal</li>
+<li><span class="arithmatex">\(H\)</span>: 1 = Suelo seco (requiere agua), 0 = Suelo húmedo</li>
+<li><span class="arithmatex">\(M\)</span>: 1 = Mantenimiento activo (inhibe todo), 0 = Funcionamiento normal</li>
+<li><strong>Salidas:</strong></li>
+<li><span class="arithmatex">\(R\)</span> (Bomba de riego): Se activa si el suelo está seco y no está en mantenimiento.</li>
+<li><span class="arithmatex">\(E\)</span> (Extractor): Se activa si la temperatura es alta y no está en mantenimiento.</li>
+</ul>
+<!--
+#### Tabla de verdad
+| M | T | H |   R   |   E   | Descripción / Observaciones                                   |
+|:-:|:-:|:-:|:-----:|:-----:|---------------------------------------------------------------|
+| 0 | 0 | 0 | **0** | **0** | Condición ideal, todo apagado                                 |
+| 0 | 0 | 1 | **1** | **0** | Suelo seco $\rightarrow$ Activa Riego                         |
+| 0 | 1 | 0 | **0** | **1** | Temperatura alta $\rightarrow$ Activa Extractor               |
+| 0 | 1 | 1 | **1** | **1** | Alta temp y suelo seco $\rightarrow$ Activa Riego y Extractor |
+| 1 | 0 | 0 | **0** | **0** | Mantenimiento activo                                          |
+| 1 | 0 | 1 | **0** | **0** | Mantenimiento activo (bloqueo)                                |
+| 1 | 1 | 0 | **0** | **0** | Mantenimiento activo (bloqueo)                                |
+| 1 | 1 | 1 | **0** | **0** | Mantenimiento activo (bloqueo)                                | -->
+
+<h2 id="ejercicio-7-dosificador-quimico-industrial-de-seguridad">Ejercicio 7 Dosificador Químico Industrial de Seguridad</h2>
+<p><strong>Contexto:</strong> Una mezcla química requiere la adición de reactivo mediante una válvula (<span class="arithmatex">\(V\)</span>). Se requiere que al menos 2 de 3 operadores presionen su botón de confirmación (<span class="arithmatex">\(A, B, C\)</span>) y que la temperatura del tanque (<span class="arithmatex">\(T\)</span>) sea segura.</p>
+<ul>
+<li><strong>Entradas:</strong></li>
+<li><span class="arithmatex">\(A, B, C\)</span> (Operadores 1, 2 y 3): 1 = Presionado, 0 = Liberado</li>
+<li><span class="arithmatex">\(T\)</span> (Térmico): 0 = Temperatura segura, 1 = Sobrecalentamiento</li>
+<li><strong>Salidas:</strong></li>
+<li><span class="arithmatex">\(V\)</span> (Válvula de llenado): Activa solo si <span class="arithmatex">\(T = 0\)</span> y por lo menos 2 botones (<span class="arithmatex">\(A, B, C\)</span>) están presionados.</li>
+</ul>
+<!-- #### Tabla de verdad
+| T | A | B | C |   V   | Descripción / Observaciones                                            |
+|:-:|:-:|:-:|:-:|:-----:|------------------------------------------------------------------------|
+| 0 | 0 | 0 | 0 | **0** | Nadie presiona                                                         |
+| 0 | 0 | 0 | 1 | **0** | Solo 1 presiona                                                        |
+| 0 | 0 | 1 | 0 | **0** | Solo 1 presiona                                                        |
+| 0 | 0 | 1 | 1 | **1** | B y C presionan $\rightarrow$ Permiso concedido                        |
+| 0 | 1 | 0 | 0 | **0** | Solo 1 presiona                                                        |
+| 0 | 1 | 0 | 1 | **1** | A y C presionan $\rightarrow$ Permiso concedido                        |
+| 0 | 1 | 1 | 0 | **1** | A y B presionan $\rightarrow$ Permiso concedido                        |
+| 0 | 1 | 1 | 1 | **1** | Todos presionan $\rightarrow$ Permiso concedido                        |
+| 1 | X | X | X | **0** | Temp Alta (filas 8 a 15) $\rightarrow$ Válvula bloqueada por seguridad |
+
+*(Nota: En las 8 filas donde $T=1$, la salida $V$ es igual a 0).* -->
+
+<h2 id="ejercicio-8-mezcladora-de-lote-automatizada">Ejercicio 8 Mezcladora de Lote Automatizada</h2>
+<p><strong>Contexto:</strong> Un tanque industrial cuenta con 2 reactivos. Hay dos sensores de nivel (<span class="arithmatex">\(N_1\)</span> bajo, <span class="arithmatex">\(N_2\)</span> alto) y un sensor de viscosidad (<span class="arithmatex">\(V\)</span>). Controla un Motor Mezclador (<span class="arithmatex">\(M\)</span>) y una Alarma de Desbordamiento (<span class="arithmatex">\(A\)</span>).</p>
+<ul>
+<li><strong>Entradas:</strong></li>
+<li><span class="arithmatex">\(N_1\)</span>: 1 = Nivel bajo alcanzado</li>
+<li><span class="arithmatex">\(N_2\)</span>: 1 = Nivel alto alcanzado</li>
+<li><span class="arithmatex">\(V\)</span>: 1 = Viscosidad óptima</li>
+<li><strong>Salidas:</strong></li>
+<li><span class="arithmatex">\(M\)</span> (Motor): Se activa para mezclar si el nivel es al menos <span class="arithmatex">\(N_1\)</span> y aún no alcanza la viscosidad <span class="arithmatex">\(V\)</span> requerida.</li>
+<li><span class="arithmatex">\(A\)</span> (Alarma): Se enciende si ocurre la falla <span class="arithmatex">\(N_1=0\)</span> y <span class="arithmatex">\(N_2=1\)</span>.</li>
+</ul>
+<!-- #### Tabla de verdad
+| $N_1$ | $N_2$ | V |   M   |   A   | Descripción / Observaciones                        |
+|:-----:|:-----:|:-:|:-----:|:-----:|----------------------------------------------------|
+|   0   |   0   | 0 | **0** | **0** | Tanque vacío                                       |
+|   0   |   0   | 1 | **0** | **0** | Tanque vacío                                       |
+|   0   |   1   | 0 | **0** | **1** | Error: $N_2$ activo sin $N_1$                      |
+|   0   |   1   | 1 | **0** | **1** | Error: $N_2$ activo sin $N_1$                      |
+|   1   |   0   | 0 | **1** | **0** | Tanque a nivel medio $\rightarrow$ Mezclar ($M=1$) |
+|   1   |   0   | 1 | **0** | **0** | Mezcla lista, detiene motor                        |
+|   1   |   1   | 0 | **1** | **0** | Tanque lleno $\rightarrow$ Mezclar ($M=1$)         |
+|   1   |   1   | 1 | **0** | **0** | Mezcla lista a nivel alto                          | -->
+
+<h2 id="ejercicio-9-sistema-de-extincion-contra-incendios">Ejercicio 9 Sistema de Extinción contra Incendios</h2>
+<p><strong>Contexto:</strong> Un edificio tiene dos detectores de humo (<span class="arithmatex">\(H_1, H_2\)</span>) y un sensor de temperatura extrema (<span class="arithmatex">\(T\)</span>). Para evitar falsas alarmas, el rociador (<span class="arithmatex">\(R\)</span>) y la sirena (<span class="arithmatex">\(S\)</span>) se activan mediante reglas específicas.</p>
+<ul>
+<li><strong>Entradas:</strong></li>
+<li><span class="arithmatex">\(H_1, H_2\)</span>: Detectores de humo (1 = Humo detectado)</li>
+<li><span class="arithmatex">\(T\)</span>: Sensor de temperatura (1 = Temperatura alta)</li>
+<li><strong>Salidas:</strong></li>
+<li><span class="arithmatex">\(S\)</span> (Sirena): Se activa si se detecta cualquier condición de riesgo (humo o temperatura).</li>
+<li><span class="arithmatex">\(R\)</span> (Rociadores de agua): Se activan si <strong>ambos</strong> sensores de humo detectan humo, O bien si hay al menos un sensor de humo Y la temperatura es alta.</li>
+</ul>
+<!-- #### Tabla de verdad
+| $H_1$ | $H_2$ | T |   S   |   R   | Descripción / Observaciones                              |
+|:-----:|:-----:|:-:|:-----:|:-----:|----------------------------------------------------------|
+|   0   |   0   | 0 | **0** | **0** | Seguro                                                   |
+|   0   |   0   | 1 | **1** | **0** | Solo alta temp $\rightarrow$ Sirena de advertencia       |
+|   0   |   1   | 0 | **1** | **0** | Humo aislado $\rightarrow$ Sirena                        |
+|   0   |   1   | 1 | **1** | **1** | Humo + Temp alta $\rightarrow$ Activa Rociador           |
+|   1   |   0   | 0 | **1** | **0** | Humo aislado $\rightarrow$ Sirena                        |
+|   1   |   0   | 1 | **1** | **1** | Humo + Temp alta $\rightarrow$ Activa Rociador           |
+|   1   |   1   | 0 | **1** | **1** | Confirmación doble de humo $\rightarrow$ Activa Rociador |
+|   1   |   1   | 1 | **1** | **1** | Emergencia total $\rightarrow$ Activa todo               | -->
+
+<h2 id="ejercicio-10-control-digital-de-faros-automotrices">Ejercicio 10 Control Digital de Faros Automotrices</h2>
+<p><strong>Contexto:</strong> Un vehículo controla sus luces altas (<span class="arithmatex">\(L_A\)</span>) y luces bajas (<span class="arithmatex">\(L_B\)</span>) según la iluminación ambiental (<span class="arithmatex">\(S_{LUZ}\)</span>), sensor de lluvia (<span class="arithmatex">\(S_{LL}\)</span>) y el interruptor manual de luces (<span class="arithmatex">\(I\)</span>).</p>
+<ul>
+<li><strong>Entradas:</strong></li>
+<li><span class="arithmatex">\(S_{LUZ}\)</span>: 1 = Noche / Oscuro, 0 = Día</li>
+<li><span class="arithmatex">\(S_{LL}\)</span>: 1 = Lluvia detectada, 0 = Seco</li>
+<li><span class="arithmatex">\(I\)</span>: 1 = Encendido manual, 0 = Apagado</li>
+<li><strong>Salidas:</strong></li>
+<li><span class="arithmatex">\(L_B\)</span> (Luces Bajas): Se encienden si es de noche, si está lloviendo o si el mando manual está activo.</li>
+<li><span class="arithmatex">\(L_A\)</span> (Luces Altas): Se encienden si es de noche, el mando manual está activo y <strong>no</strong> está lloviendo (para evitar deslumbrar por reflejo).</li>
+</ul>
+<!-- #### Tabla de verdad
+| I | $S_{LUZ}$ | $S_{LL}$ | $L_B$ | $L_A$ | Descripción / Observaciones                                       |
+|:-:|:---------:|:--------:|:-----:|:-----:|-------------------------------------------------------------------|
+| 0 |     0     |    0     | **0** | **0** | Todo apagado en día                                               |
+| 0 |     0     |    1     | **1** | **0** | Lluvia de día $\rightarrow$ Enciende Bajas                        |
+| 0 |     1     |    0     | **1** | **0** | Noche en auto $\rightarrow$ Enciende Bajas                        |
+| 0 |     1     |    1     | **1** | **0** | Noche + Lluvia $\rightarrow$ Enciende Bajas                       |
+| 1 |     0     |    0     | **1** | **0** | Manual en día $\rightarrow$ Enciende Bajas                        |
+| 1 |     0     |    1     | **1** | **0** | Manual en lluvia $\rightarrow$ Enciende Bajas                     |
+| 1 |     1     |    0     | **1** | **1** | Manual + Noche sin lluvia $\rightarrow$ Activa Altas y Bajas      |
+| 1 |     1     |    1     | **1** | **0** | Manual + Noche con lluvia $\rightarrow$ Cancela Altas por reflejo | -->
+
+<h2 id="ejercicio-11-sistema-de-estacion-de-bombeo-doble-redundancia">Ejercicio 11 Sistema de Estación de Bombeo Doble (Redundancia)</h2>
+<p><strong>Contexto:</strong> Un pozo cuenta con dos bombas (<span class="arithmatex">\(B_1\)</span> y <span class="arithmatex">\(B_2\)</span>) y tres sensores de nivel (<span class="arithmatex">\(N_B\)</span> bajo, <span class="arithmatex">\(N_M\)</span> medio, <span class="arithmatex">\(N_A\)</span> alto).</p>
+<ul>
+<li><strong>Entradas:</strong></li>
+<li><span class="arithmatex">\(N_{Bajo}, N_{Medio}, N_{Alto}\)</span>: 1 = Agentes sumergidos en agua.</li>
+<li><strong>Salidas:</strong></li>
+<li><span class="arithmatex">\(B_1\)</span>: Se activa cuando el nivel llega a Medio (<span class="arithmatex">\(N_M\)</span>).</li>
+<li><span class="arithmatex">\(B_2\)</span>: Se activa adicionalmente como refuerzo solo cuando el nivel llega a Alto (<span class="arithmatex">\(N_A\)</span>).</li>
+</ul>
+<!-- #### Tabla de verdad
+| $N_B$ | $N_M$ | $N_A$ | $B_1$ | $B_2$ | Descripción / Observaciones                    |
+|:-----:|:-----:|:-----:|:-----:|:-----:|------------------------------------------------|
+|   0   |   0   |   0   | **0** | **0** | Pozo seco                                      |
+|   0   |   0   |   1   | **0** | **0** | Error de lectura                               |
+|   0   |   1   |   0   | **0** | **0** | Error de lectura                               |
+|   0   |   1   |   1   | **0** | **0** | Error de lectura                               |
+|   1   |   0   |   0   | **0** | **0** | Agua en nivel bajo (reposo)                    |
+|   1   |   0   |   1   | **0** | **0** | Error de lectura                               |
+|   1   |   1   |   0   | **1** | **0** | Nivel medio $\rightarrow$ Arranca Bomba 1      |
+|   1   |   1   |   1   | **1** | **1** | Nivel alto $\rightarrow$ Arrancan Bombas 1 y 2 | -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../ecuacion_circuito/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Ecuacion circuito">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Ecuacion circuito
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../mapak_1/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Mapak 1">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Mapak 1
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": 1.0}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-lib@0.11.6/dist/browser/index.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-view@0.2.6/dist/index.min.js"></script>
+      
+    
+  </body>
+</html>
