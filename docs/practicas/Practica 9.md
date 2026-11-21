@@ -1,6 +1,6 @@
 ---
 create_index: true
-title: "Práctica 9 - Sistema de Luz"
+title: "Práctica 9. Carrito seguidor de luz de 4 bits"
 
 ---
 
