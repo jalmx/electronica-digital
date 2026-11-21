@@ -25,27 +25,27 @@ Las señales de estos sensores serán procesadas por un circuito de control digi
 
 ## 3. Material
 
-|Cantidad     | Material                              | Descripción                                                           |
-|:--------------:|---------------------------------------|-----------------------------------------------------------------------|
-| 1            | Multímetro                            | Para realizar mediciones eléctricas.                                  |
+|   Cantidad   | Material                              | Descripción                                                           |
+|:------------:|---------------------------------------|-----------------------------------------------------------------------|
+|      1       | Multímetro                            | Para realizar mediciones eléctricas.                                  |
 | Según diseño | Circuitos integrados 7404             | Compuertas NOT.                                                       |
 | Según diseño | Circuitos integrados 7408             | Compuertas AND.                                                       |
 | Según diseño | Circuitos integrados 7432             | Compuertas OR.                                                        |
 | Según diseño | LED                                   | Indicadores visuales, si se requieren.                                |
 | Según diseño | Resistencias de 330 Ω                 | Limitación de corriente y conexiones indicadas.                       |
-| 4            | Resistencias de 1 kΩ                  | Para los circuitos de sensores y control.                             |
-| 4            | Resistencias de 10 kΩ                 | Para los circuitos de sensores.                                       |
-| 4            | Potenciómetros o presets de 1 kΩ      | Ajuste de los niveles de velocidad.                                   |
-| 4            | Resistencias de 100 Ω                 | Para los circuitos de control de velocidad.                           |
-| 4            | Diodos 1N4148                         | Para el circuito de control de velocidad.                             |
-| 4            | Sensores de luz                       | Pueden ser sensores construidos por el equipo o módulos comerciales.  |
-| 1            | DIP switch o push button              | Interruptor general de encendido y apagado.                           |
-| 2            | Llantas                               | Para el desplazamiento del carrito.                                   |
-| 2            | Motoreductores de corriente directa   | Motores con caja de engranes, con tensión de operación máxima de 5 V. |
-| 1            | Rueda loca                            | Para proporcionar estabilidad al carrito.                             |
-| 1            | Driver de motores L298P o equivalente | Etapa de potencia para controlar los motores.                         |
-| 1            | Placa o soporte                       | Para montar los componentes y circuitos.                              |
-| Según diseño | Fuente de alimentación y cables       | Para alimentar y realizar las conexiones del sistema.                 |
+|      4       | Resistencias de 1 kΩ                  | Para los circuitos de sensores y control.                             |
+|      4       | Resistencias de 10 kΩ                 | Para los circuitos de sensores.                                       |
+|      4       | Potenciómetros o presets de 1 kΩ      | Ajuste de los niveles de velocidad.                                   |
+|      4       | Resistencias de 100 Ω                 | Para los circuitos de control de velocidad.                           |
+|      4       | Diodos 1N4148                         | Para el circuito de control de velocidad.                             |
+|      4       | Sensores de luz                       | Pueden ser sensores construidos por el equipo o módulos comerciales.  |
+|      1       | DIP switch o push button              | Interruptor general de encendido y apagado.                           |
+|      2       | Llantas                               | Para el desplazamiento del carrito.                                   |
+|      2       | Motoreductores de corriente directa   | Motores con caja de engranes, con tensión de operación máxima de 5 V. |
+|      1       | Rueda loca                            | Para proporcionar estabilidad al carrito.                             |
+|      1       | Driver de motores L298P o equivalente | Etapa de potencia para controlar los motores.                         |
+|      1       | Placa o soporte                       | Para montar los componentes y circuitos.                              |
+| Según diseño | Fuente de alimentación y cables       | Para alimentar de 5V para todo el sistema (Sugerencia Powerbank)      |
 
 **Importante:** Las cantidades de algunos componentes pueden variar dependiendo del diseño final. El equipo deberá verificar que cuenta con todos los elementos necesarios antes de comenzar el montaje.
 
@@ -193,6 +193,7 @@ Cada equipo deberá presentar un reporte y el prototipo fisico:
 6. Diagramas de los circuitos lógicos.
 7. Diagrama de conexiones del montaje completo.
 8. Simulación (opcional)
+9. **Prototipo funcional**
 
 
 El equipo deberá ser capaz de explicar el funcionamiento del sistema, justificar sus decisiones de diseño y demostrar que el circuito construido cumple con la tabla de verdad.
