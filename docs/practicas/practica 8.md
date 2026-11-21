@@ -1,6 +1,6 @@
 ---
 create_index: true
-title: "Práctica 9 - Sistema de alarma"
+title: "Práctica 8 - Sistema de alarma"
 
 ---
 
@@ -8,7 +8,7 @@ title: "Práctica 9 - Sistema de alarma"
 
 ## Objetivo
 
-Aplicar los conocimientos de sistemas digitales de control a un sistema de seguridad básico
+Aplicar los conocimientos de sistemas digitales de control a un sistema de seguridad básico.
 
 
 ## Material
