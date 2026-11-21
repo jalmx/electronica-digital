@@ -1,0 +1,1786 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.alejandro-leyva.com/electronica-digital/practicas/Practica%209/">
+      
+      
+        <link rel="prev" href="../Practica%205/">
+      
+      
+        <link rel="next" href="../practica%206/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Práctica 9 - Sistema de Luz - Electrónica Digital</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-9-carrito-seguidor-de-luz-de-4-bits-equipo-proyecto" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-header__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Electrónica Digital
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Práctica 9 - Sistema de Luz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.alejandro-leyva.com/electronica-digital/" title="Electrónica Digital" class="md-nav__button md-logo" aria-label="Electrónica Digital" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Electrónica Digital
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jalmx/electronica-digital" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Electrónica Digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduccion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduccion a la electronica digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_bases_numericas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistemas Numéricos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_suma_binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operaciones Binarias
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_dise%C3%B1o_digital/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño Digital
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_compuertas_logicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas logicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_compuertas_combinadas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compuertas combinadas NOR y NAND
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07_logica_combinacional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lógica combinacional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08_aplicacion_algebra_booleana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicando Álgebra Booleana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../09_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10_aplicacion_mapa_karnaugh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicación: Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../11_aplicaciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aplicaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliografia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Actividades
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../actividades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../actividades/Dise%C3%B1o%20de%20un%20sistema%20de%20alarma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diseño de un sistema de alarma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../actividades/algebra_bool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algebra bool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../actividades/conversiones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conversiones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../actividades/ecuacion_circuito/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ecuacion circuito
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../actividades/ejercicios_aplicaciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejercicios aplicaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../actividades/mapak_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapak 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../actividades/suma%20binaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Suma binaria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../actividades/tablas_de_verdad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tablas de verdad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Practicas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Practicas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 1 - Generación de compuertas básicas con interruptores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2 - Comprobación de compuertas y niveles lógicos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 3 - Circuitos digitales básicos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4 - Álgebra booleana básico
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 5 - Álgebra booleana - Tabla de verdad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Práctica 9 - Sistema de Luz
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 9 - Sistema de Luz
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-descripcion-general-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Descripción general del proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Material
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Desarrollo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-identificacion-de-entradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Identificación de entradas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-identificacion-de-salidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Identificación de salidas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-filosofia-de-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Filosofía de operación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-diseno-del-circuito-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Diseño del circuito digital
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-construccion-y-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Construcción y montaje
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-pruebas-y-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6. Pruebas y funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-consideraciones-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Consideraciones adicionales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Entregables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Entregables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reporte-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporte PDF
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-diagrama-esquematico" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Diagrama esquematico
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Diagrama esquematico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-animacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Animación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-diagrama-pictorico" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Diagrama pictorico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 6 - Mapa de Karnaugh
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica%207/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 7 - Display de 7 segmentos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica%208/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 8 - Sistema de alarma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-descripcion-general-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Descripción general del proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Material
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Desarrollo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Desarrollo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-identificacion-de-entradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Identificación de entradas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-identificacion-de-salidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Identificación de salidas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-filosofia-de-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Filosofía de operación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-diseno-del-circuito-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4. Diseño del circuito digital
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-construccion-y-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5. Construcción y montaje
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-pruebas-y-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6. Pruebas y funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-consideraciones-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Consideraciones adicionales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Entregables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Entregables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reporte-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporte PDF
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-diagrama-esquematico" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Diagrama esquematico
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Diagrama esquematico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-animacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Animación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-diagrama-pictorico" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Diagrama pictorico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="practica-9-carrito-seguidor-de-luz-de-4-bits-equipo-proyecto">Práctica 9. Carrito seguidor de luz de 4 bits [Equipo] (Proyecto)</h1>
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>Diseñar e implementar un sistema de control digital para un carrito seguidor de luz, utilizando cuatro sensores de luz como entradas de información. El sistema deberá procesar las señales de los sensores mediante lógica digital y controlar de manera independiente los motores derecho e izquierdo, permitiendo que cada motor trabaje a dos niveles de velocidad.</p>
+<p>El propósito de la práctica es aplicar los conocimientos de sistemas digitales, compuertas lógicas, álgebra booleana y tablas de verdad en la solución de un problema real.</p>
+<h2 id="2-descripcion-general-del-proyecto">2. Descripción general del proyecto</h2>
+<p>Se deberá construir un carrito móvil capaz de detectar la presencia de una fuente de luz y responder mediante el movimiento de sus dos motores.</p>
+<p>Para lograrlo, el carrito contará con cuatro sensores de luz distribuidos de la siguiente manera:</p>
+<ul>
+<li>Dos sensores en el lado izquierdo.</li>
+<li>Dos sensores en el lado derecho.</li>
+</ul>
+<p>Las señales de estos sensores serán procesadas por un circuito de control digital, al que llamaremos <strong>caja negra</strong>. Esta caja negra deberá determinar qué motores activar y a qué velocidad deberán trabajar, de acuerdo con las condiciones detectadas.</p>
+<h2 id="3-material">3. Material</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Cantidad</th>
+<th>Material</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Multímetro</td>
+<td>Para realizar mediciones eléctricas.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Según diseño</td>
+<td>Circuitos integrados 7404</td>
+<td>Compuertas NOT.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Según diseño</td>
+<td>Circuitos integrados 7408</td>
+<td>Compuertas AND.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Según diseño</td>
+<td>Circuitos integrados 7432</td>
+<td>Compuertas OR.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Según diseño</td>
+<td>LED</td>
+<td>Indicadores visuales, si se requieren.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Según diseño</td>
+<td>Resistencias de 330 Ω</td>
+<td>Limitación de corriente y conexiones indicadas.</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Resistencias de 1 kΩ</td>
+<td>Para los circuitos de sensores y control.</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Resistencias de 10 kΩ</td>
+<td>Para los circuitos de sensores.</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Potenciómetros o presets de 1 kΩ</td>
+<td>Ajuste de los niveles de velocidad.</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Resistencias de 100 Ω</td>
+<td>Para los circuitos de control de velocidad.</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Diodos 1N4148</td>
+<td>Para el circuito de control de velocidad.</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Sensores de luz</td>
+<td>Pueden ser sensores construidos por el equipo o módulos comerciales.</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td>DIP switch o push button</td>
+<td>Interruptor general de encendido y apagado.</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Llantas</td>
+<td>Para el desplazamiento del carrito.</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Motoreductores de corriente directa</td>
+<td>Motores con caja de engranes, con tensión de operación máxima de 5 V.</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Rueda loca</td>
+<td>Para proporcionar estabilidad al carrito.</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Driver de motores L298P o equivalente</td>
+<td>Etapa de potencia para controlar los motores.</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Placa o soporte</td>
+<td>Para montar los componentes y circuitos.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Según diseño</td>
+<td>Fuente de alimentación y cables</td>
+<td>Para alimentar y realizar las conexiones del sistema.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Importante:</strong> Las cantidades de algunos componentes pueden variar dependiendo del diseño final. El equipo deberá verificar que cuenta con todos los elementos necesarios antes de comenzar el montaje.</p>
+<h2 id="4-desarrollo">4. Desarrollo</h2>
+<h3 id="41-identificacion-de-entradas">4.1. Identificación de entradas</h3>
+<p>El sistema deberá contar, como mínimo, con cuatro entradas:</p>
+<table>
+<thead>
+<tr>
+<th>Entrada</th>
+<th>Nombre</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Sensor izquierdo 1</td>
+<td>Detecta la presencia de luz en la primera posición del lado izquierdo.</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Sensor izquierdo 2</td>
+<td>Detecta la presencia de luz en la segunda posición del lado izquierdo.</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Sensor derecho 1</td>
+<td>Detecta la presencia de luz en la primera posición del lado derecho.</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Sensor derecho 2</td>
+<td>Detecta la presencia de luz en la segunda posición del lado derecho.</td>
+</tr>
+</tbody>
+</table>
+<p>Para el diseño de la lógica digital, se deberá establecer una convención para las señales de los sensores. Se recomienda utilizar:</p>
+<ul>
+<li>1 = El sensor detecta luz.</li>
+<li>0 = El sensor no detecta luz.</li>
+</ul>
+<p>Si el circuito electrónico del sensor entrega una señal con lógica inversa, deberá acondicionarse para que la caja negra trabaje con la convención anterior.</p>
+<h3 id="42-identificacion-de-salidas">4.2. Identificación de salidas</h3>
+<p>La caja negra deberá proporcionar seis salidas de control:</p>
+<table>
+<thead>
+<tr>
+<th>Salida</th>
+<th>Nombre</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>MOTOR_D</td>
+<td>Señal de control para el motor derecho.</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>VEL_1_D</td>
+<td>Selección del primer nivel de velocidad del motor derecho (50%).</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>VEL_2_D</td>
+<td>Selección del segundo nivel de velocidad del motor derecho.</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>MOTOR_I</td>
+<td>Señal de control para el motor izquierdo.</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>VEL_1_I</td>
+<td>Selección del primer nivel de velocidad del motor izquierdo (50%).</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>VEL_2_I</td>
+<td>Selección del segundo nivel de velocidad del motor izquierdo.</td>
+</tr>
+</tbody>
+</table>
+<p>Las señales de velocidad deberán trabajar de la siguiente manera:</p>
+<ul>
+<li><strong>50% de velocidad:</strong> se activa únicamente VEL_1 del motor correspondiente.</li>
+<li><strong>100% de velocidad:</strong> se activan simultáneamente VEL_1 y VEL_2 del motor correspondiente.</li>
+</ul>
+<p>El circuito de control de velocidad y el driver de motores se encargarán de llevar estas señales al motor correspondiente, de acuerdo con los diagramas proporcionados.</p>
+<h3 id="43-filosofia-de-operacion">4.3. Filosofía de operación</h3>
+<p>El funcionamiento del carrito deberá cumplir las siguientes condiciones:</p>
+<p><strong>A. Control del motor derecho</strong></p>
+<p>El motor derecho será controlado por los sensores ubicados en el lado derecho:</p>
+<ol>
+<li>Cuando ninguno de los dos sensores derechos detecte luz, el motor derecho deberá permanecer apagado.</li>
+<li>Cuando únicamente uno de los dos sensores derechos detecte luz, el motor derecho deberá encenderse al 50% de su velocidad.</li>
+<li>Cuando los dos sensores derechos detecten luz simultáneamente, el motor derecho deberá encenderse al 100% de su velocidad.</li>
+</ol>
+<p><strong>B. Control del motor izquierdo</strong></p>
+<p>El motor izquierdo será controlado por los sensores ubicados en el lado izquierdo:</p>
+<ol>
+<li>Cuando ninguno de los dos sensores izquierdos detecte luz, el motor izquierdo deberá permanecer apagado.</li>
+<li>Cuando únicamente uno de los dos sensores izquierdos detecte luz, el motor izquierdo deberá encenderse al 50% de su velocidad.</li>
+<li>Cuando los dos sensores izquierdos detecten luz simultáneamente, el motor izquierdo deberá encenderse al 100% de su velocidad.</li>
+</ol>
+<p><strong>C. Funcionamiento independiente de los motores</strong></p>
+<p>Los motores deberán trabajar de manera independiente. Esto significa que cada uno responderá exclusivamente a las señales de sus dos sensores correspondientes.</p>
+<p>Por lo tanto, pueden presentarse situaciones como las siguientes:</p>
+<ul>
+<li>El motor derecho está apagado y el izquierdo trabaja al 50%.</li>
+<li>El motor derecho trabaja al 100% y el izquierdo está apagado.</li>
+<li>Ambos motores trabajan al 50%.</li>
+<li>Un motor trabaja al 50% y el otro al 100%.</li>
+<li>Ambos motores trabajan al 100%.</li>
+</ul>
+<h3 id="44-diseno-del-circuito-digital">4.4. Diseño del circuito digital</h3>
+<p>Antes de realizar el montaje físico, cada equipo deberá desarrollar el diseño lógico de la caja negra.</p>
+<p>Para ello deberá:</p>
+<ol>
+<li>Identificar y nombrar todas las entradas y salidas.</li>
+<li>Elaborar la tabla de verdad completa del sistema, considerando las cuatro entradas.</li>
+<li>Obtener una ecuación booleana para cada una de las seis salidas.</li>
+<li>Simplificar las ecuaciones mediante álgebra booleana y/o mapas de Karnaugh. Puedes hacerlo a mano o usando alguna aplicación.</li>
+<li>Diseñar el circuito lógico utilizando las compuertas necesarias.</li>
+<li>Verificar que el circuito diseñado cumpla con todas las condiciones establecidas en la filosofía de operación.</li>
+</ol>
+<h3 id="45-construccion-y-montaje">4.5. Construcción y montaje</h3>
+<p>Una vez terminado y verificado el diseño lógico, se deberá realizar el montaje del proyecto.</p>
+<p>El montaje deberá contemplar las siguientes etapas:</p>
+<ol>
+<li>Construir los cuatro circuitos de sensores de luz.</li>
+<li>Verificar que cada sensor entregue correctamente su señal lógica.</li>
+<li>Construir la caja negra con las compuertas necesarias para implementar las ecuaciones obtenidas.</li>
+<li>Construir el circuito de control de velocidad para ambos motores, considerando los componentes y conexiones mostrados en los diagramas.</li>
+<li>Conectar las salidas de control al driver de motores.</li>
+<li>Conectar los motores derecho e izquierdo.</li>
+<li>Integrar el interruptor general.</li>
+<li>Realizar las conexiones de alimentación y verificar que no existan cortocircuitos antes de energizar el sistema.</li>
+</ol>
+<p>Los diagramas proporcionados sirven como referencia para comprender la distribución y conexión de los componentes. El diseño lógico de la caja negra deberá ser desarrollado por cada equipo.</p>
+<h3 id="46-pruebas-y-funcionamiento">4.6. Pruebas y funcionamiento</h3>
+<p>Una vez terminado el montaje, deberán realizarse pruebas para comprobar el funcionamiento del carrito.</p>
+<p>Como mínimo, deberán probarse las siguientes situaciones:</p>
+<ul>
+<li>Ningún sensor detecta luz.</li>
+<li>Solamente el primer sensor izquierdo detecta luz.</li>
+<li>Solamente el segundo sensor izquierdo detecta luz.</li>
+<li>Los dos sensores izquierdos detectan luz.</li>
+<li>Solamente el primer sensor derecho detecta luz.</li>
+<li>Solamente el segundo sensor derecho detecta luz.</li>
+<li>Los dos sensores derechos detectan luz.</li>
+<li>Los sensores de ambos lados detectan luz en diferentes combinaciones.</li>
+<li>El interruptor general se encuentra apagado mientras los sensores detectan luz.</li>
+</ul>
+<p>Se deberá comprobar que los motores respondan correctamente y que los dos niveles de velocidad puedan distinguirse.</p>
+<h2 id="5-consideraciones-adicionales">5. Consideraciones adicionales</h2>
+<ol>
+<li>Si se presentan combinaciones de sensores que no estén contempladas explícitamente en la filosofía de operación, el equipo deberá definir y justificar el comportamiento esperado.</li>
+<li>Se podrán agregar entradas o salidas adicionales si el equipo considera que mejoran el funcionamiento del proyecto. Por ejemplo: indicador de encendido, indicador de detección de luz, indicador de error o una entrada de paro.</li>
+<li>Cualquier modificación deberá documentarse y justificarse.</li>
+<li>Se deberá cuidar la alimentación eléctrica de los motores y de los circuitos integrados. No se deberán conectar los motores directamente a las salidas de las compuertas lógicas.</li>
+<li>Los niveles de velocidad deberán ajustarse y comprobarse físicamente. El porcentaje indicado representa el nivel de velocidad esperado, por lo que será necesario calibrar el circuito para aproximarse a dichos valores.</li>
+</ol>
+<p>Nota: Si se implementa alguna mejora bien implementada te puedes ganar desde 0.5 hasta 2 puntos extras, esto queda a consideración del docente, si lo implementas no necesariamente puede aplicar puntaje extra.</p>
+<h2 id="6-entregables">6. Entregables</h2>
+<p>Cada equipo deberá presentar un reporte y el prototipo fisico:</p>
+<h3 id="reporte-pdf">Reporte PDF</h3>
+<ol>
+<li>Hoja de presentación</li>
+<li>Índice automatico</li>
+<li>Tabla de verdad completa.</li>
+<li>Ecuaciones booleanas de las seis salidas.</li>
+<li>Procedimiento de simplificación de las ecuaciones.</li>
+<li>Diagramas de los circuitos lógicos.</li>
+<li>Diagrama de conexiones del montaje completo.</li>
+<li>Simulación (opcional)</li>
+</ol>
+<p>El equipo deberá ser capaz de explicar el funcionamiento del sistema, justificar sus decisiones de diseño y demostrar que el circuito construido cumple con la tabla de verdad.</p>
+<h2 id="7-diagrama-esquematico">7. Diagrama esquematico</h2>
+<p><img alt="sch" src="../practica_9/carrito_seguidor_4bits_sch.png" /></p>
+<h3 id="71-animacion">7.1 Animación</h3>
+<p><img alt="gif" src="../practica_9/carrito_seguidor_luz_4bits.gif" /></p>
+<p><a href="../practica_9/carrito_seguidor_luz_4bits.mp4">Descargar video de la animación</a></p>
+<h3 id="72-diagrama-pictorico">7.2 Diagrama pictorico</h3>
+<p>Muestra de armado de referencia, analice bien con respecto al diagrama esquematico.</p>
+<blockquote>
+<p><em>Puede contener errores</em></p>
+</blockquote>
+<p><img alt="pic" src="../practica_9/carrito_seguidor_luz_4bits_bb.svg" /></p>
+<!-- Logisim -->
+<p><a href="../practica_9/carrito_seguidor_luz_4bits.circ">.</a></p>
+<!-- Simulide -->
+<p><a href="../practica_9/carrito_seguidor_luz_4bits.circ">.</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../Practica%205/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Práctica 5 - Álgebra booleana - Tabla de verdad">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Práctica 5 - Álgebra booleana - Tabla de verdad
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../practica%206/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Práctica 6 - Mapa de Karnaugh">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Práctica 6 - Mapa de Karnaugh
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": 1.0}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-lib@0.11.6/dist/browser/index.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-view@0.2.6/dist/index.min.js"></script>
+      
+    
+  </body>
+</html>
