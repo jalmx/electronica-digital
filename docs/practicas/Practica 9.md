@@ -4,6 +4,8 @@ title: "Práctica 9. Carrito seguidor de luz de 4 bits"
 
 ---
 
+![banner](../assets/banner_class_85.png)
+
 # Práctica 9. Carrito seguidor de luz de 4 bits [Equipo] (Proyecto)
 
 ## 1. Objetivo

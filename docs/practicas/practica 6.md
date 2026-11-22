@@ -3,6 +3,8 @@ create_index: true
 title: "Práctica 6 - Mapa de Karnaugh"
 ---
 
+![banner](../assets/banner_class_85.png)
+
 # Práctica 6 - Mapa de Karnaugh
 
 ## Objetivo

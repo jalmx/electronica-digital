@@ -4,6 +4,8 @@ title: "Práctica 8 - Sistema de alarma"
 
 ---
 
+![banner](../assets/banner_class_85.png)
+
 # Práctica 8 - Sistema de alarma [Equipo]
 
 ## Objetivo

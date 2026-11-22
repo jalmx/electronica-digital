@@ -4,6 +4,9 @@ title: "Práctica 7 - Display de 7 segmentos"
 
 ---
 
+![banner](../assets/banner_class_85.png)
+
+
 # Práctica 7 - Display de 7 segmentos
 
 
@@ -16,7 +19,7 @@ Aplicar los conocimientos de algebra booleana a un display de 7 segmentos, mostr
 ## Materiales
 
 | Cantidad | Nombre                    | Descripción                            |
-| -------- | ------------------------- | -------------------------------------- |
+|:--------:| ------------------------- | -------------------------------------- |
 | 1        | IC 7404                   | Compuerta                              |
 | 1        | IC 7408                   | Compuerta                              |
 | 1        | IC7432                    | Compuerta                              |

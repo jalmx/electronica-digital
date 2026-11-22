@@ -14,7 +14,7 @@ Construir y analizar el comportamiento de circuitos digitales, creando tablas de
 ## Materiales
 
 | Cantidad | Nombre                  | Descripción      |
-| -------- | ----------------------- | ---------------- |
+|:--------:| ----------------------- | ---------------- |
 | 1        | Multímetro              | Voltímetro       |
 | 1        | IC 7404                 | Compuerta        |
 | 1        | IC 7408                 | Compuerta        |
